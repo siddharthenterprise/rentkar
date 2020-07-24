@@ -1,0 +1,12 @@
+.slide-container{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+}
+.slide-container .each-fade img{
+    margin: 20px 0px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    
+}

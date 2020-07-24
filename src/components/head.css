@@ -1,0 +1,63 @@
+.container{
+    background-color: black;
+    max-width: 100% ;
+    max-height: 12vh;
+    margin: auto;
+    /* position: absolute; */
+}
+
+.container .main{
+    display: flex;
+    flex-direction: row;
+    
+    /* grid-gap: 1em; */
+    max-width: 100%;
+    /* margin: 0px 20px; */
+    margin: 1% 10%;
+    /* margin: auto; */
+    align-items: center;
+    text-align: center;
+}
+.main div{
+    padding: 0 10px;
+}
+
+.container .main .image img{
+    max-width: 11vw;
+    height: auto;
+}
+.but button{
+background-color: black; /* Green */
+  /* border: none; */
+
+  min-width: 7.5vw;
+  height: 6vh;
+  color: white;
+  padding: 5px 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10x;
+  border-radius: 10px;
+  border-color: #1bacf4;
+
+}
+.searc input{
+    min-width: 35.5vw;
+    height: auto;
+    border-radius: 10px;
+    border-color: #1bacf4;
+    background-color: #FFFFFF;
+    color: black;
+    padding: 5px 10px;
+    
+}
+
+.but button img{
+    max-height: 30px;
+    
+}
+#sign button{
+    background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
+    border-color: none;
+}
