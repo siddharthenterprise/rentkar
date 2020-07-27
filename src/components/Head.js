@@ -18,7 +18,7 @@ export class Head extends Component {
                     </div>
                     <div className='searc'>
                         <input name='search' placeholder='Search for instruments,gaming gears,camera as...'></input>
-
+                        <a><i class="fas fa-search"></i></a>
                         {/* <i class="fas fa-search"></i> */}
 
 

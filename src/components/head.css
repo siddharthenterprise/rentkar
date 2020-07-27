@@ -38,19 +38,53 @@ background-color: black; /* Green */
   text-decoration: none;
   display: inline-block;
   font-size: 1vw;
-  border-radius: 10px;
-  border-color: #1bacf4;
+  border-width:thin ;
+  border-radius: 9px;
+  border-color: #00CEFF;
 
 }
-.searc input{
-    min-width: 35.5vw;
+/* .searc input{
+    
+    min-width: 30.5vw;
     height: auto;
-    border-radius: 10px;
-    border-color: #1bacf4;
+    border-radius: 9px;
+    border-color: #00CEFF;
     background-color: #FFFFFF;
     color: black;
     padding: 5px 10px;
+    border-right: #FFFFFF;
+    border-top-right-radius:0px ;
+    border-bottom-right-radius:0px ;
+
     
+} */
+.searc{
+    min-width: 30.5vw;
+    height: 6vh;
+    border-radius: 9px;
+    border-color: #00CEFF;
+    background-color: #FFFFFF;
+    border-style: solid;    
+    border-width: thin;
+    
+    /* padding: 1vh 0vh; */
+}
+.searc input{
+    border: none;
+    padding: 8px 0px;
+    float: left;
+    min-width: 30vw;
+    
+    
+}
+.searc input:focus,.but button:focus{
+
+    outline: none;
+}
+.searc a i{
+    background-color: #FFFFFF;
+    margin: 12px 0px;
+    float: rightS;
 }
 
 .but button img{
