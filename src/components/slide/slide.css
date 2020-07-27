@@ -10,3 +10,34 @@
     border-radius: 20px;
     
 }
+.react-slideshow-container .nav:first-of-type,.react-slideshow-container .nav:last-of-type{
+    background-color: #3333;
+    
+}
+.carousel .control-dots{
+    margin-bottom: 26px;
+}
+.carousel.carousel-slider .control-arrow{
+    top: 35vh;
+}
+.carousel .control-prev.control-arrow:before{
+    border-right: 8px solid black;
+}
+.carousel *{
+    background-color: white;
+}
+.carousel .control-dots{
+    background-color: transparent;
+}
+.carousel.carousel-slider .control-arrow {
+    top: 30vh;
+    max-height: 10vh;
+    border-radius: 30px;
+    padding: 0px 10px;
+}
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid black;
+}
+.carousel .carousel-status{
+    display: none;
+}

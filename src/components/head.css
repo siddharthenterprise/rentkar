@@ -30,14 +30,14 @@
 background-color: black; /* Green */
   /* border: none; */
 
-  min-width: 7.5vw;
+  min-width: 8.5vw;
   height: 6vh;
   color: white;
-  padding: 5px 2px;
+  padding: 5px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10x;
+  font-size: 1vw;
   border-radius: 10px;
   border-color: #1bacf4;
 
@@ -60,4 +60,5 @@ background-color: black; /* Green */
 #sign button{
     background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
     border-color: none;
+    padding: 0.3vw;
 }

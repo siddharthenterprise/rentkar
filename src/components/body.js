@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Card, Icon, Feed, Image, Button } from "semantic-ui-react";
 
-
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import './body.css';
 
@@ -21,8 +22,26 @@ import cust1 from '../images/cust1.png';
 import cust2 from '../images/cust2.png';
 import wave from '../images/wave.png';
 
+
+import Corousel from './corousel';
+import Slide_corousel from './Slide_corousel';
+
+
+
 export class Body extends Component {
+
     render() {
+        // 
+
+
+        // const goLeft = () => {
+        //     setX(x + 100);
+        // };
+        // const goRight = () => {
+        //     setX(x - 100);
+        // };
+
+
         return (
             <div>
                 <div className="covid">
@@ -79,70 +98,14 @@ export class Body extends Component {
                     <div className='Heading'>
                         <h1>WHAT'S HOT?</h1>
                     </div>
+
                     <div className='category'>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={guitar} wrapped ui={false} />
-                                <Card.Content
-                                    className='cathead'>
-                                    <Card.Header>Fender Bullet Strat.</Card.Header>
-                                    <Card.Meta>
-                                        <span className="date">Starting at</span>
-                                    </Card.Meta>
-                                    <Card.Description>
-                                        <i class="fas fa-rupee-sign"></i>****/day
-                                     </Card.Description>
-                                    <Button>ADD TO CART</Button>
-                                </Card.Content>
-                            </Card>
-                        </div>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={guitar} wrapped ui={false} />
-                                <Card.Content className='cathead'>
-                                    <Card.Header>Fender Bullet Strat.</Card.Header>
-                                    <Card.Meta>
-                                        <span className="date">Starting at</span>
-                                    </Card.Meta>
-                                    <Card.Description>
-                                        <i class="fas fa-rupee-sign"></i>****/day
-                                     </Card.Description>
-                                    <Button>ADD TO CART</Button>
-                                </Card.Content>
-                            </Card>
-                        </div>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={guitar} wrapped ui={false} />
-                                <Card.Content className='cathead'>
-                                    <Card.Header>Fender Bullet Strat.</Card.Header>
-                                    <Card.Meta>
-                                        <span className="date">Starting at</span>
-                                    </Card.Meta>
-                                    <Card.Description>
-                                        <i class="fas fa-rupee-sign"></i>****/day
-                                     </Card.Description>
-                                    <Button>ADD TO CART</Button>
-                                </Card.Content>
-                            </Card>
-                        </div>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={guitar} wrapped ui={false} />
-                                <Card.Content className='cathead'>
-                                    <Card.Header>Fender Bullet Strat.</Card.Header>
-                                    <Card.Meta>
-                                        <span className="date">Starting at</span>
-                                    </Card.Meta>
-                                    <Card.Description>
-                                        <i class="fas fa-rupee-sign"></i>****/day
-                                     </Card.Description>
-                                    <Button>ADD TO CART</Button>
-                                </Card.Content>
-                            </Card>
-                        </div>
+
+                        <Slide_corousel />
 
                     </div>
+
+
                 </div>
                 <div className='list3'>
                     <div className='final'>

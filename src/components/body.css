@@ -100,6 +100,7 @@
     box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2)
 
   }
+  
   .list .category .catcard .ccard,.list2 .category .catcard .ccard{
      border: none;
      border-radius: 20px; 
@@ -131,6 +132,7 @@
     flex-direction: column;
       height: auto;
       margin: auto;
+      overflow: hidden;
     }
     .list2 .Heading h1,.list3 .final .para h1,.list4 .final .para h1{
       font-size: 30px;
@@ -177,8 +179,9 @@
       border: none;
       padding: 3px 10px;
       font-size: 12px;
-      background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5) ;
+      background-color:#1bacf4 ;
       border-radius: 5px;
+      font-weight: bold;
 
     }
     .list2 .date{
@@ -412,5 +415,20 @@ font-family: 'Roboto', sans-serif;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 10px;
+
+}
+
+
+
+/* Hover */
+.list .category .catcard:hover,.sliide .catcard:hover{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin: 20px 30px;
+  margin-left: 0px;
+  border-radius: 20px;
+  box-shadow:2px 13px 13px 2px rgba(27,144,244, 0.7);
+  transition: 0.4s;
 
 }
