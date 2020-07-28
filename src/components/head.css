@@ -39,12 +39,12 @@ background-color: black; /* Green */
   text-decoration: none;
   display: inline-block;
   font-size: 1vw;
-  border: 2px solid #00CEFF;
+  border: 0.1px solid #00CEFF;
   border-radius: 10px;
 
 
 }
-.but button:hover{
+/* .but button:hover{
     border-color: #00CEFF;
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
@@ -54,7 +54,7 @@ background-color: black; /* Green */
     transform: scale(1.1);
     transition: 0.5s ;
     border-width: 5px;
-}
+} */
 /* .searc input{
     
     min-width: 30.5vw;
