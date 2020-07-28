@@ -50,7 +50,7 @@ export class Body extends Component {
                     </div>
                     <div className='covid_text'>
                         <h4>Safety precaution during COVID-19</h4>
-                        <p>We are taking additional steps and precautionary measures to protect out community from COVID-19</p>
+                        <p>We are taking additional steps and precautionary measures to protect our community from COVID-19</p>
                     </div>
                     <div className="card">
                         <div className="card1">
@@ -88,6 +88,22 @@ export class Body extends Component {
                                 <Image src={musical} wrapped ui={false} />
                                 <Card.Content className='cathead'>
                                     <Card.Header >MUSICAL</Card.Header>
+                                </Card.Content>
+                            </Card>
+                        </div>
+                        <div className='catcard'>
+                            <Card className='ccard'>
+                                <Image src={gaming} wrapped ui={false} />
+                                <Card.Content className='cathead'>
+                                    <Card.Header >CAMERAS</Card.Header>
+                                </Card.Content>
+                            </Card>
+                        </div>
+                        <div className='catcard'>
+                            <Card className='ccard'>
+                                <Image src={musical} wrapped ui={false} />
+                                <Card.Content className='cathead'>
+                                    <Card.Header >LAPTOP</Card.Header>
                                 </Card.Content>
                             </Card>
                         </div>

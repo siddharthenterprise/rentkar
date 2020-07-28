@@ -29,6 +29,7 @@
    text-align: left;
    font-weight: bold;
    margin: 20px 8px;
+   margin-left: 0px;
  }
  .covid #alag,i{
    color: #1f4691;
@@ -42,7 +43,7 @@
   .covid .card img {
     max-width: 5.7vw;
     height: 80px;
-    margin: 10px 0px;
+    margin: 0px 0px;
 }
   
   .covid .card {
@@ -54,22 +55,23 @@
     min-width: 32vw;
 
   }
-  .covid .card .card1:hover,.covid .card .card2:hover {
+  /* .covid .card .card1:hover,.covid .card .card2:hover {
     
     transform: scale(1.1);
     transition: 0.5s;
     
 
-  }
+  } */
   .covid .card .card1,
   .card2 {
     display: flex;
     flex-direction: row;
     background-color: #f2f7f7;
-    margin: 8px 5px;
+    margin: 12px 5px;
     border-radius: 10px;
     border-color: #f2f7f7;
     padding: 2px 5px;
+    max-width: 190px;
     
   }
 
