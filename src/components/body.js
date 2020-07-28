@@ -217,6 +217,7 @@ export class Body extends Component {
                             <h4>NOTE FROM OUR HAPPY CUSTOMER</h4>
                         </div>
                         <div className='customer'>
+
                             <div>
                                 <Card className='descr'>
                                     <div className='straight'>

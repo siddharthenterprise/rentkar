@@ -1,7 +1,7 @@
 .container{
     background-color: black;
     max-width: 100% ;
-    max-height: 12vh;
+    max-height: 121px;
     margin: auto;
     /* position: absolute; */
 }
@@ -31,7 +31,7 @@ background-color: black; /* Green */
   /* border: none; */
 
   min-width: 8.5vw;
-  height: 6vh;
+  height: 40px;
   color: white;
   padding: 5px 5px;
   text-align: center;
@@ -60,7 +60,7 @@ background-color: black; /* Green */
 } */
 .searc{
     min-width: 30.5vw;
-    height: 6vh;
+    height: 40px;
     border-radius: 9px;
     border-color: #00CEFF;
     background-color: #FFFFFF;

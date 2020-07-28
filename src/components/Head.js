@@ -3,6 +3,8 @@ import './head.css'
 // import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap'
 import logo from '../images/logo.png'
 import map from '../images/map.png';
+import bag from '../images/bag.png';
+
 
 
 export class Head extends Component {
@@ -24,7 +26,7 @@ export class Head extends Component {
 
                     </div>
                     <div className='but'>
-                        <button><i class="fas fa-shopping-bag"></i> Bag</button>
+                        <button><img src={bag}></img>Bag</button>
                     </div>
                     <div className='but' id='sign'>
                         <button>Login/Sign Up</button>
