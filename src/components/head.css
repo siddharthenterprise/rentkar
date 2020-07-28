@@ -40,14 +40,20 @@ background-color: black; /* Green */
   display: inline-block;
   font-size: 1vw;
   border: 2px solid #00CEFF;
-  border-radius: 5px;
+  border-radius: 10px;
 
 
 }
-.but button:active{
-    border-color: #19eeb5;
+.but button:hover{
+    border-color: #00CEFF;
     transform: scale(1.1);
     transition: 0.5s ease-in-out;
+}
+.but button:active{
+    border-color: #103266;
+    transform: scale(1.1);
+    transition: 0.5s ;
+    border-width: 5px;
 }
 /* .searc input{
     
