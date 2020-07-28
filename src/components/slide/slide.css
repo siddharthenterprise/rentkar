@@ -29,6 +29,9 @@
 .carousel .control-dots{
     background-color: transparent;
 }
+.carousel .control-dots .dot:focus{
+    outline: none;
+}
 .carousel.carousel-slider .control-arrow {
     top: 30vh;
     max-height: 10vh;
@@ -40,4 +43,7 @@
 }
 .carousel .carousel-status{
     display: none;
+}
+.carousel.carousel-slider .control-arrow{
+    padding: 0px 50px;
 }
