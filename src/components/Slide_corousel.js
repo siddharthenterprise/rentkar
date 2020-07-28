@@ -11,7 +11,7 @@ function Slide_corousel() {
     <Corousel imgname={guitar} />,
     <Corousel imgname={guitar} />];
     const left_but = {
-        backgroundColor: '#3333',
+        backgroundColor: 'white',
         padding: '5px 10px',
         borderRadius: '20px',
         margin: '2vw'
