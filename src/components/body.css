@@ -11,16 +11,17 @@
     border-radius: 10px;
     padding: 2px 5px;
     max-height: 125px;
+    font-family: 'Montserrat', sans-serif;
   }
  .covid h4{
    font-size: 20px;
    font-weight: bold;
    text-align: left;
-   padding: 10px 0px;
+   padding-top: 25px;
  } 
  .covid p{
    font-size: 12px;
-   font-weight: bold;
+   /* font-weight: bold; */
    text-align: left;
  }
  .covid h5{
@@ -47,10 +48,18 @@
   .covid .card {
     display: flex;
     flex-direction: row;
-    margin: 0px 10px;
+    margin: 5px 10px;
     padding: 0px 5px;
     border: none;
     min-width: 32vw;
+
+  }
+  .covid .card .card1:hover,.covid .card .card2:hover {
+    
+    margin: 0px 10px;
+    padding: 0px 5px;
+    transition: 0.5s;
+    
 
   }
   .covid .card .card1,
