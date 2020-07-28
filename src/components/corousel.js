@@ -19,7 +19,7 @@ function Corousel({ imgname }) {
                     <Card.Description>
                         <i class="fas fa-rupee-sign"></i>****/day
                                      </Card.Description>
-                    <Button>ADD TO CART</Button>
+                    <Button>ADD TO BAG</Button>
                 </Card.Content>
             </Card>
         </div>

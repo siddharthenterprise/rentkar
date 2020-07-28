@@ -57,14 +57,14 @@ export class Body extends Component {
                             <img src={sanitise} />
                             <div>
                                 <h5>Sanitised Product & gears</h5>
-                                <h5 id='alag'>Know more <i class="fas fa-chevron-circle-right"></i></h5>
+                                <h7 id='alag'>Know more <i class="fas fa-chevron-circle-right"></i></h7>
                             </div>
                         </div>
                         <div className="card2">
                             <img src={hygienic} />
                             <div>
                                 <h5>Hygienic delivery And pickup</h5>
-                                <h5 id='alag'>Know more <i class="fas fa-chevron-circle-right"></i></h5>
+                                <h7 id='alag'>Know more <i class="fas fa-chevron-circle-right"></i></h7>
                             </div>
                         </div>
                     </div>

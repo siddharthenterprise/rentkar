@@ -30,10 +30,14 @@
    font-weight: bold;
    margin: 20px 8px;
    margin-left: 0px;
+   margin-bottom: 2px;
+
  }
- .covid #alag,i{
-   color: #1f4691;
- }
+ .covid #alag, i {
+  color: #1f4691;
+  font-size: 10px;
+  margin-right: 17px;
+}
   
   .covid img
   {
@@ -119,8 +123,8 @@
      border-radius: 20px; 
   }
   .list .category .catcard img{
-    height: 30vh;
-    width: 19vw;
+    height: 25vh;
+    width: 15vw;
     border-top-left-radius:20px;
     border-top-right-radius: 20px;
     
@@ -140,11 +144,11 @@
   }
     /* ------------------------------------------------------------------------------------------------ */
     .list2{
-      max-width: 80%;
+      max-width: 90%;
       display: flex;
     flex-direction: column;
     min-height: 500px;
-      margin: auto;
+      margin-left: 10vw;
       overflow: hidden;
     }
     .list2 .Heading h1,.list3 .final .para h1,.list4 .final .para h1{

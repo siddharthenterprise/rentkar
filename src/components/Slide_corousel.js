@@ -4,7 +4,7 @@ import Corousel from './corousel';
 
 
 function Slide_corousel() {
-    const [x, setX] = useState(65);
+    const [x, setX] = useState(0);
     let whats_hot = [<Corousel imgname={guitar} />,
     <Corousel imgname={guitar} />,
     <Corousel imgname={guitar} />,
@@ -17,13 +17,13 @@ function Slide_corousel() {
         margin: '2vw'
     }
     const goleft = () => {
-        if ((x) < 65) {
+        if ((x) < 0) {
             setX(x + 100)
         }
 
     };
     const goright = () => {
-        if (x > -165) {
+        if (x >= -100) {
             setX(x - 100)
         }
 
