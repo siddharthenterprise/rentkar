@@ -199,6 +199,7 @@
       background-color:#1bacf4 ;
       border-radius: 5px;
       font-weight: bold;
+      color: white;
 
     }
     .list2 .date{
@@ -244,9 +245,10 @@
       margin-left: 0px;
       background-color: #ffffff;
       border-radius: 5px;
+      border: 0.1px solid;
       border-color:#1bacf4;
       color: #1bacf4;
-      box-shadow: 2px 2px 2px rgba(27,144,244,0.5);
+      /* box-shadow: 2px 2px 2px rgba(27,144,244,0.5); */
 
     }
     .list3 .final .para .button .button2{
@@ -255,7 +257,7 @@
       border-radius: 5px;
       border-color:#1bacf4;
       color: #ffffff;
-      box-shadow: 2px 2px 2px rgba(27,144,244,0.5);
+      /* box-shadow: 2px 2px 2px rgba(27,144,244,0.5); */
 
     }
     .list3 .final .para h4,.list4 .final .para h4{
@@ -288,17 +290,19 @@
   background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
   border: none;
   border-radius: 5px;
+  
   border-color:#1bacf4;
   color: #ffffff;
-  box-shadow: 2px 2px 2px rgba(27,144,244,0.5);
+  /* box-shadow: 2px 2px 2px rgba(27,144,244,0.5); */
 }
 .list4 .final .button .button2{
   margin-left: 0px;
       background-color: #ffffff;
       border-radius: 5px;
+      border: 0.1px solid;
       border-color:#1bacf4;
       color: #1bacf4;
-      box-shadow: 2px 2px 2px rgba(27,144,244,0.5);
+      /* box-shadow: 2px 2px 2px rgba(27,144,244,0.5); */
 }
 /* ------------------------------------------------------------- */
 .promise{
@@ -317,6 +321,7 @@
   font-weight: bolder;
   text-align: left;
   margin: 10px 0px;
+  margin-top: 40px;
 
 }
 .promise .parts{
@@ -393,6 +398,7 @@ font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
+  margin-top:20px ;
 }
 .customers .custom .customer .descr .straight img{
   max-width: 6vw;
