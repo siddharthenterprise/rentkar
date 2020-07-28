@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.eebc6d94.chunk.css",
-    "main.js": "/rentkar/static/js/main.7e34e9ab.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.7e34e9ab.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.32d5cd5d.chunk.css",
+    "main.js": "/rentkar/static/js/main.a419cc84.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.a419cc84.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.bc116243.chunk.js": "/rentkar/static/js/2.bc116243.chunk.js",
-    "static/js/2.bc116243.chunk.js.map": "/rentkar/static/js/2.bc116243.chunk.js.map",
+    "static/js/2.6ff4330c.chunk.js": "/rentkar/static/js/2.6ff4330c.chunk.js",
+    "static/js/2.6ff4330c.chunk.js.map": "/rentkar/static/js/2.6ff4330c.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.8aa32975b89773f2e1ae32a43538d298.js": "/rentkar/precache-manifest.8aa32975b89773f2e1ae32a43538d298.js",
+    "precache-manifest.c9572bf7c84d545321c3346382b7f6e3.js": "/rentkar/precache-manifest.c9572bf7c84d545321c3346382b7f6e3.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.eebc6d94.chunk.css.map": "/rentkar/static/css/main.eebc6d94.chunk.css.map",
-    "static/js/2.bc116243.chunk.js.LICENSE.txt": "/rentkar/static/js/2.bc116243.chunk.js.LICENSE.txt",
+    "static/css/main.32d5cd5d.chunk.css.map": "/rentkar/static/css/main.32d5cd5d.chunk.css.map",
+    "static/js/2.6ff4330c.chunk.js.LICENSE.txt": "/rentkar/static/js/2.6ff4330c.chunk.js.LICENSE.txt",
+    "static/media/bag.png": "/rentkar/static/media/bag.75bed337.png",
     "static/media/changes_icon-01.png": "/rentkar/static/media/changes_icon-01.82213741.png",
     "static/media/changes_icon-03.png": "/rentkar/static/media/changes_icon-03.5d492adb.png",
     "static/media/covid sefty web-03.png": "/rentkar/static/media/covid sefty web-03.7f621656.png",
@@ -34,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
-    "static/js/2.bc116243.chunk.js",
-    "static/css/main.eebc6d94.chunk.css",
-    "static/js/main.7e34e9ab.chunk.js"
+    "static/js/2.6ff4330c.chunk.js",
+    "static/css/main.32d5cd5d.chunk.css",
+    "static/js/main.a419cc84.chunk.js"
   ]
 }
