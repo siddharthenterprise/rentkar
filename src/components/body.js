@@ -144,7 +144,7 @@ export class Body extends Component {
 
                     </div>
                 </div>
-                <div className='list4'>
+                {/* <div className='list4'>
                     <div className='final'>
 
 
@@ -162,7 +162,7 @@ export class Body extends Component {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
 
                 <div className='promise'>
                     <div>
