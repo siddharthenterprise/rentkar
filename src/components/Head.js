@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import Popup from "reactjs-popup";
+
+import Login from './Login';
+
 import './head.css'
 // import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap'
 import logo from '../images/logo.png'
@@ -8,7 +12,12 @@ import bag from '../images/bag.png';
 
 
 export class Head extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { addModalshow: false };
+    }
     render() {
+        let addModalclose = () => { this.setState({ addModalshow: false }) };
         return (
             <div class="container">
                 <div className='main'>
@@ -29,7 +38,10 @@ export class Head extends Component {
                         <button><img src={bag}></img>Bag</button>
                     </div>
                     <div className='but' id='sign'>
-                        <button>Login/Sign Up</button>
+                        <button onClick={() => this.setState({ addModalshow: true })}>Login/Sign Up</button>
+                        <Login
+                            show={this.state.addModalshow}
+                            onHide={addModalclose} />
                     </div>
 
                 </div>
