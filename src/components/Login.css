@@ -55,14 +55,14 @@
 .loginbut{
     font-family: 'Montserrat', sans-serif;
 
-    min-width: 18.33vw;
-    height: 45px;
+    min-width: 215px;
+    height: 36px;
     background: #0B90D3;
     border: none;
     border-radius: 10px;
     font-size: 18px;
     color: white;
-    margin: 6px 16%;
+    margin: 10px auto;
     font-weight: 700;
 }
 .signuptxt{
@@ -97,4 +97,12 @@ input:focus,button:focus{
 #signup{
     color: #0A577E;
     margin: 0px;
+    
+}
+.login #signup,.login p{
+    margin-bottom: 3px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 3px;
 }

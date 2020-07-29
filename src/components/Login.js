@@ -33,7 +33,7 @@ export class Login extends Component {
     }
     render() {
         const logoimage = {
-            height: '125px',
+            height: '100px',
             width: 'auto',
             margin: 'auto'
         }
@@ -65,9 +65,9 @@ export class Login extends Component {
                         />
                         <i class="fas fa-eye" onClick={this.toggleShow}></i>
                     </div>
-                    <div>
-                        <button className="loginbut">Log in</button>
-                    </div>
+
+                    <button className="loginbut">Log in</button>
+
                     <div className="signuptxt">
                         <p>Don’t have an  account?  <span id='signup'>Sign Up</span></p>
                     </div>
