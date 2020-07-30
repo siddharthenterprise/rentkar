@@ -51,6 +51,8 @@ export class Body extends Component {
                     <div className='covid_text'>
                         <h4>Safety precaution during COVID-19</h4>
                         <p>We are taking additional steps and precautionary measures to protect our community from COVID-19</p>
+                        <button id='button_knowmore'>Know more</button>
+
                     </div>
                     <div className="card">
                         <div className="card1">
@@ -91,22 +93,7 @@ export class Body extends Component {
                                 </Card.Content>
                             </Card>
                         </div>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={gaming} wrapped ui={false} />
-                                <Card.Content className='cathead'>
-                                    <Card.Header >CAMERAS</Card.Header>
-                                </Card.Content>
-                            </Card>
-                        </div>
-                        <div className='catcard'>
-                            <Card className='ccard'>
-                                <Image src={musical} wrapped ui={false} />
-                                <Card.Content className='cathead'>
-                                    <Card.Header >LAPTOP</Card.Header>
-                                </Card.Content>
-                            </Card>
-                        </div>
+
 
                     </div>
                 </div>
@@ -131,11 +118,13 @@ export class Body extends Component {
                             <div>
                                 <h1>LIST YOUR ITEM</h1>
                             </div>
-                            <h4>We help you share</h4>
-                            <p>Join our community of lenders sharing their products all around the city.We help you with delivery,pick up and total security of your peoducts</p>
-                            <div className='button'>
-                                <Button className='button1'>Learn more</Button>
-                                <Button className='button2'>List an item</Button>
+                            <div>
+                                <h4>We help you share</h4>
+                                <p>Join our community of lenders sharing their products all around the city.We help you with delivery,pick up and total security of your peoducts</p>
+                                <div className='button'>
+                                    <Button className='button1'>Learn more</Button>
+                                    <Button className='button2'>List an item</Button>
+                                </div>
                             </div>
                         </div>
                         <div>

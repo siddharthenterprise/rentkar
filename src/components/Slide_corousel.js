@@ -40,7 +40,7 @@ function Slide_corousel() {
                     )
                 })}
             </div>
-            <div className='slide_button' style={{ position: `absolute`, marginLeft: `70vw`, PaddingBottom: `20vh` }}>
+            <div className='slide_button' style={{ position: `absolute`, marginLeft: `60vw`, PaddingBottom: `20vh` }}>
                 <a style={left_but} onClick={goleft} ><i class="fas fa-chevron-left"></i></a>
                 <a style={left_but} onClick={goright} ><i class="fas fa-chevron-right"></i></a>
 

@@ -38,11 +38,14 @@ background-color: black; /* Green */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1vw;
+  font-size: 12px;
   border: 0.1px solid #00CEFF;
   border-radius: 10px;
 
 
+}
+.bar{
+    display: none;
 }
 .but button:hover{
      border-color: #1383bb;
@@ -105,4 +108,36 @@ background-color: black; /* Green */
     background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
     border-color: none;
     padding: 0.3vw;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+    .searc,#bag,#sign{
+        display: none;
+    }
+    #navmap{
+        float: left;
+    }
+    .bar{
+        display: inline;
+    order: 3;
+    float: right;
+    font-size: 30px;
+    /* margin: auto; */
+    margin: 0px auto;
+    margin-right: 0px;
+    }
+    .image{
+        order: 2;
+        margin: auto;
+        max-width: 25vw
+    }
+    .container .main .image img {
+        max-width: 25vw;
+        height: auto;
+        margin: auto;
+    }
+    
 }

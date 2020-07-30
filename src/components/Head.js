@@ -24,7 +24,7 @@ export class Head extends Component {
                     <div className='image'>
                         <img src={logo}></img>
                     </div>
-                    <div className='but'>
+                    <div className='but' id="navmap">
                         <button><img src={map}></img> Mumbai</button>
                     </div>
                     <div className='searc'>
@@ -34,7 +34,7 @@ export class Head extends Component {
 
 
                     </div>
-                    <div className='but'>
+                    <div className='but' id="bag">
                         <button><img src={bag}></img>Bag</button>
                     </div>
                     <div className='but' id='sign'>
@@ -42,6 +42,9 @@ export class Head extends Component {
                         <Login
                             show={this.state.addModalshow}
                             onHide={addModalclose} />
+                    </div>
+                    <div className="bar">
+                        <i class="fas fa-bars"></i>
                     </div>
 
                 </div>
