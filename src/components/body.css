@@ -477,7 +477,7 @@ font-family: 'Roboto', sans-serif;
   #button_knowmore{
     display: inline;
     float: left;
-    border: 0.1px solid black;
+    border: 0.5px solid black;
     background-color: white;
     border-radius: 5px;
     padding: 2px;
@@ -570,6 +570,9 @@ font-family: 'Roboto', sans-serif;
 /* ------------------------------------------ */
 .list3 .final .para .button{
   font-size: 8px;
+}
+.list3 .final .para .button .button1{
+  border:0.5px solid #1bacf4;
 }
 /* -------------------------------- */
 .promise{
