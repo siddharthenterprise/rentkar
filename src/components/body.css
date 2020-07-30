@@ -460,7 +460,7 @@ font-family: 'Roboto', sans-serif;
 
 @media screen and (max-width: 992px){
   .covid{
-    min-height: 21vh;
+    min-height: 18vh;
     padding: 0px 10px;
   }
   .covid .card{
@@ -496,7 +496,7 @@ font-family: 'Roboto', sans-serif;
   }
   .list .category .catcard .ccard img,.list2 .category .catcard .ccard img{
     order: 1;
-    width: 100px;
+    width: 100%;
     height: auto;
     border-top-left-radius:10px;
     border-top-right-radius: 10px;
@@ -578,6 +578,9 @@ font-family: 'Roboto', sans-serif;
 
 
 /* =========================== */
+.customers{
+  overflow: hidden;
+}
 .customers .custom .customer .descr{
   font-size: 10px;
   min-height: 32vh;
