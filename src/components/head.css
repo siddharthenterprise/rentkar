@@ -20,7 +20,7 @@
     text-align: center;
 }
 .main div{
-    padding: 0 12px;
+    padding: 0 11px;
 }
 
 .container .main .image img{
@@ -134,10 +134,18 @@ background-color: black; /* Green */
         margin: auto;
         max-width: 25vw
     }
+    .container .main{
+        margin: 0px 0px;
+    }
     .container .main .image img {
         max-width: 25vw;
         height: auto;
         margin: auto;
+    }
+    .but button {
+        border-radius: 5px;
+        height: auto;
+        padding: 0px 5px;
     }
     
 }

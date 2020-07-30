@@ -112,6 +112,9 @@
     padding-right: 15px;
 }
 @media screen and (max-width: 992px){
+    .slide-container .each-fade img{
+        max-width: 95%;
+    }
     .carousel-control-prev, .carousel-control-next{
         display: none;
     }
