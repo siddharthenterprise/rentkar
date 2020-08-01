@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react'
 import { Card, Icon, Feed, Image, Button } from "semantic-ui-react";
 
 import { Carousel } from 'react-responsive-carousel';
+import { DotsMobileStepper } from './ListItem';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import './body.css';
@@ -29,10 +30,14 @@ import Slide_corousel from './Slide_corousel';
 
 
 export class Body extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { addModalshow: false };
+    }
 
     render() {
         // 
-
+        let addModalclose = () => { this.setState({ addModalshow: false }) };
 
         // const goLeft = () => {
         //     setX(x + 100);
@@ -123,7 +128,10 @@ export class Body extends Component {
                                 <p>Join our community of lenders sharing their products all around the city.We help you with delivery,pick up and total security of your peoducts</p>
                                 <div className='button'>
                                     <Button className='button1'>Learn more</Button>
-                                    <Button className='button2'>List an item</Button>
+                                    <Button className='button2' onClick={() => this.setState({ addModalshow: true })}>List an item</Button>
+                                    <DotsMobileStepper
+                                        show={this.state.addModalshow}
+                                        onHide={addModalclose} />
                                 </div>
                             </div>
                         </div>
