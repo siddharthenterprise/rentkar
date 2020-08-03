@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.c871aaf1.chunk.css",
-    "main.js": "/rentkar/static/js/main.480ed461.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.480ed461.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.5ec5b72d.chunk.css",
+    "main.js": "/rentkar/static/js/main.55480b39.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.55480b39.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.3bff6249.chunk.js": "/rentkar/static/js/2.3bff6249.chunk.js",
-    "static/js/2.3bff6249.chunk.js.map": "/rentkar/static/js/2.3bff6249.chunk.js.map",
+    "static/js/2.08396818.chunk.js": "/rentkar/static/js/2.08396818.chunk.js",
+    "static/js/2.08396818.chunk.js.map": "/rentkar/static/js/2.08396818.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.1d19097bc50cac2a3e20617daeadd6dd.js": "/rentkar/precache-manifest.1d19097bc50cac2a3e20617daeadd6dd.js",
+    "precache-manifest.4e616faf98e2587afce06ce309e34ab2.js": "/rentkar/precache-manifest.4e616faf98e2587afce06ce309e34ab2.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.c871aaf1.chunk.css.map": "/rentkar/static/css/main.c871aaf1.chunk.css.map",
-    "static/js/2.3bff6249.chunk.js.LICENSE.txt": "/rentkar/static/js/2.3bff6249.chunk.js.LICENSE.txt",
+    "static/css/main.5ec5b72d.chunk.css.map": "/rentkar/static/css/main.5ec5b72d.chunk.css.map",
+    "static/js/2.08396818.chunk.js.LICENSE.txt": "/rentkar/static/js/2.08396818.chunk.js.LICENSE.txt",
     "static/media/bag.png": "/rentkar/static/media/bag.75bed337.png",
     "static/media/changes_icon-01.png": "/rentkar/static/media/changes_icon-01.82213741.png",
     "static/media/changes_icon-03.png": "/rentkar/static/media/changes_icon-03.5d492adb.png",
@@ -23,7 +23,7 @@
     "static/media/cust1.png": "/rentkar/static/media/cust1.0dea09a4.png",
     "static/media/cust2.png": "/rentkar/static/media/cust2.4337d063.png",
     "static/media/gaming.jpg": "/rentkar/static/media/gaming.4fddd023.jpg",
-    "static/media/guitar.png": "/rentkar/static/media/guitar.c56564ed.png",
+    "static/media/Item.css": "/rentkar/static/media/guitar.c56564ed.png",
     "static/media/logo.png": "/rentkar/static/media/logo.7d3d55f9.png",
     "static/media/logo_trans.png": "/rentkar/static/media/logo_trans.a636beae.png",
     "static/media/map.png": "/rentkar/static/media/map.e82877ea.png",
@@ -37,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
-    "static/js/2.3bff6249.chunk.js",
-    "static/css/main.c871aaf1.chunk.css",
-    "static/js/main.480ed461.chunk.js"
+    "static/js/2.08396818.chunk.js",
+    "static/css/main.5ec5b72d.chunk.css",
+    "static/js/main.55480b39.chunk.js"
   ]
 }
