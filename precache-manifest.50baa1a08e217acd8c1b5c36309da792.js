@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26c15d7de974ccad0a415502adbeb9e4",
+    "revision": "90938820b9ad5f2bfaadd042cd3c572a",
     "url": "/rentkar/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "becd9424882daf587578",
-    "url": "/rentkar/static/css/main.5ec5b72d.chunk.css"
+    "revision": "af96c265e7c5b31b4c84",
+    "url": "/rentkar/static/css/main.76dddf68.chunk.css"
   },
   {
     "revision": "1ed7be9a46a9b79ec773",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/js/2.08396818.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "becd9424882daf587578",
-    "url": "/rentkar/static/js/main.55480b39.chunk.js"
+    "revision": "af96c265e7c5b31b4c84",
+    "url": "/rentkar/static/js/main.c9c3c0f7.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
