@@ -24,6 +24,7 @@ export class DotsMobileStepper extends Component {
             occupation: '',
             city: '',
             bio: '',
+            selected: []
             // addModalshow: false
         };
 
@@ -79,7 +80,7 @@ export class DotsMobileStepper extends Component {
                             centered>
 
                             <Personaldetail nextStep={this.nextStep}
-
+                                selected={this.state.selected}
                                 show={this.show}
                                 handleChange={this.handleChange}
                                 values={values} />
@@ -99,6 +100,7 @@ export class DotsMobileStepper extends Component {
 
                         <Items nextStep={this.nextStep}
                             prevStep={this.prevStep}
+                            selected={this.state.selected}
                             handleChange={this.handleChange}
                             values={values} />
 
@@ -113,6 +115,7 @@ export class DotsMobileStepper extends Component {
                         centered
                     >
                         <Confirmation prevStep={this.prevStep}
+                            selected={this.state.selected}
                             show={this.show}
                             onHide={addModalclose}
                         />

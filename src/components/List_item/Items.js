@@ -4,11 +4,16 @@ import { guitar } from './guitar.png';
 import './Item.css';
 
 export class Item extends Component {
+    constructor(props) {
+        super(props);
+
+    }
 
     image = {
         height: '120px',
         width: '100px',
         borderRadius: '5px',
+        padding: '45% 40%'
         // backgroundImage: 'url(' + guitar + ')'
 
     }
@@ -22,23 +27,23 @@ export class Item extends Component {
     //     backgroundImage: 'url(' + {guitar} + ')'
     // }
     items = [
-        <div className='abc' style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>,
-        <div style={this.image} ></div>
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>,
+        <div style={this.image} ><i class="fas fa-check-circle"></i></div>
     ]
 
 
@@ -53,15 +58,19 @@ export class Item extends Component {
         this.props.prevStep();
     };
     changeStyle = (e, data) => {
-        if (!this.selected.includes(data)) {
-            e.target.style.boxShadow = `inset 0 0 0 1000px rgba(143,227,205,0.9)`;
-            this.selected.push(data)
+        if (e.target.querySelector('i') != null) {
+            if (!this.selected.includes(data)) {
+                e.target.style.boxShadow = `inset 0 0 0 1000px rgba(143,227,205,0.9)`;
+                this.selected.push(data);
+                e.target.querySelector('i').style.display = `block`;
+            }
+            else {
+                e.target.style.boxShadow = `inset 0 0 0 1000px rgba(143,227,205,0)`;
+                this.selected.pop(data);
+                e.target.querySelector('i').style.display = `none`;
+            }
         }
-        else {
-            e.target.style.boxShadow = `inset 0 0 0 1000px rgba(143,227,205,0)`;
-            this.selected.pop(data);
-        }
-        console.log(this.selected);
+        console.log(e);
         // alert(e.target.style.borderRadius = `2px`);
     }
     render() {
