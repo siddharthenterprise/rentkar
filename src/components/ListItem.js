@@ -50,6 +50,23 @@ export class DotsMobileStepper extends Component {
         });
     };
 
+    one = () => {
+        this.setState({
+            step: 1
+        })
+    }
+
+    two = () => {
+        this.setState({
+            step: 2
+        })
+    }
+    three = () => {
+        this.setState({
+            step: 3
+        })
+    }
+
     show = () => {
         // const { addModalshow } = this.state;
         // alert('sad');
@@ -72,22 +89,27 @@ export class DotsMobileStepper extends Component {
         switch (step) {
             case 1:
                 return (
-                    <div className='listitem'>
-                        <Modal
-                            {...this.props}
-                            size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered>
 
-                            <Personaldetail nextStep={this.nextStep}
-                                selected={this.state.selected}
-                                show={this.show}
-                                handleChange={this.handleChange}
-                                values={values} />
+                    <Modal
+                        {...this.props}
+                        size="lg"
+                        aria-labelledby="contained-modal-title-vcenter"
+                        centered>
+                        <div className='dots'>
+                            <i style={{ color: `#0B90D3` }} class="fas fa-circle"></i>
+                            <i onClick={this.two} class="fas fa-circle"></i>
+                            <i onClick={this.three} class="fas fa-circle"></i>
+                        </div>
+
+                        <Personaldetail nextStep={this.nextStep}
+                            selected={this.state.selected}
+                            show={this.show}
+                            handleChange={this.handleChange}
+                            values={values} />
 
 
-                        </Modal>
-                    </div>
+                    </Modal>
+
                 );
             case 2:
                 return (
@@ -97,7 +119,11 @@ export class DotsMobileStepper extends Component {
                         aria-labelledby="contained-modal-title-vcenter"
                         centered>
 
-
+                        <div className='dots'>
+                            <i onClick={this.one} class="fas fa-circle"></i>
+                            <i style={{ color: `#0B90D3` }} onClick={this.two} class="fas fa-circle"></i>
+                            <i onClick={this.three} class="fas fa-circle"></i>
+                        </div>
                         <Items nextStep={this.nextStep}
                             prevStep={this.prevStep}
                             selected={this.state.selected}
@@ -114,6 +140,11 @@ export class DotsMobileStepper extends Component {
                         aria-labelledby="contained-modal-title-vcenter"
                         centered
                     >
+                        <div className='dots'>
+                            <i onClick={this.one} class="fas fa-circle"></i>
+                            <i onClick={this.two} class="fas fa-circle"></i>
+                            <i style={{ color: `#0B90D3` }} class="fas fa-circle"></i>
+                        </div>
                         <Confirmation prevStep={this.prevStep}
                             selected={this.state.selected}
                             show={this.show}
