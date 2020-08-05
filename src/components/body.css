@@ -577,17 +577,18 @@ font-family: 'Roboto', sans-serif;
 }
 /* -------------------------------- */
 .promise{
-  max-width: 95%;
+  max-width: 100%;
     margin: 0px 0px;
     padding: 10px 10px;
 }
 .promise .parts{
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(1,1fr); */
   flex-wrap: wrap;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+  /* margin: auto; */
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .promise .parts .same_card{
   display: flex;
@@ -596,7 +597,7 @@ font-family: 'Roboto', sans-serif;
 
 .promise .parts .same_card .logos {
   max-width: 100px;
-  margin: 9px;
+  margin: 10px;
 }
 .promise h4{
   font-size: 20px;
