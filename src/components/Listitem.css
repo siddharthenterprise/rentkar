@@ -9,6 +9,9 @@
     margin:auto;
     padding: 5px;
 }
+.dots i{
+    font-size: 10px;
+}
 .dots .fa-circle{
     margin: 5px;
 }

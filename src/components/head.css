@@ -135,7 +135,7 @@ background-color: black; /* Green */
     .image{
         order: 2;
         margin: auto;
-        max-width: 25vw
+        max-width: 100px;
     }
     .container .main{
         margin: 0px 0px;

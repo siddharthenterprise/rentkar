@@ -120,13 +120,13 @@
   
   .list .category .catcard .ccard,.list2 .category .catcard .ccard{
      border: none;
-     border-radius: 20px; 
+     border-radius: 10px; 
   }
   .list .category .catcard img{
     height: 25vh;
     width: 15vw;
-    border-top-left-radius:20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius:10px;
+    border-top-right-radius: 10px;
     
     
   }
@@ -213,6 +213,7 @@
       width: 100%;
       height: auto;
       background-color: #ffffff;
+      padding: 20px 0px;
     }
     .list3 .final,.list4 .final{
       max-width: 80%;
@@ -523,7 +524,7 @@ font-family: 'Roboto', sans-serif;
   
   .list2{
     max-width: 95%;
-    padding: 0px;
+    padding:10px 0px;
     margin: 0px;
     min-height: 30vh;
   }
@@ -578,6 +579,7 @@ font-family: 'Roboto', sans-serif;
 .promise{
   max-width: 80%;
     margin: 0px 10px;
+    padding: 10px 10px;
 }
 .promise .parts{
   display: grid;
@@ -593,7 +595,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 .promise .parts .same_card .logos {
-  max-width: 25vw;
+  max-width: 100px;
   margin: 9px;
 }
 .promise h4{
