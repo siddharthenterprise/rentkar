@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52bcacfce95f8db50e39a738024cdba8",
+    "revision": "1cad29f099b6a3a299286661e83bdbfe",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "1ed7be9a46a9b79ec773",
+    "revision": "0733ad8624bac8c5e7b7",
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "b2aaad74d2b9ab4c5d61",
-    "url": "/rentkar/static/css/main.d35a28ef.chunk.css"
+    "revision": "71845e52e9db2bcf677f",
+    "url": "/rentkar/static/css/main.e6d36185.chunk.css"
   },
   {
-    "revision": "1ed7be9a46a9b79ec773",
-    "url": "/rentkar/static/js/2.08396818.chunk.js"
+    "revision": "0733ad8624bac8c5e7b7",
+    "url": "/rentkar/static/js/2.531bb945.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.08396818.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.531bb945.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b2aaad74d2b9ab4c5d61",
-    "url": "/rentkar/static/js/main.bd788b01.chunk.js"
+    "revision": "71845e52e9db2bcf677f",
+    "url": "/rentkar/static/js/main.dd58efe4.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
     "url": "/rentkar/static/js/runtime-main.c01f0d97.js"
+  },
+  {
+    "revision": "46295bac098bd77b26fce9e3ec5583e8",
+    "url": "/rentkar/static/media/about.46295bac.png"
   },
   {
     "revision": "75bed337b5f5c66de263dc297c3b9b5e",
@@ -82,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "574b44e9bd91b07e4ed384233748d8bd",
     "url": "/rentkar/static/media/musical.574b44e9.jpg"
+  },
+  {
+    "revision": "44668d2b0901e227a3fa413ef55d0876",
+    "url": "/rentkar/static/media/search.44668d2b.png"
   },
   {
     "revision": "a4f0995223c763ed05e6fc09a99bf5e7",
