@@ -577,8 +577,8 @@ font-family: 'Roboto', sans-serif;
 }
 /* -------------------------------- */
 .promise{
-  max-width: 80%;
-    margin: 0px 10px;
+  max-width: 95%;
+    margin: 0px 0px;
     padding: 10px 10px;
 }
 .promise .parts{
