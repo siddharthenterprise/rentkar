@@ -597,6 +597,7 @@ font-family: 'Roboto', sans-serif;
 
 .promise .parts .same_card .logos {
   max-width: 100px;
+  max-height: 100px;
   margin: 10px;
 }
 .promise h4{
