@@ -1,11 +1,22 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css';
+
+
 .feet{
     max-width: 100%;
     background-color: black;
+    font-family: 'Montserrat';
     /* max-height: 60vh; */
 }
+
+.feet .foot p{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
 .feet .foot{
     max-width: 80%;
-
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -13,54 +24,63 @@
     text-align: center;
     
 }
-.feet .foot .line1{
+.feet .foot .toplines .line1{
     display: flex;
     flex-direction: row;
     margin: 20px 0px;
 }
-.feet .foot .line1 img{
+.feet .foot .toplines .line1 img{
     width: 10vw;
     height: auto;
     float: left;
     margin-top: 20px;
 }
-.feet .foot .line1 .navv{
+.feet .foot .toplines .line1 .navv{
     display: flex;
     flex-direction: row;
     margin: 20px 30px;
     
 }
-.feet .foot .line1 .navv a{
-    font-size: 30;
-    
-    font-weight: bold;
-    color: white;
-    margin: 20px 30px;
 
+.feet .foot .toplines .line1 .menu_collaps{
+    display: none;
 }
+
+
+.feet .foot .toplines .line1 .navv a{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin: 20px 25px;
+}
+
+.feet .foot .toplines .line1 .navv h4{
+    font-weight: lighter;
+    color: gray;
+    margin: 0px 30px;
+}
+
 /* ---------------------------------------------------------- */
-.feet .foot .line2 p{
+.feet .foot .toplines .line2 p{
     margin: auto;
     text-align: left;
-    /* font-family: 'Roboto',sans-serif; */
+    font-size: medium;
     align-items: center;
     color: white;
-
-
 }
 /* ---------------------------------------------------------- */
 .feet .foot .line3{
     display: grid;
     grid-template-columns: 3fr 1fr;
-   
+    grid-template-rows: 1fr 1fr;
 }
+
 .feet .foot .line3 .physical h4{
     font-size: 24px;
-    margin-left: 0px;
     font-weight: bold;
     color: white;
     float: left;
-
 }
 .feet .foot .line3 .physical,.feet .foot .line3 .social{
     display: flex;
@@ -70,30 +90,138 @@
     color: white;
 }
 
-/* .feet .foot .line3 .physical{
-    margin: auto;
-    float: left;
-} */
-.feet .foot .line3 .physical .phone,.feet .foot .line3 .social .media a{
+.feet .foot .line3 .physical .contact,.feet .foot .line3 .social .media{
     display: flex;
     flex-direction: row;
-    
-    margin: 20px 20px;
 }
-.feet .foot .line3 .physical .phone h3{
-    font-size: 12px;
-    /* font-weight: bold; */
+
+.feet .foot .line3 .physical .contact,.feet .foot .line3 .social .media a{
+    margin: 10px 20px 10px 20px;
     color: white;
-    margin: 0px 20px;
+}
+
+.feet .foot .line3 .physical .contact div{
+    display: flex;
+    flex-direction: row;
+}
+
+.feet .foot .line3 .physical .contact h3{
+    font-size: 15px;
+    color: white;
+    margin: 0px 50px 0px 10px; 
     text-align: left;
 
 }
 
 @media screen and (max-width: 992px){
-    .feet{
+    .feet .foot .toplines{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .feet .foot .toplines .line2{
+        font-size: 10px;
+        margin: 20px 0px
+    }
+    .feet .foot .toplines .line1{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+
+    .feet .foot .toplines .line1 img{
         display: none;
     }
+
+    .feet .foot .toplines .line1 .navv{
+        display: none;
+    }
+
+    .feet .foot .toplines .line1 .menu_collaps{
+        display: inline;
+
+    }
+
+    .feet .foot .toplines .line1 .menu_collaps .collapsible {
+        background-color: #000000;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        font-family: 'Montserrat';
+        outline: none;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+    
+    .feet .foot .toplines .line1 .menu_collaps .active, .collapsible:hover {
+        background-color: #000;
+    }
+    
+    .feet .foot .toplines .line1 .menu_collaps .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+    
+    .feet .foot .toplines .line1 .menu_collaps .active:after {
+    content: "\2212";
+    }
+    
+    .feet .foot .toplines .line1 .menu_collaps .content {
+    padding: 0 18px;
+    max-height: 0;
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.2s ease-out;
+    background-color: #000;
+    }
+
+    .feet .foot .toplines .line1 .menu_collaps .content a{
+        font-size: 10;
+        font-weight: lighter;
+        text-decoration: none;
+        color: white;
+        margin: 10px 0px;
+    }
+
+    .feet .foot .toplines .line1 .menu_collaps .content hr{
+        color: gray;
+        min-width: 100%;
+        opacity: 30%;
+    }
+
+    .feet .foot .line3{
+        display: grid;
+        grid-template-columns: none;
+        margin-bottom: 50px;
+    }
+
+    .feet .foot .line3 .physical{
+        display: none;
+    }
+
+    .feet .foot .line3 .social{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        font-size: 20px;
+        color: white;
+        justify-content: space-around;
+    }
+    .feet .foot .line3 .social h4{
+        display: none;
+    }
+    
+
+    .feet .foot p{
+        margin: 6px 6px 6px 6px;
+        font-size: 8px;
+    }
 }
-
-
-
