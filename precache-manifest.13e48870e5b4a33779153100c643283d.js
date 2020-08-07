@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22b98032f6c03b42fb7563d8b8672b21",
+    "revision": "87c6bf10783ae87f422f637abe95c812",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "2bba94853e8479308c6f",
+    "revision": "93024b289a6e30e894cd",
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "0e4bc1911f0401ef1f52",
-    "url": "/rentkar/static/css/main.84170211.chunk.css"
+    "revision": "070091beb53e8fd0ef6e",
+    "url": "/rentkar/static/css/main.52a0c967.chunk.css"
   },
   {
-    "revision": "2bba94853e8479308c6f",
-    "url": "/rentkar/static/js/2.60744f9e.chunk.js"
+    "revision": "93024b289a6e30e894cd",
+    "url": "/rentkar/static/js/2.668bff46.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.60744f9e.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.668bff46.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e4bc1911f0401ef1f52",
-    "url": "/rentkar/static/js/main.bafbceb8.chunk.js"
+    "revision": "070091beb53e8fd0ef6e",
+    "url": "/rentkar/static/js/main.6442bfcb.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -84,8 +84,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/map.e82877ea.png"
   },
   {
+    "revision": "c7d30ff74848d8f904545d53463d51d1",
+    "url": "/rentkar/static/media/mumbai.c7d30ff7.png"
+  },
+  {
     "revision": "574b44e9bd91b07e4ed384233748d8bd",
     "url": "/rentkar/static/media/musical.574b44e9.jpg"
+  },
+  {
+    "revision": "4205d4edc7064537201eba472e7807a9",
+    "url": "/rentkar/static/media/pune.4205d4ed.png"
   },
   {
     "revision": "44668d2b0901e227a3fa413ef55d0876",
