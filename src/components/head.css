@@ -124,7 +124,7 @@ background-color: black; /* Green */
     flex-direction: row;
 }
 .container .main .but .popup_of_place .popup_of_place1:hover{
-    
+    /* background-color: #19eeb5; */
 }
 .container .main .but .popup_of_place .popup_of_place1 .header{
    margin: 37px 0px;

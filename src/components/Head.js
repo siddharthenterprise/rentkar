@@ -10,6 +10,8 @@ import map from '../images/map.png';
 import bag from '../images/bag.png';
 import mumbai from '../images/mumbai.png';
 import pune from '../images/pune.png';
+import mumbaig from '../images/mumbaig.png';
+import puneg from '../images/puneg.png';
 
 
 
@@ -21,7 +23,9 @@ export class Head extends Component {
             addModalshow: false,
             mumbai: true,
             pune: false,
-            drop: true
+            drop: true,
+            mumbai_image: mumbai,
+            pune_image: puneg
         };
 
     }
@@ -31,6 +35,9 @@ export class Head extends Component {
     onChangeMumbai = (e) => {
         this.setState({ mumbai: true });
         this.setState({ pune: false })
+        this.setState({ pune_image: puneg })
+        this.setState({ mumbai_image: mumbai })
+
         console.log(this.state.mumbai);
     }
     onChangePune = (e) => {
@@ -38,6 +45,9 @@ export class Head extends Component {
         // this.setState({ m: this.state.mumbai, m: false });
         this.setState({ pune: true });
         this.setState({ mumbai: false });
+        this.setState({ mumbai_image: mumbaig });
+        this.setState({ pune_image: pune });
+
 
         console.log(this.state);
 
@@ -54,12 +64,12 @@ export class Head extends Component {
                         <Popup className="pop" trigger={<button onFocus={this.onfocus}><img src={map}></img> {this.state.mumbai ? 'Mumbai' : 'Pune'} </button>} flowing hoverable>
                             <Grid className="popup_of_place" stretched divided rows={2}>
                                 <Grid.Row className="popup_of_place1" onClick={this.onChangeMumbai} textAlign="left">
-                                    <img className="imgage" src={mumbai} alt="hey" />
+                                    <img className="imgage" src={this.state.mumbai_image} alt="hey" />
                                     <div className='header'>Mumbai</div>
                                     {this.state.mumbai === true ? <i class="fas fa-check" /> : null}
                                 </Grid.Row>
                                 <Grid.Row className="popup_of_place1" onClick={this.onChangePune} textAlign="left">
-                                    <img className="imgage" src={pune} alt="hey" />
+                                    <img className="imgage" src={this.state.pune_image} alt="hey" />
                                     <div className='header'>Pune</div>
 
                                     {this.state.pune === true ? <i class="fas fa-check" /> : null}
