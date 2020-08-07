@@ -51,7 +51,7 @@ export class Head extends Component {
                         <img src={logo}></img>
                     </div>
                     <div className='but' id="navmap">
-                        <Popup className="pop" trigger={<button onFocus={this.onfocus}><img src={map}></img> Mumbai </button>} flowing hoverable>
+                        <Popup className="pop" trigger={<button onFocus={this.onfocus}><img src={map}></img> {this.state.mumbai ? 'Mumbai' : 'Pune'} </button>} flowing hoverable>
                             <Grid className="popup_of_place" stretched divided rows={2}>
                                 <Grid.Row className="popup_of_place1" onClick={this.onChangeMumbai} textAlign="left">
                                     <img className="imgage" src={mumbai} alt="hey" />
