@@ -109,6 +109,40 @@ background-color: black; /* Green */
     border-color: none;
     padding: 0.3vw;
 }
+.popup-content.pop-content{
+    min-width: 17vw;
+
+}
+
+.container .main .but .popup_of_place{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.container .main .but .popup_of_place .popup_of_place1{
+    display: flex;
+    flex-direction: row;
+}
+.container .main .but .popup_of_place .popup_of_place1:hover{
+    
+}
+.container .main .but .popup_of_place .popup_of_place1 .header{
+   margin: 37px 0px;
+   font-weight: bold;
+}
+.but .popup_of_place1 .fas{
+    padding: 40px 0px;
+    color: #28A5E5;
+}
+.imgage{
+    width: 100px;
+    height: 100px;
+}
+ .popup-arrow{
+   box-shadow: none !important;
+   top: 2% !important;
+}
+
 
 @media screen and (max-width: 992px) {
     .container {
