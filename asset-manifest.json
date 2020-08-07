@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.52a0c967.chunk.css",
-    "main.js": "/rentkar/static/js/main.4d297384.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.4d297384.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.8adf3c99.chunk.css",
+    "main.js": "/rentkar/static/js/main.32e972ef.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.32e972ef.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.668bff46.chunk.js": "/rentkar/static/js/2.668bff46.chunk.js",
-    "static/js/2.668bff46.chunk.js.map": "/rentkar/static/js/2.668bff46.chunk.js.map",
+    "static/js/2.58334acd.chunk.js": "/rentkar/static/js/2.58334acd.chunk.js",
+    "static/js/2.58334acd.chunk.js.map": "/rentkar/static/js/2.58334acd.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.c61430deb9490f8c8ad48c3a4e28b6be.js": "/rentkar/precache-manifest.c61430deb9490f8c8ad48c3a4e28b6be.js",
+    "precache-manifest.57f411ad3205dc3e53d14d1f86ed5d8d.js": "/rentkar/precache-manifest.57f411ad3205dc3e53d14d1f86ed5d8d.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.52a0c967.chunk.css.map": "/rentkar/static/css/main.52a0c967.chunk.css.map",
-    "static/js/2.668bff46.chunk.js.LICENSE.txt": "/rentkar/static/js/2.668bff46.chunk.js.LICENSE.txt",
+    "static/css/main.8adf3c99.chunk.css.map": "/rentkar/static/css/main.8adf3c99.chunk.css.map",
+    "static/js/2.58334acd.chunk.js.LICENSE.txt": "/rentkar/static/js/2.58334acd.chunk.js.LICENSE.txt",
     "static/media/about.png": "/rentkar/static/media/about.46295bac.png",
     "static/media/bag.png": "/rentkar/static/media/bag.75bed337.png",
     "static/media/changes_icon-01.png": "/rentkar/static/media/changes_icon-01.82213741.png",
@@ -29,8 +29,10 @@
     "static/media/logo_trans.png": "/rentkar/static/media/logo_trans.a636beae.png",
     "static/media/map.png": "/rentkar/static/media/map.e82877ea.png",
     "static/media/mumbai.png": "/rentkar/static/media/mumbai.c7d30ff7.png",
+    "static/media/mumbaig.png": "/rentkar/static/media/mumbaig.e058c5df.png",
     "static/media/musical.jpg": "/rentkar/static/media/musical.574b44e9.jpg",
     "static/media/pune.png": "/rentkar/static/media/pune.4205d4ed.png",
+    "static/media/puneg.png": "/rentkar/static/media/puneg.685e3b28.png",
     "static/media/search.png": "/rentkar/static/media/search.44668d2b.png",
     "static/media/share.png": "/rentkar/static/media/share.a4f09952.png",
     "static/media/slide1.jpg": "/rentkar/static/media/slide1.44b2f1a1.jpg",
@@ -41,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
-    "static/js/2.668bff46.chunk.js",
-    "static/css/main.52a0c967.chunk.css",
-    "static/js/main.4d297384.chunk.js"
+    "static/js/2.58334acd.chunk.js",
+    "static/css/main.8adf3c99.chunk.css",
+    "static/js/main.32e972ef.chunk.js"
   ]
 }
