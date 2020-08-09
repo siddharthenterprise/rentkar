@@ -4,7 +4,7 @@
   
   padding: 20px 0px;
 }
-.intro{
+.father .intro{
   max-width: 80%;
   align-self: center;
   padding: 30px 30px 0px 30px;
@@ -16,19 +16,19 @@
   align-items: flex-start;
 }
 
-.headers{
+.father .headers{
   font-size: 22px;
   font-weight: bolder;
   text-align: left;
   margin: 30px 0px 40px 0px
 }
 
-.intro .introPara{
+.father .intro .introPara{
   display: flex;
   flex-direction: row;
 }
 
-.intro .introPara p{
+.father .intro .introPara p{
   color: gray;
   font-size: 12px;
   font-weight: bolder;
@@ -36,7 +36,7 @@
   max-width: 100%;
 }
 
-.intro .introPara .listingButton{
+.father .intro .introPara .listingButton{
   margin: 80px 0px 0px 0px;
   display: block;
   background-image: linear-gradient(to bottom right,#1bacf4,#19eeb5);
@@ -48,12 +48,12 @@
   padding: 15px 40px;
 }
 
-.intro .introPara img{
+.father .intro .introPara img{
   width: 400px;
 
   height: auto;
 }
-.videos{
+.father .videos{
   max-width: 80%;
   align-self: center;
   background-color: white;
@@ -147,7 +147,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-.covid {
+.father .covid {
     max-width: 80%;
     margin: auto;
     display: flex;
@@ -162,18 +162,18 @@ align-items: center;
     max-height: 125px;
     font-family: 'Montserrat', sans-serif;
   }
- .covid h4{
+  .father .covid h4{
    font-size: 20px;
    font-weight: bold;
    text-align: left;
    padding-top: 25px;
  } 
- .covid p{
+ .father .covid p{
    font-size: 12px;
    /* font-weight: bold; */
    text-align: left;
  }
- .covid h5 {
+ .father .covid h5 {
   font-size: 12px;
   text-align: left;
   font-weight: bold;
@@ -181,24 +181,24 @@ align-items: center;
   margin-left: 0px;
   margin-bottom: 2px;
 }
- .covid #alag,.covid #alag i{
+.father .covid #alag,.covid #alag i{
    color: #1f4691;
    font-size: 10px;
    margin-right:17px ;
  }
   
-  .covid img
+ .father .covid img
   {
     max-width: 10.7vw;
     height: auto;
   }
-  .covid .card img {
+  .father .covid .card img {
     max-width: 5.7vw;
     height: 80px;
     margin: 0px 0px;
 }
   
-  .covid .card {
+.father .covid .card {
     display: flex;
     flex-direction: row;
     margin: 5px 10px;
@@ -214,8 +214,8 @@ align-items: center;
     
 
   } */
-  .covid .card .card1,
-  .card2 {
+  .father .covid .card .card1,
+  .father .card2 {
     display: flex;
     flex-direction: row;
     background-color: #E4E4E4;
@@ -295,19 +295,19 @@ align-items: center;
 
 /* ---------------------------- */
 @media screen and (max-width: 992px){
-  .covid{
+  .father .covid{
     min-height: 18vh;
     padding: 0px 10px;
     max-width: 95%;
   }
-  .covid .card{
+  .father .covid .card{
     display: none;
   }
-  .covid img{
+  .father  .covid img{
     max-width: 60px;
     margin: 30% 0px;
   }
-  #button_knowmore{
+  .father #button_knowmore{
     display: inline;
     float: left;
     border: 0.5px solid black;
@@ -319,9 +319,9 @@ align-items: center;
     color: #0E6084;
     font-weight: bold;
   }
-  .covid p {
+  .father .covid p {
     font-size: 6px;
     font-weight: 600;}
-  .covid h4 {
+    .father .covid h4 {
       font-size: 18px;
   }}

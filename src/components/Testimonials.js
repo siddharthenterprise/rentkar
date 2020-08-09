@@ -7,9 +7,9 @@ import './testimonials.css'
 export class Testimonials extends React.Component {
     render() {
         return (
-            <div>
+            <div className="Outer">
                 <h2>LENDER'S TESTIMONIALS</h2>
-                <div className='customer'>
+                <div className='customer_know'>
                     <div>
                         <Card className='descr'>
                             <div>
