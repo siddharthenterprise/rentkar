@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/rentkar/static/css/main.4fccb473.chunk.css",
-    "main.js": "/rentkar/static/js/main.9f8612d6.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.9f8612d6.chunk.js.map",
+    "main.js": "/rentkar/static/js/main.daa05452.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.daa05452.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
     "static/js/2.a74d7107.chunk.js": "/rentkar/static/js/2.a74d7107.chunk.js",
     "static/js/2.a74d7107.chunk.js.map": "/rentkar/static/js/2.a74d7107.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.09f08a1aed082a936fefa6670dd3c9ae.js": "/rentkar/precache-manifest.09f08a1aed082a936fefa6670dd3c9ae.js",
+    "precache-manifest.9a611bbb655da2e51467a3460b053f54.js": "/rentkar/precache-manifest.9a611bbb655da2e51467a3460b053f54.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
     "static/css/main.4fccb473.chunk.css.map": "/rentkar/static/css/main.4fccb473.chunk.css.map",
@@ -48,6 +48,6 @@
     "static/css/2.baa86093.chunk.css",
     "static/js/2.a74d7107.chunk.js",
     "static/css/main.4fccb473.chunk.css",
-    "static/js/main.9f8612d6.chunk.js"
+    "static/js/main.daa05452.chunk.js"
   ]
 }
