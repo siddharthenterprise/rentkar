@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Floatnav className='floatnav' />
         <Head />
-        <Route exact path="/" render={props => (
+        <Route exact path="/rentkar" render={props => (
           <React.Fragment>
             <Slideshow />
             <Body />
