@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e7e057dde5a61ed79488c3ce7a7e06d",
+    "revision": "4ff842b171d146f81e2633a68421dd67",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "1f8152de3a4a173a718d",
+    "revision": "215912b53b4cf5a2d91c",
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "e49cd12e807678000515",
-    "url": "/rentkar/static/css/main.8adf3c99.chunk.css"
+    "revision": "7bfeb492ef1fe238b104",
+    "url": "/rentkar/static/css/main.4fccb473.chunk.css"
   },
   {
-    "revision": "1f8152de3a4a173a718d",
-    "url": "/rentkar/static/js/2.58334acd.chunk.js"
+    "revision": "215912b53b4cf5a2d91c",
+    "url": "/rentkar/static/js/2.a74d7107.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.58334acd.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.a74d7107.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e49cd12e807678000515",
-    "url": "/rentkar/static/js/main.32e972ef.chunk.js"
+    "revision": "7bfeb492ef1fe238b104",
+    "url": "/rentkar/static/js/main.9f8612d6.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "46295bac098bd77b26fce9e3ec5583e8",
     "url": "/rentkar/static/media/about.46295bac.png"
+  },
+  {
+    "revision": "37193046f1093798947f35423c0800f1",
+    "url": "/rentkar/static/media/bag+.37193046.png"
   },
   {
     "revision": "75bed337b5f5c66de263dc297c3b9b5e",
@@ -70,6 +74,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c56564eda7fdba5ee2c442225bf5dd6a",
     "url": "/rentkar/static/media/guitar.c56564ed.png"
+  },
+  {
+    "revision": "622a354e13ca19dd03bb68298e2de766",
+    "url": "/rentkar/static/media/lock.622a354e.png"
   },
   {
     "revision": "7d3d55f95d0cf5e4e4c6f3f5376596ea",
@@ -122,6 +130,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e17bb92254323d437aa5ab429df2287c",
     "url": "/rentkar/static/media/slide3.e17bb922.jpg"
+  },
+  {
+    "revision": "855265d615f99dbb0fb0cbbe4f6823d5",
+    "url": "/rentkar/static/media/tick_circle.855265d6.png"
   },
   {
     "revision": "e6fcd0e0fca89bd606ced01eefbcca5a",
