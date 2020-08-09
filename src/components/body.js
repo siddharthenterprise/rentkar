@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react'
 import { Card, Icon, Feed, Image, Button } from "semantic-ui-react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import { Carousel } from 'react-responsive-carousel';
 import { DotsMobileStepper } from './ListItem';
@@ -22,6 +23,8 @@ import icon5 from '../images/changes_icon-05.png';
 import cust1 from '../images/cust1.png';
 import cust2 from '../images/cust2.png';
 import wave from '../images/wave.png';
+
+import knowmore from './Know_more';
 
 
 import Corousel from './corousel';
@@ -127,7 +130,7 @@ export class Body extends Component {
                                 <h4>We help you share</h4>
                                 <p>Join our community of lenders sharing their products all around the city.We help you with delivery,pick up and total security of your peoducts</p>
                                 <div className='button'>
-                                    <Button className='button1'>Learn more</Button>
+                                    <Link to="/knowmore"><Button className='button1' >Learn more</Button></Link>
                                     <Button className='button2' onClick={() => this.setState({ addModalshow: true })}>List an item</Button>
                                     <DotsMobileStepper
                                         show={this.state.addModalshow}
