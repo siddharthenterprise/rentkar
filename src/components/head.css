@@ -110,7 +110,7 @@ background-color: black; /* Green */
     padding: 0.3vw;
 }
 .popup-content.pop-content{
-    min-width: 17vw;
+    min-width: 233px !important;
 
 }
 
@@ -122,9 +122,10 @@ background-color: black; /* Green */
 .container .main .but .popup_of_place .popup_of_place1{
     display: flex;
     flex-direction: row;
+    margin: 7px -7px;
 }
 .container .main .but .popup_of_place .popup_of_place1:hover{
-    /* background-color: #19eeb5; */
+    background-color: #e4e4e4;
 }
 .container .main .but .popup_of_place .popup_of_place1 .header{
    margin: 37px 0px;
