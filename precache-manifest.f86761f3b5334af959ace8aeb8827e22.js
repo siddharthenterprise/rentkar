@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20addc23cb1c32b5650f1a55f2082425",
+    "revision": "afe46b7bfd54957ca4b9f236f4e212be",
     "url": "/rentkar/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "1ea4fc8fe1d33405acb8",
+    "revision": "30ab6f830c3202ac7651",
     "url": "/rentkar/static/css/main.12a83b6d.chunk.css"
   },
   {
@@ -20,12 +20,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/js/2.bf89f9db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ea4fc8fe1d33405acb8",
-    "url": "/rentkar/static/js/main.c26073a0.chunk.js"
+    "revision": "30ab6f830c3202ac7651",
+    "url": "/rentkar/static/js/main.3fe2c3f5.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
     "url": "/rentkar/static/js/runtime-main.c01f0d97.js"
+  },
+  {
+    "revision": "8511cbb55cf0a24e5fefc2b155a01c47",
+    "url": "/rentkar/static/media/Mumbai.8511cbb5.png"
+  },
+  {
+    "revision": "9b9b0741166960a0064c2c5f7052d0c8",
+    "url": "/rentkar/static/media/Mumbaig.9b9b0741.png"
+  },
+  {
+    "revision": "d025b84f4efbbbd27569ee8a7a9748f5",
+    "url": "/rentkar/static/media/PuneC.d025b84f.png"
+  },
+  {
+    "revision": "e82057a01c6e61b7cbc4083fdfd14973",
+    "url": "/rentkar/static/media/PuneCG.e82057a0.png"
   },
   {
     "revision": "46295bac098bd77b26fce9e3ec5583e8",
@@ -92,24 +108,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/map.e82877ea.png"
   },
   {
-    "revision": "c7d30ff74848d8f904545d53463d51d1",
-    "url": "/rentkar/static/media/mumbai.c7d30ff7.png"
-  },
-  {
-    "revision": "e058c5df4fb0f393bf931eb397afb2a6",
-    "url": "/rentkar/static/media/mumbaig.e058c5df.png"
-  },
-  {
     "revision": "574b44e9bd91b07e4ed384233748d8bd",
     "url": "/rentkar/static/media/musical.574b44e9.jpg"
-  },
-  {
-    "revision": "4205d4edc7064537201eba472e7807a9",
-    "url": "/rentkar/static/media/pune.4205d4ed.png"
-  },
-  {
-    "revision": "685e3b2895b27297ad36b80fa3dbdb46",
-    "url": "/rentkar/static/media/puneg.685e3b28.png"
   },
   {
     "revision": "44668d2b0901e227a3fa413ef55d0876",

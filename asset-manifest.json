@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/rentkar/static/css/main.12a83b6d.chunk.css",
-    "main.js": "/rentkar/static/js/main.c26073a0.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.c26073a0.chunk.js.map",
+    "main.js": "/rentkar/static/js/main.3fe2c3f5.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.3fe2c3f5.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
     "static/js/2.bf89f9db.chunk.js": "/rentkar/static/js/2.bf89f9db.chunk.js",
     "static/js/2.bf89f9db.chunk.js.map": "/rentkar/static/js/2.bf89f9db.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.5225e57723f0621991c11461566540ec.js": "/rentkar/precache-manifest.5225e57723f0621991c11461566540ec.js",
+    "precache-manifest.f86761f3b5334af959ace8aeb8827e22.js": "/rentkar/precache-manifest.f86761f3b5334af959ace8aeb8827e22.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
     "static/css/main.12a83b6d.chunk.css.map": "/rentkar/static/css/main.12a83b6d.chunk.css.map",
     "static/js/2.bf89f9db.chunk.js.LICENSE.txt": "/rentkar/static/js/2.bf89f9db.chunk.js.LICENSE.txt",
+    "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
+    "static/media/Mumbaig.png": "/rentkar/static/media/Mumbaig.9b9b0741.png",
+    "static/media/PuneC.png": "/rentkar/static/media/PuneC.d025b84f.png",
+    "static/media/PuneCG.png": "/rentkar/static/media/PuneCG.e82057a0.png",
     "static/media/about.png": "/rentkar/static/media/about.46295bac.png",
     "static/media/bag+.png": "/rentkar/static/media/bag+.37193046.png",
     "static/media/bag.png": "/rentkar/static/media/bag.75bed337.png",
@@ -30,11 +34,7 @@
     "static/media/logo.png": "/rentkar/static/media/logo.7d3d55f9.png",
     "static/media/logo_trans.png": "/rentkar/static/media/logo_trans.a636beae.png",
     "static/media/map.png": "/rentkar/static/media/map.e82877ea.png",
-    "static/media/mumbai.png": "/rentkar/static/media/mumbai.c7d30ff7.png",
-    "static/media/mumbaig.png": "/rentkar/static/media/mumbaig.e058c5df.png",
     "static/media/musical.jpg": "/rentkar/static/media/musical.574b44e9.jpg",
-    "static/media/pune.png": "/rentkar/static/media/pune.4205d4ed.png",
-    "static/media/puneg.png": "/rentkar/static/media/puneg.685e3b28.png",
     "static/media/search.png": "/rentkar/static/media/search.44668d2b.png",
     "static/media/share.png": "/rentkar/static/media/share.a4f09952.png",
     "static/media/slide1.jpg": "/rentkar/static/media/slide1.44b2f1a1.jpg",
@@ -48,6 +48,6 @@
     "static/css/2.baa86093.chunk.css",
     "static/js/2.bf89f9db.chunk.js",
     "static/css/main.12a83b6d.chunk.css",
-    "static/js/main.c26073a0.chunk.js"
+    "static/js/main.3fe2c3f5.chunk.js"
   ]
 }
