@@ -57,7 +57,6 @@
   max-width: 80%;
   align-self: center;
   background-color: white;
-  padding: 30px 30px 0px 30px;
   height: auto;
   margin: auto;
   display: flex;
@@ -66,8 +65,9 @@
 }
 
 .videos div{
-  max-width: 80%;
-  align-self: center;
+  width: 73.42%;
+  height: auto;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,15 +76,17 @@
 
 .videos p{
   text-align: center;
-  max-width: 60%;
+  max-width: 65%;
 }
 .videos .vFrame{
   border-radius: 10px;
   color: gray;
   margin: 60px ;
 }
+
+
 .video-overlay-play-button{
-  padding: 10px calc(50% - 17px);
+  padding: 5px calc(50% - 20px);
 }
 
 
@@ -97,44 +99,44 @@
   margin: auto;
 }
 
-.Testimonial .customer{
+.Testimonials .lender{
   display: flex;
   flex-direction: row;
 }
 
-.Testimonial .customer .descr img{
+.Testimonials .lender .content img{
   max-width: 20vw;
   height: auto;
   margin: -60px 0px 0px 0px ;
 }
 
-.Testimonial .customer .descr p{
+.Testimonials .lender .content p{
 font-family: 'Montserrat', sans-serif;
 font-size: 12px;
 text-align: center;
 padding: 0px 10px 10px 10px;
 }
 
-.Testimonial .customer .descr .straight{
+.Testimonials .lender .content .str{
 display: flex;
 flex-direction: row;
 padding: 20px;
-/* margin: 10px; */
+/* margin: 10px; */ 
 }
 
-.Testimonial .customer .descr .straight .name_rating{
+.Testimonials .lender .content .str .lenderName{
 margin: 10px;
 display: block;
 }
 
 
-.Testimonial .customer .descr .straight .name_rating h4{
+.Testimonials .lender .content .str .lenderName h4{
   font-size: 18px;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
 }
 
-.Testimonial .customer .descr {
+.Testimonials .lender .content {
 min-width: 25vw;
 min-height: 43vh;
 margin: 20px;
@@ -147,6 +149,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
+
 .father .covid {
     max-width: 80%;
     margin: auto;

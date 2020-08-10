@@ -1,7 +1,5 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
 import './VPlayer.css'
-import { Button } from 'semantic-ui-react'
 
 export class VPlayer extends React.Component {
 
@@ -24,12 +22,14 @@ export class VPlayer extends React.Component {
                 },
 
                 formatVideoPlayButton: function () {
+
                     videoWrapper.insertAdjacentHTML('beforeend', '\
                     <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">\
                         <circle cx="100" cy="100" r="90" fill="#fff" stroke-width="15" stroke="#fff"/>\
                         <polygon points="70, 55 70, 145 145, 100" fill="#E4E4E4"/>\
                     </svg>\
                 ')
+
                 },
 
                 hideVideoPlayButton: function () {
@@ -45,12 +45,11 @@ export class VPlayer extends React.Component {
     render() {
         return (
             <div className='videoPlayer'>
-                <video className='vFrame' width='400' height="260" controls>
-                    <Button className='active'>play</Button>
+                <video className='vFrame' controls>
                     <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4" type='video/mp4' />
                 </video>
             </div>
         )
     }
 }
-export default VPlayer;
+export default VPlayer

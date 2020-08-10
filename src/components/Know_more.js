@@ -54,15 +54,14 @@ export class Know_more extends Component {
 
                 <div className='Testimonials'>
                     <h2 className='headers'>LENDER'S TESTIMONIALS</h2>
-                    <div className='customer'>
+                    <div className='lender'>
                         <div>
-                            <Card className='descr'>
+                            <Card className='content'>
                                 <div>
                                     <img src={cust2}></img>
                                 </div>
-                                <div className='straight'>
-
-                                    <div className='name_rating'>
+                                <div className='str'>
+                                    <div className='lenderName'>
                                         <div >
                                             <h4>Shivam Wadhwa</h4>
                                         </div>
@@ -80,13 +79,13 @@ export class Know_more extends Component {
                             </Card>
                         </div>
                         <div>
-                            <Card className='descr'>
+                            <Card className='content'>
                                 <div>
                                     <img src={cust1}></img>
                                 </div>
-                                <div className='straight'>
+                                <div className='str'>
 
-                                    <div className='name_rating'>
+                                    <div className='lenderName'>
                                         <div >
                                             <h4>Shivam Wadhwa</h4>
                                         </div>

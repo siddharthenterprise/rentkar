@@ -7,57 +7,57 @@ import './testimonials.css'
 export class Testimonials extends React.Component {
     render() {
         return (
-            <div className="Outer">
+            <div>
                 <h2>LENDER'S TESTIMONIALS</h2>
                 <div className='customer_know'>
-                    <div>
-                        <Card className='descr'>
-                            <div>
-                                <img src={cust2}></img>
-                            </div>
-                            <div className='straight'>
 
-                                <div className='name_rating'>
-                                    <div >
-                                        <h4>Shivam Wadhwa</h4>
-                                    </div>
+                    <Card className='descri'>
+                        <div>
+                            <img src={cust2}></img>
+                        </div>
+                        <div className='straight'>
+
+                            <div className='name_rating'>
+                                <div >
+                                    <h4>Shivam Wadhwa</h4>
                                 </div>
                             </div>
-                            <div>
-                                <p>
-                                    Rentkar is really good!! The quality of the
-                                    product is brilliant. The service is also
-                                    spot on. They make sure that the product
-                                    is delivered as well as picked up on time.
-                                    Highly recommended..
+                        </div>
+                        <div>
+                            <p>
+                                Rentkar is really good!! The quality of the
+                                product is brilliant. The service is also
+                                spot on. They make sure that the product
+                                is delivered as well as picked up on time.
+                                Highly recommended..
                             </p>
-                            </div>
-                        </Card>
-                    </div>
-                    <div>
-                        <Card className='descr'>
-                            <div>
-                                <img src={cust1}></img>
-                            </div>
-                            <div className='straight'>
+                        </div>
+                    </Card>
 
-                                <div className='name_rating'>
-                                    <div >
-                                        <h4>Shivam Wadhwa</h4>
-                                    </div>
+
+                    <Card className='descr'>
+                        <div>
+                            <img src={cust1}></img>
+                        </div>
+                        <div className='straight'>
+
+                            <div className='name_rating'>
+                                <div >
+                                    <h4>Shivam Wadhwa</h4>
                                 </div>
                             </div>
-                            <div>
-                                <p>
-                                    Rentkar is really good!! The quality of the
-                                    product is brilliant. The service is also
-                                    spot on. They make sure that the product
-                                    is delivered as well as picked up on time.
-                                    Highly recommended..
+                        </div>
+                        <div>
+                            <p>
+                                Rentkar is really good!! The quality of the
+                                product is brilliant. The service is also
+                                spot on. They make sure that the product
+                                is delivered as well as picked up on time.
+                                Highly recommended..
                             </p>
-                            </div>
-                        </Card>
-                    </div>
+                        </div>
+                    </Card>
+
                 </div>
             </div>)
     }

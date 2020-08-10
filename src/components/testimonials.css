@@ -1,47 +1,48 @@
-.outer h2{
+ h2{
     text-align: left;
     margin-top: 20px;
     font-weight: bold;
     margin-bottom: 60px;
 }
+
 .customer_know{
     display: flex;
     flex-direction: row;
 }
 
-.customer_know .descr img{
+.customer_know .descri img{
     max-width: 20vw;
     height: auto;
     margin: -60px 0px 0px 0px ;
 }
 
-.customer_know .descr p{
+.customer_know .descri p{
 font-family: 'Montserrat', sans-serif;
 font-size: 12px;
 text-align: center;
 padding: 0px 10px 10px 10px;
 }
 
-.customer_know .descr .straight{
+.customer_know .descri .straight{
 display: flex;
 flex-direction: row;
 padding: 20px;
 /* margin: 10px; */
 }
 
-.customer_know .descr .straight .name_rating{
+.customer_know .descri .straight .name_rating{
 margin: 10px;
 display: block;
 }
 
 
-.customer_know .descr .straight .name_rating h4{
+.customer_know .descri .straight .name_rating h4{
     font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 
-.customer_know .descr {
+.customer_know .descri {
 min-width: 25vw;
 min-height: 43vh;
 margin: 20px;
