@@ -111,6 +111,7 @@ background-color: black; /* Green */
 }
 .popup-content.pop-content{
     min-width: 233px !important;
+    padding: 7px !important;
 
 }
 
