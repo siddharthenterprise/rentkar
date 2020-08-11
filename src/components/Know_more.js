@@ -6,6 +6,9 @@ import lock from "../images/lock.png";
 import bag from "../images/bag+.png";
 import tick from "../images/tick_circle.png";
 import VPlayer from './VPlayer';
+import { DotsMobileStepper } from './ListItem';
+
+
 import Testimonials from './Testimonials';
 import cust1 from '../images/cust1.png';
 import cust2 from '../images/cust2.png';
@@ -20,7 +23,13 @@ import './know_more.css';
 import { Header } from 'semantic-ui-react';
 
 export class Know_more extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { addModalshow: false };
+    }
     render() {
+        let addModalclose = () => { this.setState({ addModalshow: false }) };
+
         return (
             <div className="father">
                 <div className='wrap'>
@@ -31,7 +40,11 @@ export class Know_more extends Component {
                                 <p>Share any underused products lying down at your home securely.</p>
                                 <p>From mobile phones, cameras, Gaming consoles, furniture and anything that you can think of can be shared and earned a passive income from.</p>
                                 <p>Make your investments recover securely.</p>
-                                <Button className='listingButton' floated='left'>Start Listing</Button>
+                                {/* <Button className='listingButton' floated='left'>Start Listing</Button> */}
+                                <Button className='listingButton' onClick={() => this.setState({ addModalshow: true })}>Start Listing</Button>
+                                <DotsMobileStepper
+                                    show={this.state.addModalshow}
+                                    onHide={addModalclose} />
                             </div>
                             <div>
                                 <img src={KnowImg} />

@@ -72,20 +72,32 @@
 /* ---------------------------------------------------------- */
 .feet .foot .line3{
     display: grid;
+    width: 100%;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-top: 20px;
+
 }
 
 .feet .foot .line3 .physical h4{
     font-size: 24px;
     font-weight: bold;
     color: white;
-    float: left;
+    text-align: left;
 }
+
+.feet .foot .line3 .social h4{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+
 .feet .foot .line3 .physical,.feet .foot .line3 .social{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 20px 0px 20px 0px; 
     font-size: 20px;
     color: white;
 }
@@ -93,16 +105,24 @@
 .feet .foot .line3 .physical .contact,.feet .foot .line3 .social .media{
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    margin: 20px 20px 0px 0px;
 }
 
-.feet .foot .line3 .physical .contact,.feet .foot .line3 .social .media a{
-    margin: 10px 20px 10px 20px;
+.feet .foot .line3 .social .media div{
+    margin: 10px 20px 0px 20px;
+}
+
+.feet .foot .line3 .social .media a{
     color: white;
 }
+
 
 .feet .foot .line3 .physical .contact div{
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    margin: 20px 20px 0px 0px;
 }
 
 .feet .foot .line3 .physical .contact h3{
@@ -201,6 +221,7 @@
         display: grid;
         grid-template-columns: none;
         margin-bottom: 50px;
+        align-self: center;
     }
 
     .feet .foot .line3 .physical{
@@ -215,6 +236,10 @@
         color: white;
         justify-content: space-around;
     }
+    .feet .foot .line3 .social .media{
+        align-self: center;
+    }
+
     .feet .foot .line3 .social h4{
         display: none;
     }
