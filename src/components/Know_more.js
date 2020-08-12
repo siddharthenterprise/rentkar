@@ -208,7 +208,11 @@ export class Know_more extends Component {
 </p>
                     </div>
                     <div className='buut'>
-                        <button>Start Listing</button>
+                        {/* <button>Start Listing</button> */}
+                        <Button className='listingButton' onClick={() => this.setState({ addModalshow: true })}>Start Listing</Button>
+                        <DotsMobileStepper
+                            show={this.state.addModalshow}
+                            onHide={addModalclose} />
                     </div>
 
                 </div>
