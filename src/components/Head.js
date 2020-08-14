@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Popup from "reactjs-popup";
 import { Grid, Header } from 'semantic-ui-react';
 import Login from './Login';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 
 import './head.css'
 // import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap'
@@ -89,7 +91,7 @@ export class Head extends Component {
 
                     </div>
                     <div className='but' id="bag">
-                        <button><img src={bag}></img>Bag</button>
+                        <Link to="/category"><button><img src={bag}></img>Bag</button></Link>
                     </div>
                     <div className='but' id='sign'>
                         <button onClick={() => this.setState({ addModalshow: true })}>Login/Sign Up</button>

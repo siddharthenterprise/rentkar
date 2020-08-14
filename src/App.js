@@ -6,6 +6,7 @@ import { Body } from './components/body';
 import { Footer } from './components/Footer';
 import { Floatnav } from './components/Floatnav';
 import { Know_more } from './components/Know_more';
+import { Category } from './components/Category';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -18,9 +19,13 @@ function App() {
           <React.Fragment>
             <Slideshow />
             <Body />
+
+
           </React.Fragment>
+
         )} />
         <Route path="/knowmore" render={props => (<Know_more />)}></Route>
+        <Route path="/category" render={props => (<Category />)}></Route>
       </div>
       <Footer />
     </Router>
