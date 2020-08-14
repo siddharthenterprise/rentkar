@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "033dcd5be8989b72aa877b19b3547b57",
+    "revision": "769b2846f310cc245130d274dcaa2c4d",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "dd3ff1f4f6772f0d92d8",
+    "revision": "1b6dc5a8edc2921bb307",
     "url": "/rentkar/static/css/2.baa86093.chunk.css"
   },
   {
-    "revision": "267fd7d2bd014e02a076",
-    "url": "/rentkar/static/css/main.4108bacd.chunk.css"
+    "revision": "6a35de65892b3aa66494",
+    "url": "/rentkar/static/css/main.86d42cb4.chunk.css"
   },
   {
-    "revision": "dd3ff1f4f6772f0d92d8",
-    "url": "/rentkar/static/js/2.6992e0f6.chunk.js"
+    "revision": "1b6dc5a8edc2921bb307",
+    "url": "/rentkar/static/js/2.692c09de.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.6992e0f6.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.692c09de.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "267fd7d2bd014e02a076",
-    "url": "/rentkar/static/js/main.420e3861.chunk.js"
+    "revision": "6a35de65892b3aa66494",
+    "url": "/rentkar/static/js/main.273e0d4f.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -66,6 +66,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "87620698d7b2b0f39d4b2573988f369d",
     "url": "/rentkar/static/media/bago.87620698.png"
+  },
+  {
+    "revision": "94d8b7047d5fb826fcb61bfb20041e6e",
+    "url": "/rentkar/static/media/category1.94d8b704.png"
+  },
+  {
+    "revision": "037b90886bb502335e68d17324bfde0a",
+    "url": "/rentkar/static/media/category2.037b9088.png"
+  },
+  {
+    "revision": "bd86793897e79fce71927bf7a6e78ca5",
+    "url": "/rentkar/static/media/category3.bd867938.png"
+  },
+  {
+    "revision": "0b998e94c969ad0cb3f07969c8efed6d",
+    "url": "/rentkar/static/media/category4.0b998e94.png"
   },
   {
     "revision": "822137416ed223d3e977f67dcd0e8112",
@@ -132,12 +148,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/musical.574b44e9.jpg"
   },
   {
+    "revision": "d6dc0b554ce97185d0cef42f98d0cc14",
+    "url": "/rentkar/static/media/search_boy.d6dc0b55.png"
+  },
+  {
     "revision": "5779ec365fc4dbdcf1a4eb403bccc889",
     "url": "/rentkar/static/media/searchf.5779ec36.png"
   },
   {
     "revision": "81a6185d5adca381492276db3062b2a1",
     "url": "/rentkar/static/media/searcho.81a6185d.png"
+  },
+  {
+    "revision": "339ea2932a758ecf3f2ca43acc17b088",
+    "url": "/rentkar/static/media/selectedCategory1.339ea293.png"
+  },
+  {
+    "revision": "60e6e0dd551f8050568b110ca0b0126e",
+    "url": "/rentkar/static/media/selectedCategory2.60e6e0dd.png"
+  },
+  {
+    "revision": "912404a8ec05af4118bf42f40ac46ed9",
+    "url": "/rentkar/static/media/selectedCategory3.912404a8.png"
+  },
+  {
+    "revision": "9fedb29b07d9462e9cbecded0a873e72",
+    "url": "/rentkar/static/media/selectedCategory4.9fedb29b.png"
   },
   {
     "revision": "a4f0995223c763ed05e6fc09a99bf5e7",
