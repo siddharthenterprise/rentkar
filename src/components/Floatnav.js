@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
-import { about } from '../images/about.png';
-import { search } from '../images/search.png';
-import { home } from '../images/about.png';
+import { abouto } from '../images/float_nav/abouto.png';
+import { aboutf } from '../images/float_nav/aboutf.png';
+
+import { bagf } from '../images/float_nav/bagf.png';
+import { bago } from '../images/float_nav/bago.png';
+
+import { homeo } from '../images/float_nav/homeo.png';
+import { homef } from '../images/float_nav/homef.png';
+
+import { searcho } from '../images/float_nav/searcho.png';
+import { searchf } from '../images/float_nav/searchf.png';
+
 
 
 import './Float.css';
@@ -11,31 +20,37 @@ export class Floatnav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            home: require('../images/home.png'),
-            search: require('../images/search.png'),
-            bag: require('../images/bagb.png'),
-            about: require('../images/about.png')
+            home: require('../images/float_nav/homef.png'),
+            search: require('../images/float_nav/searcho.png'),
+            bag: require('../images/float_nav/bago.png'),
+            about: require('../images/float_nav/abouto.png')
         }
     }
 
     onHome = (e) => {
-        this.setState({ home: require('../images/home.png') });
-        this.setState({ bag: require('../images/bagb.png') });
-        // this.setState({ about: require('../images/bagb.png') });
+        this.setState({ home: require('../images/float_nav/homef.png') });
+        this.setState({ bag: require('../images/float_nav/bago.png') });
+        this.setState({ about: require('../images/float_nav/abouto.png') });
+        this.setState({ search: require('../images/float_nav/searcho.png') });
 
     }
     onSearch = (e) => {
-        this.setState({ home: require('../images/homeo.png') });
-        this.setState({ bag: require('../images/bagb.png') });
-
+        this.setState({ home: require('../images/float_nav/homeo.png') });
+        this.setState({ bag: require('../images/float_nav/bago.png') });
+        this.setState({ about: require('../images/float_nav/abouto.png') });
+        this.setState({ search: require('../images/float_nav/searchf.png') });
     }
     onBag = (e) => {
-        this.setState({ home: require('../images/homeo.png') });
-        this.setState({ bag: require('../images/bag.png') });
+        this.setState({ home: require('../images/float_nav/homeo.png') });
+        this.setState({ bag: require('../images/float_nav/bagf.png') });
+        this.setState({ about: require('../images/float_nav/abouto.png') });
+        this.setState({ search: require('../images/float_nav/searcho.png') });
     }
     onAbout = (e) => {
-        this.setState({ home: require('../images/homeo.png') });
-        this.setState({ bag: require('../images/bagb.png') });
+        this.setState({ home: require('../images/float_nav/homeo.png') });
+        this.setState({ bag: require('../images/float_nav/bago.png') });
+        this.setState({ about: require('../images/float_nav/aboutf.png') });
+        this.setState({ search: require('../images/float_nav/searcho.png') });
     }
 
 
