@@ -23,9 +23,6 @@ const img = [selectedCategory1, selectedCategory2, selectedCategory3, selectedCa
 const selectedImg = [category1, category2, category3, category4];
 
 export class Category extends Component {
-
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -48,8 +45,17 @@ export class Category extends Component {
         this.categorySelect = this.categorySelect.bind(this);
     }
 
+    componentDidMount() {
+        document.getElementById('sub0').style.opacity = '1';
+    }
 
     subSelect(index) {
+        for (var i = 0; i < 4; i++) {
+            if (i == index)
+                document.getElementById(('sub' + index.toString())).style.opacity = '1';
+            else
+                document.getElementById(('sub' + i.toString())).style.opacity = '0';
+        }
         this.setState((prevState) => {
             return {
                 category: prevState.category,
@@ -84,23 +90,34 @@ export class Category extends Component {
 
         return (
             <div className="category_overview">
-                <div className="ayush">
+                <div className="categorizeHead">
                     <div className='pagePath'>
                         <p>{'Home' + " > " + categories[this.state.category] + " > " + sub[this.state.sub]}</p>
                     </div>
                     <div className='categories'>
-                        <button className={this.state.category == 0 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(0) }}>{categories[0].toUpperCase()}</button>
-                        <button className={this.state.category == 1 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(1) }}>{categories[1].toUpperCase()}</button>
-                        <button className={this.state.category == 2 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(2) }}>{categories[2].toUpperCase()}</button>
-                        <button className={this.state.category == 3 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(3) }}>{categories[3].toUpperCase()}</button>
+                        <button id='musicButton' className={this.state.category == 0 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(0) }}>{categories[0].toUpperCase()}</button>
+                        <button id='gamingButton' className={this.state.category == 1 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(1) }}>{categories[1].toUpperCase()}</button>
+                        <button id='laptopButton' className={this.state.category == 2 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(2) }}>{categories[2].toUpperCase()}</button>
+                        <button id='photographyButton' className={this.state.category == 3 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(3) }}>{categories[3].toUpperCase()}</button>
                     </div>
                     <div className='subCategories'>
-                        <SubCard index={0} />
-                        <SubCard index={1} />
-                        <SubCard index={2} />
-                        <SubCard index={3} />
+                        <div>
+                            <SubCard index={0} />
+                            <hr className='subLine' id='sub0' />
+                        </div>
+                        <div>
+                            <SubCard index={1} />
+                            <hr className='subLine' id='sub1' />
+                        </div>
+                        <div>
+                            <SubCard index={2} />
+                            <hr className='subLine' id='sub2' />
+                        </div>
+                        <div>
+                            <SubCard index={3} />
+                            <hr className='subLine' id='sub3' />
+                        </div>
                     </div>
-
                 </div>
                 <div className="product_overview" >
                     <div className='category'>
