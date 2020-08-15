@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.86d42cb4.chunk.css",
-    "main.js": "/rentkar/static/js/main.273e0d4f.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.273e0d4f.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.776061f4.chunk.css",
+    "main.js": "/rentkar/static/js/main.371b795b.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.371b795b.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
     "static/js/2.692c09de.chunk.js": "/rentkar/static/js/2.692c09de.chunk.js",
     "static/js/2.692c09de.chunk.js.map": "/rentkar/static/js/2.692c09de.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.f08d42a9fd56d557142cfffa9e02fd7b.js": "/rentkar/precache-manifest.f08d42a9fd56d557142cfffa9e02fd7b.js",
+    "precache-manifest.02475433b6a0f5143cb174420ac68e3b.js": "/rentkar/precache-manifest.02475433b6a0f5143cb174420ac68e3b.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.86d42cb4.chunk.css.map": "/rentkar/static/css/main.86d42cb4.chunk.css.map",
+    "static/css/main.776061f4.chunk.css.map": "/rentkar/static/css/main.776061f4.chunk.css.map",
     "static/js/2.692c09de.chunk.js.LICENSE.txt": "/rentkar/static/js/2.692c09de.chunk.js.LICENSE.txt",
     "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
     "static/media/Mumbaig.png": "/rentkar/static/media/Mumbaig.9b9b0741.png",
@@ -62,7 +62,7 @@
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
     "static/js/2.692c09de.chunk.js",
-    "static/css/main.86d42cb4.chunk.css",
-    "static/js/main.273e0d4f.chunk.js"
+    "static/css/main.776061f4.chunk.css",
+    "static/js/main.371b795b.chunk.js"
   ]
 }
