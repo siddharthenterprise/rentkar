@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.776061f4.chunk.css",
-    "main.js": "/rentkar/static/js/main.371b795b.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.371b795b.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.14e2c8c5.chunk.css",
+    "main.js": "/rentkar/static/js/main.30af1359.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.30af1359.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.692c09de.chunk.js": "/rentkar/static/js/2.692c09de.chunk.js",
-    "static/js/2.692c09de.chunk.js.map": "/rentkar/static/js/2.692c09de.chunk.js.map",
+    "static/js/2.96bcba0d.chunk.js": "/rentkar/static/js/2.96bcba0d.chunk.js",
+    "static/js/2.96bcba0d.chunk.js.map": "/rentkar/static/js/2.96bcba0d.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.02475433b6a0f5143cb174420ac68e3b.js": "/rentkar/precache-manifest.02475433b6a0f5143cb174420ac68e3b.js",
+    "precache-manifest.9ad1d8b763e38feab713795ecb7bf7e2.js": "/rentkar/precache-manifest.9ad1d8b763e38feab713795ecb7bf7e2.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.776061f4.chunk.css.map": "/rentkar/static/css/main.776061f4.chunk.css.map",
-    "static/js/2.692c09de.chunk.js.LICENSE.txt": "/rentkar/static/js/2.692c09de.chunk.js.LICENSE.txt",
+    "static/css/main.14e2c8c5.chunk.css.map": "/rentkar/static/css/main.14e2c8c5.chunk.css.map",
+    "static/js/2.96bcba0d.chunk.js.LICENSE.txt": "/rentkar/static/js/2.96bcba0d.chunk.js.LICENSE.txt",
     "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
     "static/media/Mumbaig.png": "/rentkar/static/media/Mumbaig.9b9b0741.png",
     "static/media/PuneC.png": "/rentkar/static/media/PuneC.d025b84f.png",
@@ -37,6 +37,7 @@
     "static/media/cust2.png": "/rentkar/static/media/cust2.4337d063.png",
     "static/media/gaming.jpg": "/rentkar/static/media/gaming.4fddd023.jpg",
     "static/media/Item.css": "/rentkar/static/media/guitar.c56564ed.png",
+    "static/media/guitar2.png": "/rentkar/static/media/guitar2.069d2494.png",
     "static/media/homef.png": "/rentkar/static/media/homef.ae4956cf.png",
     "static/media/homeo.png": "/rentkar/static/media/homeo.4d5e2813.png",
     "static/media/lock.png": "/rentkar/static/media/lock.622a354e.png",
@@ -61,8 +62,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
-    "static/js/2.692c09de.chunk.js",
-    "static/css/main.776061f4.chunk.css",
-    "static/js/main.371b795b.chunk.js"
+    "static/js/2.96bcba0d.chunk.js",
+    "static/css/main.14e2c8c5.chunk.css",
+    "static/js/main.30af1359.chunk.js"
   ]
 }
