@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Corousel from './corousel';
-import guitar from '../images/guitar.png';
+import guitar from '../images/guitar2.png';
 import search_boy from '../images/search_boy.png';
 
 // import './category.css';
@@ -13,7 +13,7 @@ import selectedCategory1 from '../images/selectedCategory1.png';
 import selectedCategory2 from '../images/selectedCategory2.png';
 import selectedCategory3 from '../images/selectedCategory3.png';
 import selectedCategory4 from '../images/selectedCategory4.png';
-
+import arrow from '../images/arrow.jpeg';
 
 import './category.css';
 
@@ -92,7 +92,11 @@ export class Category extends Component {
             <div className="category_overview">
                 <div className="categorizeHead">
                     <div className='pagePath'>
-                        <p>{'Home' + " > " + categories[this.state.category] + " > " + sub[this.state.sub]}</p>
+                        <p style={{ marginTop: '5px' }}>Home</p>
+                        <h3 style={{ paddingLeft: '20px', paddingRight: '20px' }}>{">"}</h3>
+                        <p style={{ marginTop: '5px' }}>{categories[this.state.category]}</p>
+                        <h3 style={{ paddingLeft: '20px', paddingRight: '20px' }}>{">"}</h3>
+                        <p style={{ marginTop: '5px' }}>{sub[this.state.sub]}</p>
                     </div>
                     <div className='categories'>
                         <button id='musicButton' className={this.state.category == 0 ? 'selectedButton' : 'categoryButton'} onClick={() => { this.categorySelect(0) }}>{categories[0].toUpperCase()}</button>
