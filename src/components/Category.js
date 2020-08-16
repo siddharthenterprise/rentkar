@@ -93,9 +93,9 @@ export class Category extends Component {
                 <div className="categorizeHead">
                     <div className='pagePath'>
                         <p style={{ marginTop: '5px' }}>Home</p>
-                        <h3 style={{ paddingLeft: '20px', paddingRight: '20px' }}>{">"}</h3>
+                        <h3 style={{ paddingLeft: '10px', paddingRight: '10px' }}>{">"}</h3>
                         <p style={{ marginTop: '5px' }}>{categories[this.state.category]}</p>
-                        <h3 style={{ paddingLeft: '20px', paddingRight: '20px' }}>{">"}</h3>
+                        <h3 style={{ paddingLeft: '10px', paddingRight: '10px' }}>{">"}</h3>
                         <p style={{ marginTop: '5px' }}>{sub[this.state.sub]}</p>
                     </div>
                     <div className='categories'>
