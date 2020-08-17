@@ -144,6 +144,7 @@ export class Category extends Component {
                     </div>
                     <div className="search_boy_input">
                         <input placeholder="Drop your queries here"></input>
+                        <button className="selectedButton">Submit</button>
                     </div>
                 </div>
             </div>
