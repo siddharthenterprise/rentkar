@@ -63,7 +63,7 @@ export class Floatnav extends Component {
                     <nav class="fixed-bottom text-center dark customnav">
                         <div class="d-flex justify-content-between">
                             <div class="container" id="home_float" onClick={this.onHome}>
-                                <img src={this.state.home} className="img-thumbnail" />
+                                <Link to="/rentkar"><img src={this.state.home} className="img-thumbnail" /></Link>
                             </div>
                             <div class="container" onClick={this.onSearch}>
 

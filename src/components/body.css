@@ -364,7 +364,7 @@
   font-family: 'Montserrat', sans-serif;
 /* font-family: 'Roboto', sans-serif; */
   color: #707070;
-  font-size: 10px;
+  font-size: 15px;
   /* font-weight: bold; */
 }
 .promise .parts .same_card .logos{
@@ -626,6 +626,9 @@
 .promise .parts .same_card{
   display: flex;
   flex-direction: row;
+}
+.promise .parts .same_card p{
+  font-size: 10px;
 }
 
 .promise .parts .same_card .logos {
