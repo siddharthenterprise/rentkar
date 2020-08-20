@@ -8,11 +8,12 @@
   background-color: #fff;
   color: #000;
   font-weight: bolder;
-  text-align: left;
   display: flex;
   flex-direction: row;
+  max-width: 80%;
+  margin: 0 auto;
   padding: 0px;
-  padding-left: 13%;
+  padding-left: 40px;
   max-height: 28px;
 }
 
@@ -21,17 +22,21 @@
   font-weight: 500;
 }
 
-.category_overview .categories {
-  padding: 13px;
-  width: 100%;
-  padding-left: 13%;
-  float: left;
-  display: flex;
-  flex-direction: row;
+.category_overview .categoriesBackground {
   background-color: #f4f4f4;
+  width: 100%;
 }
 
-.category_overview .categoryButton {
+.category_overview .categoriesBackground .categories {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding: 13px;
+  padding-left: 40px;
+  flex-direction: row;
+}
+
+.category_overview .categoriesBackground .categories .categoryButton {
   border: 0.4px solid;
   border-style: solid;
   background-image: none;
@@ -41,7 +46,7 @@
   font-weight: bold;
   padding: 5px 5px;
   color: #000;
-  min-width: 10%;
+  width: 120px;
   font-size: 12px;
   height: 35px;
 }
@@ -51,42 +56,44 @@
   border: 0.4px solid transparent;
   border-radius: 5px;
   margin-right: 10px;
-
   font-weight: bold;
   padding: 5px 5px;
   color: #ffffff;
-  min-width: 10%;
+  width: 120px;
   font-size: 12px;
   height: 35px;
 }
 
-.category_overview .subCategories {
+.category_overview .subCategoriesBackground {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 0px 20px 0px;
-  padding-left: 11.5%;
-  float: left;
   background-color: #ffffff;
   box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.4);
 }
-.category_overview .subCategories hr {
+
+.category_overview .subCategoriesBackground .subCategories {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0px 20px 0px 20px;
+}
+.category_overview .subCategoriesBackground .subCategories hr {
   border-bottom: 5px solid #1bacf4;
   width: 75%;
-  margin: auto;
-  margin-left: 20px;
+  margin: 0 auto;
   margin-top: 10px;
+  margin-left: 15%;
   opacity: 0;
 }
 
-.category_overview .subCategories img {
+.category_overview .subCategoriesBackground .subCategories img {
   height: 60px;
   width: 60px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.category_overview .subCategories .subCard {
+.category_overview .subCategoriesBackground .subCategories .subCard {
   margin: 20px 15px;
   margin-left: 20px;
   margin-bottom: 0px;
@@ -101,11 +108,11 @@
   margin-left: 12%;
 }
 
-.category_overview .subCategories .subCard:hover {
+.category_overview .subCategoriesBackground .subCategories .subCard:hover {
   text-decoration: none;
 }
 
-.category_overview .subCategories .subCard p {
+.category_overview .subCategoriesBackground .subCategories .subCard p {
   font-weight: 500;
   color: #000;
   padding-bottom: 10px;
@@ -195,99 +202,176 @@
 }
 
 /* -------------------------------------- */
-.category_overview .search_boy_with_input{
-    
-    max-width: 100%;
-    display:flex;
-    flex-direction: column;
-    padding: 20px;
+.category_overview .search_boy_with_input {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
-.category_overview .search_boy_with_input h1{
-    font-family: 'Montserrat',sans-serif;
-    font-weight: bold;
-    font-size: 18px;
+.category_overview .search_boy_with_input h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
 }
-.category_overview .search_boy_with_input .search_boy img{
-    max-width: 50%;
-
+.category_overview .search_boy_with_input .search_boy img {
+  max-width: 50%;
 }
-.category_overview .search_boy_with_input .search_boy_input{
+.category_overview .search_boy_with_input .search_boy_input {
   display: flex;
   flex-direction: row;
   justify-items: space-between;
   margin: auto;
   padding: 20px;
 }
-.category_overview .search_boy_with_input .search_boy_input input{
-    min-width: 20vw;
-    margin: auto;
-    padding: 7px 5px;
-    border: 0.4px solid;
-    border-radius: 10px;
-    font-family: 'Montserrat',sans-serif;
-    margin-right: 20px;
+.category_overview .search_boy_with_input .search_boy_input input {
+  min-width: 20vw;
+  margin: auto;
+  padding: 7px 5px;
+  border: 0.4px solid;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 20px;
 }
-.category_overview .search_boy_with_input .search_boy_input #category_last_but{
+.category_overview .search_boy_with_input .search_boy_input #category_last_but {
   min-width: 10vw;
 }
 
+/*************************************/
 
-@media screen and (max-width: 992px){
-  .category_overview{
+@media screen and (max-width: 992px) {
+  .category_overview {
     overflow: hidden;
   }
-  .category_overview .product_overview{
-    max-width: 100%;
-  }
-  .category_overview .product_overview button{
+
+  .category_overview .pagePath {
     display: none;
   }
-  .category_overview .product_overview .category{
+
+  .category_overview .categoriesBackground {
+    background-color: #fff;
+    width: auto;
+  }
+
+  .category_overview .categoriesBackground ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category_overview .categoriesBackground .categories {
+    min-width: 100%;
+    max-width: 200%;
+    padding-left: 5.5%;
+    overflow-x: scroll;
+  }
+
+  .category_overview .categoriesBackground .categories .categoryButton {
+    margin-right: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    overflow: visible;
+    font-size: 12px;
+    height: 35px;
+    min-width: 120px;
+    max-width: 240px;
+    width: 120px;
+  }
+
+  .category_overview .categoriesBackground .categories .selectedButton {
+    min-width: 120px;
+    max-width: 240px;
+    width: 120px;
+  }
+
+  .category_overview .subCategoriesBackground {
+    width: auto;
+  }
+
+  .category_overview .subCategoriesBackground ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category_overview .subCategoriesBackground .subCategories {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding-left: 5.5%;
+    overflow-x: scroll;
+  }
+
+  .category_overview .subCategoriesBackground .subCategories hr {
+    border-bottom: 5px solid #1bacf4;
+    width: 83%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 1%;
+    opacity: 0;
+  }
+
+  .category_overview .subCategoriesBackground .subCategories .subCard {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.2);
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+    height: auto;
+  }
+
+  .category_overview .subCategoriesBackground .subCategories .subCard p {
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .category_overview .product_overview {
+    max-width: 100%;
+  }
+  .category_overview .product_overview button {
+    display: none;
+  }
+  .category_overview .product_overview .category {
     margin: 0px;
     justify-content: space-evenly;
   }
-  .category_overview .product_overview .category .catcard .ccard{
+  .category_overview .product_overview .category .catcard .ccard {
     min-width: 40vw;
     min-height: 180px;
     padding: 10px;
   }
-  .category_overview .product_overview .category .catcard .ccard img{
+  .category_overview .product_overview .category .catcard .ccard img {
     order: 1;
     max-width: 100%;
     height: auto;
-    border-top-left-radius:10px;
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
-  .category_overview .product_overview .category .catcard .ccard .cathead{
+  .category_overview .product_overview .category .catcard .ccard .cathead {
     order: 2;
     font-size: 6px;
     padding: 3px 4px;
     /* min-width: 100px; */
-    
   }
-  .category_overview .product_overview .category .catcard .ccard .description{
+  .category_overview .product_overview .category .catcard .ccard .description {
     font-size: 12px;
   }
 
-  .category_overview .search_boy_with_input .search_boy_input{
+  .category_overview .search_boy_with_input .search_boy_input {
     display: flex;
     flex-direction: column;
     padding: 0px;
   }
-  .category_overview .search_boy_with_input .search_boy img{
+  .category_overview .search_boy_with_input .search_boy img {
     max-width: 100%;
   }
 
-  .category_overview .search_boy_with_input .search_boy_input input{
+  .category_overview .search_boy_with_input .search_boy_input input {
     margin: 10px 0px;
-    min-width: 378px;
+    min-width: 90vw;
   }
-  .category_overview .search_boy_with_input .search_boy_input button{
-    background-color: #0B90D3;
+  .category_overview .search_boy_with_input .search_boy_input button {
+    background-color: #0b90d3;
     width: 135px;
     margin: auto;
   }
-  
-
-
 }

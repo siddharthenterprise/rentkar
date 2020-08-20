@@ -129,7 +129,7 @@ export class Body extends Component {
                             <div>
                                 <h4>We help you share</h4>
                                 <p>Join our community of lenders sharing their products all around the city.We help you with delivery,pick up and total security of your peoducts</p>
-                                <div className='button'>
+                                <div className='button' id="in_pc_mode">
                                     <Link to="/knowmore"><Button className='button1' >Learn more</Button></Link>
                                     <Button className='button2' onClick={() => this.setState({ addModalshow: true })}>List an item</Button>
                                     <DotsMobileStepper
@@ -141,10 +141,17 @@ export class Body extends Component {
                         <div>
                             <img src={share}></img>
                         </div>
+                        <div className='button' id="in_mobile_mode">
+                            <Link to="/knowmore"><Button className='button1' >Learn more</Button></Link>
+                            <Button className='button2' onClick={() => this.setState({ addModalshow: true })}>List an item</Button>
+                            <DotsMobileStepper
+                                show={this.state.addModalshow}
+                                onHide={addModalclose} />
+                        </div>
 
                     </div>
                 </div>
-                {/* <div className='list4'>
+                <div className='list4'>
                     <div className='final'>
 
 
@@ -152,17 +159,25 @@ export class Body extends Component {
                             <div>
                                 <h1>START EARNING NOW</h1>
                             </div>
-                            <h4>Earn from the products shared securely around the city</h4>
-                            <p>Also get 100 INR Share credit on listing each item and 250 INR Share Credit on getting your friend on board to list their items</p>
+                            <div>
+                                <h4>Earn from the products shared securely around the city</h4>
+                            </div>
+                            <div className="button_with_para">
+                                <div>
+
+                                    <p>Also get 100 INR Share credit on listing each item and 250 INR Share Credit on getting your friend on board to list their items</p>
+                                </div>
+                                <div className='button'>
+                                    <Button className='button1'>Start Earning </Button>
+                                    <Button className='button2'>Learn more</Button>
+                                </div>
+                            </div>
 
                         </div>
-                        <div className='button'>
-                            <Button className='button1'>Start Earning </Button>
-                            <Button className='button2'>Learn more</Button>
-                        </div>
+
 
                     </div>
-                </div> */}
+                </div>
 
                 <div className='promise'>
                     <div>

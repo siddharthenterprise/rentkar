@@ -229,7 +229,7 @@
       flex-direction: column;
       padding: 0px 20px;
     }
-    .list3 .final .para .button{
+    .list3 .final .para .button,.list3 .final .button{
       display: flex;
       flex-direction: row;
       /* border: none; */
@@ -241,7 +241,7 @@
 
     }
 
-    .list3 .final .para .button .button1{
+    .list3 .final .para .button .button1,.list3 .final .button .button1{
       margin-left: 0px;
       background-color: #ffffff;
       border-radius: 5px;
@@ -251,7 +251,7 @@
       /* box-shadow: 2px 2px 2px rgba(27,144,244,0.5); */
 
     }
-    .list3 .final .para .button .button2{
+    .list3 .final .para .button .button2,.list3 .final .button .button2{
       background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
       border: none;
       border-radius: 5px;
@@ -278,12 +278,21 @@
       font-size:50;
       padding-left: 0px;
     }
+
+    .list3 .final #in_mobile_mode{
+      display: none;
+    }
 /* ------------------------------------------------------------------ */
+
+.list4 .final .button_with_para{
+  display: flex;
+  flex-direction: row;
+}
 .list4 .final .button{
   display: flex;
   flex-direction: row;
   padding: 7px 12px;
-  margin: 15vh 20px 10px 10px;
+  margin: 10px 20px 10px 10px;
   
 }
 .list4 .final .button .button1{
@@ -531,7 +540,7 @@
   .list2 .date {
     font-size: 4px;
 }
-  .list .Heading h1,.list2 .Heading h1,.list3 .final .para h1{
+  .list .Heading h1,.list2 .Heading h1,.list3 .final .para h1,.list4 .final .para h1{
     font-size: 12px;
     margin: -30px 0px;
   }
@@ -561,21 +570,45 @@
   margin: auto;
 }
 
-.list3 .final .para h4{
+.list3 .final .para h4,.list4 .final .para h4{
   font-size: 12px;
 }
-.list3 .final .para p{
+.list3 .final .para p,.list4 .final .para p{
   font-size: 10px;
 }
 
 /* ------------------------------------------ */
-.list3 .final .para .button{
+.list3 .final .button{
   font-size: 8px;
 }
-.list3 .final .para .button .button1{
+.list3 .final .button .button1,.list4 .final .para .button .button1{
   border:0.5px solid #1bacf4;
 }
+
+.list3 .final #in_mobile_mode{
+  display: -webkit-inline-box;
+}
+.list3 .final #in_pc_mode{
+  display: none;
+}
+
 /* -------------------------------- */
+.list4 .final .para{
+  flex-direction: column;
+}
+.list4 .final .para .button{
+  font-size: 8px;
+  display: inline-block;
+}
+.list4 .final .para .button_with_para{
+  flex-direction: column;
+}
+
+
+
+
+
+
 .promise{
   max-width: 100%;
     margin: 0px 0px;
