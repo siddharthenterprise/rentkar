@@ -335,7 +335,7 @@
     justify-content: space-evenly;
   }
   .category_overview .product_overview .category .catcard .ccard {
-    min-width: 40vw;
+    min-width: 37vw;
     min-height: 180px;
     padding: 10px;
   }
