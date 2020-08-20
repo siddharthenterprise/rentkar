@@ -364,7 +364,7 @@
   font-family: 'Montserrat', sans-serif;
 /* font-family: 'Roboto', sans-serif; */
   color: #707070;
-  font-size: 15px;
+  font-size: 10px;
   /* font-weight: bold; */
 }
 .promise .parts .same_card .logos{
@@ -634,10 +634,10 @@
   margin: 10px;
 }
 .promise h4{
-  font-size: 20px;
+  font-size: 12px;
 }
 .promise .parts .same_card .cathead h4,.customers .custom .special h4{
-  font-size: 18px;
+  font-size: 12px;
 }
 
 

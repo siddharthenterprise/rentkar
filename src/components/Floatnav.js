@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import { abouto } from '../images/float_nav/abouto.png';
 import { aboutf } from '../images/float_nav/aboutf.png';
 
@@ -68,7 +70,7 @@ export class Floatnav extends Component {
                                 <img src={this.state.search} className="img-thumbnail" />
                             </div>
                             <div class="container" onClick={this.onBag}>
-                                <img src={this.state.bag} className="img-thumbnail" />
+                                <Link to="/category"><img src={this.state.bag} className="img-thumbnail" /></Link>
                             </div>
                             <div class="container" onClick={this.onAbout}>
                                 <img src={this.state.about} className="img-thumbnail" />
