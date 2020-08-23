@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.92e9b3ea.chunk.css",
-    "main.js": "/rentkar/static/js/main.bc04dbac.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.bc04dbac.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.39710640.chunk.css",
+    "main.js": "/rentkar/static/js/main.96501075.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.96501075.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.ccb0a83d.chunk.js": "/rentkar/static/js/2.ccb0a83d.chunk.js",
-    "static/js/2.ccb0a83d.chunk.js.map": "/rentkar/static/js/2.ccb0a83d.chunk.js.map",
+    "static/js/2.522a0ed3.chunk.js": "/rentkar/static/js/2.522a0ed3.chunk.js",
+    "static/js/2.522a0ed3.chunk.js.map": "/rentkar/static/js/2.522a0ed3.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.b9b6f3aecbad3162806656999c672b89.js": "/rentkar/precache-manifest.b9b6f3aecbad3162806656999c672b89.js",
+    "precache-manifest.7b7957f76b8c900bce341b765d1cadbb.js": "/rentkar/precache-manifest.7b7957f76b8c900bce341b765d1cadbb.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.92e9b3ea.chunk.css.map": "/rentkar/static/css/main.92e9b3ea.chunk.css.map",
-    "static/js/2.ccb0a83d.chunk.js.LICENSE.txt": "/rentkar/static/js/2.ccb0a83d.chunk.js.LICENSE.txt",
+    "static/css/main.39710640.chunk.css.map": "/rentkar/static/css/main.39710640.chunk.css.map",
+    "static/js/2.522a0ed3.chunk.js.LICENSE.txt": "/rentkar/static/js/2.522a0ed3.chunk.js.LICENSE.txt",
     "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
     "static/media/Mumbaig.png": "/rentkar/static/media/Mumbaig.9b9b0741.png",
     "static/media/PuneC.png": "/rentkar/static/media/PuneC.d025b84f.png",
@@ -62,8 +62,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.baa86093.chunk.css",
-    "static/js/2.ccb0a83d.chunk.js",
-    "static/css/main.92e9b3ea.chunk.css",
-    "static/js/main.bc04dbac.chunk.js"
+    "static/js/2.522a0ed3.chunk.js",
+    "static/css/main.39710640.chunk.css",
+    "static/js/main.96501075.chunk.js"
   ]
 }
