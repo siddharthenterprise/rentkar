@@ -331,8 +331,12 @@
     display: none;
   }
   .category_overview .product_overview .category {
+    min-width: 96%;
     margin: 0px;
     justify-content: space-evenly;
+  }
+  .category_overview .product_overview .category .catcard{
+    margin: 20px 0px;
   }
   .category_overview .product_overview .category .catcard .ccard {
     min-width: 37vw;
