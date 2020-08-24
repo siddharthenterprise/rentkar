@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import guitar from "../images/guitar.png";
+import guitar from "../images/guitar2.png";
 import Corousel from "./corousel";
 
 function Slide_corousel() {
