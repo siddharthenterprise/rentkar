@@ -255,7 +255,7 @@
 .list2 button {
   float: right;
   border: none;
-  padding: 3px 10px;
+  padding: 5px 10px;
   font-size: 8px;
   background-color: #1bacf4;
   border-radius: 5px;
@@ -332,7 +332,7 @@
   text-align: left;
 }
 .list3 img {
-  height: 70vh;
+  height: 400px;
   width: auto;
 }
 .list3 .final .para h1,
@@ -437,7 +437,7 @@
 .customers {
   /* max-width: 100%; */
   background-color: #ffffff;
-  background-image: url("../images/wave.png");
+  /* background-image: url("../images/wave.png"); */
   background-position: 0px -25px; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -507,7 +507,7 @@
   min-height: 43vh;
   margin: 20px;
   border: none;
-  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 7px 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 10px;
 }
@@ -530,7 +530,7 @@
     padding: 0 0px;
   }
   .covid {
-    min-height: 18vh;
+    min-height: 110px;
     padding: 0px 10px;
     max-width: 95%;
   }
@@ -784,6 +784,12 @@
   }
   .promise h4 {
     font-size: 12px;
+  }
+  .promise .title{
+    padding: 0px 20px;
+  }
+  .promise .parts .same_card .cathead{
+    margin: auto;
   }
   .promise .parts .same_card .cathead h4,
   .customers .custom .special h4 {

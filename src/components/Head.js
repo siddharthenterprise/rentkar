@@ -14,6 +14,7 @@ import mumbai from '../images/Mumbai.png';
 import pune from '../images/PuneC.png';
 import mumbaig from '../images/Mumbaig.png';
 import puneg from '../images/PuneCG.png';
+import bar from "../images/icons/new icin-16.png";
 
 
 
@@ -100,7 +101,8 @@ export class Head extends Component {
                             onHide={addModalclose} />
                     </div>
                     <div className="bar">
-                        <i class="fas fa-bars"></i>
+                        {/* <i class="fas fa-bars"></i> */}
+                        <img src={bar} />
                     </div>
 
                 </div>

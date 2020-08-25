@@ -46,6 +46,10 @@ background-color: black; /* Green */
 }
 .bar{
     display: none;
+    /* max-width: 10px; */
+}
+.bar img{
+    max-width: 10px;
 }
 .but button:hover{
      border-color: #1383bb;

@@ -36,15 +36,91 @@ import selectedCategory4 from "../images/selectedCategory4.png";
 import Corousel from "./corousel";
 import Slide_corousel from "./Slide_corousel";
 
+
+import gam_con_sel from "../images/icons2/icons/GAMING/console gradient.png";
+import gam_con from "../images/icons2/icons/GAMING/console grey.png";
+import ps4_sel from "../images/icons2/icons/GAMING/games gradient.png";
+import ps4 from "../images/icons2/icons/GAMING/games grey.png";
+import packag_sel from "../images/icons2/icons/GAMING/packages colour.png";
+import packag from "../images/icons2/icons/GAMING/packages grey.png";
+import pc_sel from "../images/icons2/icons/GAMING/pc gradient.png";
+import pc from "../images/icons2/icons/GAMING/pc grey.png";
+import access_sel from "../images/icons2/icons/GAMING/accesories colour.png";
+import access from "../images/icons2/icons/GAMING/accesories grey.png";
+
+import guitar_sel from "../images/icons2/icons/MUSIC/GUITAR GRADIENT.png";
+import key_sel from "../images/icons2/icons/MUSIC/keyboard volour.png";
+import per_sel from "../images/icons2/icons/MUSIC/percussion colour.png";
+import rec_sel from "../images/icons2/icons/MUSIC/recording colour.png";
+import amp_sel from "../images/icons2/icons/MUSIC/amplifier colour.png";
+import groove_sel from "../images/icons2/icons/MUSIC/groove colour.png";
+import wind_sel from "../images/icons2/icons/MUSIC/wind color.png";
+
+import guitar_grey from "../images/icons2/icons/MUSIC/GUITAR GREY.png";
+import key from "../images/icons2/icons/MUSIC/keyboard grey.png";
+import per from "../images/icons2/icons/MUSIC/percussion grey.png";
+import rec from "../images/icons2/icons/MUSIC/recording grey.png";
+// "../images/icons2/icons/MUSIC/GUITAR GREY.png",
+import amp from "../images/icons2/icons/MUSIC/amplifier grey.png";
+import groove from "../images/icons2/icons/MUSIC/groove.png";
+import wind from "../images/icons2/icons/MUSIC/wind grey.png";
+
+// game
+import l1s from "../images/icons2/icons/laptop/gaming colour.png";
+import l2s from "../images/icons2/icons/laptop/i3colour.png";
+import l3s from "../images/icons2/icons/laptop/i5 colour.png";
+import l4s from "../images/icons2/icons/laptop/i7 colour.png";
+import l5s from "../images/icons2/icons/laptop/macbook colour.png";
+import l6s from "../images/icons2/icons/laptop/pc colour.png";
+import l7s from "../images/icons2/icons/laptop/tablet color.png";
+
+import l1 from "../images/icons2/icons/laptop/gaming grey.png";
+import l2 from "../images/icons2/icons/laptop/i3 grey.png";
+import l3 from "../images/icons2/icons/laptop/i5 grey.png";
+import l4 from "../images/icons2/icons/laptop/i7 grey.png";
+import l5 from "../images/icons2/icons/laptop/macbook grey.png";
+import l6 from "../images/icons2/icons/laptop/pc grey.png";
+import l7 from "../images/icons2/icons/laptop/tablet grey.png";
+
+
+import c1s from "../images/icons2/icons/photography/camera colour.png";
+import c2s from "../images/icons2/icons/photography/filters.png";
+import c3s from "../images/icons2/icons/photography/lense color.png";
+import c4s from "../images/icons2/icons/photography/lights colour.png";
+import c5s from "../images/icons2/icons/photography/recording colour.png";
+import c6s from "../images/icons2/icons/photography/rigs color.png";
+
+import c1 from "../images/icons2/icons/photography/camera grey.png";
+import c2 from "../images/icons2/icons/photography/filters grey.png";
+import c3 from "../images/icons2/icons/photography/lens grey.png";
+import c4 from "../images/icons2/icons/photography/lights grey.png";
+import c5 from "../images/icons2/icons/photography/recording.png";
+import c6 from "../images/icons2/icons/photography/rigs grey.png";
+
+
 const categories = ["Music", "Gaming", "Laptop", "Photography"];
-const sub = ["Packages", "Deals", "PC Gaming", "Console"];
-const img = [
-    selectedCategory1,
-    selectedCategory2,
-    selectedCategory3,
-    selectedCategory4,
+const sub = [["Guitar", "Keyboard", "Percussion", "Recording", "Amplifier", "Groove", "Wind"],
+["Packages", "PC Gaming", "Console", "Accessories"],
+["Gaming", "i3", "i5", "i7", "Macbook", "PC", "Tablet"],
+["Camera", "Filters", "Lens", "Lights", "Recording", "Rigs"]];
+const img = [[
+    guitar_grey, key, per, rec, amp, groove, wind
+],
+[
+    packag, pc, gam_con, access
+],
+[l1, l2, l3, l4, l5, l6, l7],
+
+[c1, c2, c3, c4, c5, c6]
 ];
-const selectedImg = [category1, category2, category3, category4];
+const selectedImg = [
+    [guitar_sel, key_sel, per_sel, rec_sel, amp_sel, groove_sel, wind_sel
+
+    ],
+
+    [packag_sel, pc_sel, gam_con_sel, access_sel],
+    [l1s, l2s, l3s, l4s, l5s, l6s, l7s],
+    [c1s, c2s, c3s, c4s, c5s, c6s]];
 
 export class Body extends Component {
     constructor(props) {
@@ -61,24 +137,24 @@ export class Body extends Component {
     }
 
     subSelect(index) {
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < sub[this.state.category].length; i++) {
             if (i == index)
                 document.getElementById("sub" + index.toString()).style.opacity = "1";
             else document.getElementById("sub" + i.toString()).style.opacity = "0";
         }
-        this.setState((prevState) => {
-            return {
-                category: prevState.category,
-                sub: index,
-            };
-        });
+        this.setState({
+            sub: index,
+        })
+        console.log(index);
+        console.log(this.state.sub);
     }
 
     categorySelect(index) {
+        this.subSelect(0);
         this.setState((prevState) => {
             return {
                 category: index,
-                sub: prevState.sub,
+                sub: 0,
             };
         });
     }
@@ -105,11 +181,11 @@ export class Body extends Component {
             >
                 <Card.Content>
                     <Image
-                        src={this.state.sub == index ? selectedImg[index] : img[index]}
+                        src={this.state.sub == index ? selectedImg[this.state.category][index] : img[this.state.category][index]}
                         wrapped
                         ui={false}
                     />
-                    <p>{sub[index]}</p>
+                    <p>{sub[this.state.category][index]}</p>
                 </Card.Content>
             </Card>
         );
@@ -203,22 +279,14 @@ export class Body extends Component {
                     </div>
                     <div className="subCategoriesBackground">
                         <div className="subCategories">
-                            <div>
-                                <SubCard index={0} />
-                                <hr className="subLine" id="sub0" />
-                            </div>
-                            <div>
-                                <SubCard index={1} />
-                                <hr className="subLine" id="sub1" />
-                            </div>
-                            <div>
-                                <SubCard index={2} />
-                                <hr className="subLine" id="sub2" />
-                            </div>
-                            <div>
-                                <SubCard index={3} />
-                                <hr className="subLine" id="sub3" />
-                            </div>
+                            {
+                                sub[this.state.category].map((item, index) => {
+                                    return <div>
+                                        <SubCard index={index} />
+                                        <hr className="subLine" id={"sub" + index.toString()} />
+                                    </div>
+                                })
+                            }
                         </div>
                     </div>
                     {/* <div className='category'>
@@ -328,7 +396,7 @@ export class Body extends Component {
                 <div className="promiseBackground">
                     <div className="promise">
                         <div>
-                            <h4>OUR PROMISES</h4>
+                            <h4 className="title">OUR PROMISES</h4>
                         </div>
                         <div className="parts">
                             <div>
