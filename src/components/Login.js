@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import logo_trans from '../images/logo_trans.png';
 
@@ -65,9 +66,9 @@ export class Login extends Component {
                         />
                         <i class="fas fa-eye" onClick={this.toggleShow}></i>
                     </div>
-
-                    <button className="loginbut">Log in</button>
-
+                    <div className="loginbut">
+                        <Link to="/about" className="loginbut"><button className="loginbut">Log in</button></Link>
+                    </div>
                     <div className="signuptxt">
                         <p>Don’t have an  account?  <span id='signup'>Sign Up</span></p>
                     </div>

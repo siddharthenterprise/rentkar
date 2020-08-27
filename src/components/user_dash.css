@@ -1,0 +1,40 @@
+.useropt{
+    min-width: 25%;
+    float: left;
+    
+}
+.useropt .user_detail{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
+}
+.useropt .user_detail .first{
+    display: flex;
+    flex-direction: column;
+    /* float:center; */
+    margin: auto;
+}
+.useropt .user_detail .first i{
+    font-size: 40px;
+}
+.useropt .user_detail .first .userlocation i{
+    font-size: 18px;
+}
+.useropt .user_detail .second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.useropt .user_detail .second .mail{
+    float: left;
+   
+}
+.useropt .user_detail .second .mail h4{
+    font-size: 10px;
+}
+.useropt .user_detail .second .marker{
+    float: right;
+    margin: auto,none;
+}

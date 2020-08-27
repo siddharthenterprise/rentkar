@@ -2,7 +2,9 @@ import React, { Component, useState } from "react";
 import { Card, Icon, Feed, Image, Button } from "semantic-ui-react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import { DotsMobileStepper } from "./ListItem";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -189,6 +191,52 @@ export class Body extends Component {
                 </Card.Content>
             </Card>
         );
+
+        const responsive = {
+            superLargeDesktop: {
+                breakpoint: { max: 4000, min: 3000 },
+                items: 3,
+            },
+            desktop: {
+                breakpoint: { max: 3000, min: 1024 },
+                items: 2.5,
+            },
+            tablet: {
+                breakpoint: { max: 1024, min: 464 },
+                items: 2,
+            },
+            mobile: {
+                breakpoint: { max: 464, min: 0 },
+                items: 1,
+            },
+        };
+
+        const left_but = {
+            backgroundColor: "white",
+            padding: "5px 10px",
+            borderRadius: "20px",
+            margin: "2vw",
+        };
+
+        const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+            const { carouselState: { currentSlide } } = rest;
+            return (
+                <div
+                    className="carousel-button-group"
+                    style={{
+                        marginLeft: `40vw`,
+                        PaddingBottom: `20vh`,
+                    }}>
+                    <a style={left_but} onClick={() => previous()}>
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a style={left_but} onClick={() => next()}>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            );
+        };
+
 
         return (
             <div className="homeBody">
@@ -472,94 +520,88 @@ export class Body extends Component {
                         <div className="special">
                             <h4>NOTE FROM OUR HAPPY CUSTOMER</h4>
                         </div>
-                        <div className="customer">
-                            <div>
-                                <Card className="descr">
-                                    <div className="straight">
-                                        <div>
-                                            <img src={cust1}></img>
-                                        </div>
-                                        <div className="name_rating">
-                                            <div>
-                                                <h4>Shivam Wadhwa</h4>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <Carousel arrows={false} containerClass="carousel-container" responsive={responsive} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />}>
+                            <Card className="descr">
+                                <div className="straight">
                                     <div>
-                                        <p>
-                                            Ordered Yamaha acoustic guitar through rentkar, they offer
-                                            great gadgets at a very cheap price 🤘🏽. Highly
-                                            recommended.
-                    </p>
+                                        <img src={cust1}></img>
                                     </div>
-                                </Card>
-                            </div>
-                            <div>
-                                <Card className="descr">
-                                    <div className="straight">
+                                    <div className="name_rating">
                                         <div>
-                                            <img src={cust2}></img>
+                                            <h4>Shivam Wadhwa</h4>
                                         </div>
-                                        <div className="name_rating">
-                                            <div>
-                                                <h4>Shivam Wadhwa</h4>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p>
-                                            Rentkar is really good!! The quality of the product is
-                                            brilliant. The service is also spot on. They make sure
-                                            that the product is delivered as well as picked up on
-                                            time. Highly recommended..
-                    </p>
-                                    </div>
-                                </Card>
-                            </div>
-                            <div>
-                                <Card className="descr">
-                                    <div className="straight">
                                         <div>
-                                            <img src={cust1}></img>
-                                        </div>
-                                        <div className="name_rating">
-                                            <div>
-                                                <h4>Shivam Wadhwa</h4>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
                                         </div>
                                     </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Ordered Yamaha acoustic guitar through rentkar, they offer
+                                        great gadgets at a very cheap price 🤘🏽. Highly
+                                        recommended.
+                                        </p>
+                                </div>
+                            </Card>
+                            <Card className="descr">
+                                <div className="straight">
                                     <div>
-                                        <p>
-                                            Rentkar is really good!! The quality of the product is
-                                            brilliant. The service is also spot on. They make sure
-                                            that the product is delivered as well as picked up on
-                                            time. Highly recommended..
-                    </p>
+                                        <img src={cust2}></img>
                                     </div>
-                                </Card>
-                            </div>
-                        </div>
+                                    <div className="name_rating">
+                                        <div>
+                                            <h4>Shivam Wadhwa</h4>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Rentkar is really good!! The quality of the product is
+                                        brilliant. The service is also spot on. They make sure
+                                        that the product is delivered as well as picked up on
+                                        time. Highly recommended..
+                                        </p>
+                                </div>
+                            </Card>
+                            <Card className="descr">
+                                <div className="straight">
+                                    <div>
+                                        <img src={cust1}></img>
+                                    </div>
+                                    <div className="name_rating">
+                                        <div>
+                                            <h4>Shivam Wadhwa</h4>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Rentkar is really good!! The quality of the product is
+                                        brilliant. The service is also spot on. They make sure
+                                        that the product is delivered as well as picked up on
+                                        time. Highly recommended..
+                                        </p>
+                                </div>
+                            </Card>
+                        </Carousel>
                     </div>
                 </div>
             </div>

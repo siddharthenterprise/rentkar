@@ -7,6 +7,8 @@ import { Footer } from './components/Footer';
 import { Floatnav } from './components/Floatnav';
 import { Know_more } from './components/Know_more';
 import { Category } from './components/Category';
+import { User_dash } from './components/User_dash';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         )} />
         <Route path="/knowmore" render={props => (<Know_more />)}></Route>
         <Route path="/category" render={props => (<Category />)}></Route>
+        <Route path="/about" render={props => (<User_dash />)}></Route>
+
       </div>
       <Footer />
     </Router>
