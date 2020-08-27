@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "033a61ade8779b627c6e3b661a3ed189",
+    "revision": "2fd6b6bb84142c3699c0d065a6d2b59e",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "eb65aea65765b604d1be",
-    "url": "/rentkar/static/css/2.baa86093.chunk.css"
+    "revision": "004de0bd259496e7563e",
+    "url": "/rentkar/static/css/2.240414b9.chunk.css"
   },
   {
-    "revision": "08ae796c8b911cb92ff3",
-    "url": "/rentkar/static/css/main.1772e2c9.chunk.css"
+    "revision": "c42c97560768afc4cdb8",
+    "url": "/rentkar/static/css/main.311b6596.chunk.css"
   },
   {
-    "revision": "eb65aea65765b604d1be",
-    "url": "/rentkar/static/js/2.c309718e.chunk.js"
+    "revision": "004de0bd259496e7563e",
+    "url": "/rentkar/static/js/2.fc509986.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.c309718e.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.fc509986.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "08ae796c8b911cb92ff3",
-    "url": "/rentkar/static/js/main.45d0a749.chunk.js"
+    "revision": "c42c97560768afc4cdb8",
+    "url": "/rentkar/static/js/main.9f768a44.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -338,6 +338,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b73201fec451a69840300e5f1431bfb6",
     "url": "/rentkar/static/media/recording.b73201fe.png"
+  },
+  {
+    "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
+    "url": "/rentkar/static/media/revicons.04eb8fc5.woff"
+  },
+  {
+    "revision": "17629a5dfe0d3c3946cf401e1895f091",
+    "url": "/rentkar/static/media/revicons.17629a5d.ttf"
+  },
+  {
+    "revision": "2feb69ccb596730c72920c6ba3e37ef8",
+    "url": "/rentkar/static/media/revicons.2feb69cc.eot"
   },
   {
     "revision": "7f651b185b1f34d676c3be85f19d2923",

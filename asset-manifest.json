@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.1772e2c9.chunk.css",
-    "main.js": "/rentkar/static/js/main.45d0a749.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.45d0a749.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.311b6596.chunk.css",
+    "main.js": "/rentkar/static/js/main.9f768a44.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.9f768a44.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
-    "static/css/2.baa86093.chunk.css": "/rentkar/static/css/2.baa86093.chunk.css",
-    "static/js/2.c309718e.chunk.js": "/rentkar/static/js/2.c309718e.chunk.js",
-    "static/js/2.c309718e.chunk.js.map": "/rentkar/static/js/2.c309718e.chunk.js.map",
+    "static/css/2.240414b9.chunk.css": "/rentkar/static/css/2.240414b9.chunk.css",
+    "static/js/2.fc509986.chunk.js": "/rentkar/static/js/2.fc509986.chunk.js",
+    "static/js/2.fc509986.chunk.js.map": "/rentkar/static/js/2.fc509986.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.3c20116c5194f4d49fd3f2a158684baf.js": "/rentkar/precache-manifest.3c20116c5194f4d49fd3f2a158684baf.js",
+    "precache-manifest.dc4276903ce28b121018e1727b3440d5.js": "/rentkar/precache-manifest.dc4276903ce28b121018e1727b3440d5.js",
     "service-worker.js": "/rentkar/service-worker.js",
-    "static/css/2.baa86093.chunk.css.map": "/rentkar/static/css/2.baa86093.chunk.css.map",
-    "static/css/main.1772e2c9.chunk.css.map": "/rentkar/static/css/main.1772e2c9.chunk.css.map",
-    "static/js/2.c309718e.chunk.js.LICENSE.txt": "/rentkar/static/js/2.c309718e.chunk.js.LICENSE.txt",
+    "static/css/2.240414b9.chunk.css.map": "/rentkar/static/css/2.240414b9.chunk.css.map",
+    "static/css/main.311b6596.chunk.css.map": "/rentkar/static/css/main.311b6596.chunk.css.map",
+    "static/js/2.fc509986.chunk.js.LICENSE.txt": "/rentkar/static/js/2.fc509986.chunk.js.LICENSE.txt",
     "static/media/GUITAR GRADIENT.png": "/rentkar/static/media/GUITAR GRADIENT.c5bb0659.png",
     "static/media/GUITAR GREY.png": "/rentkar/static/media/GUITAR GREY.515fa585.png",
     "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
@@ -90,6 +90,7 @@
     "static/media/recording colour.png": "/rentkar/static/media/recording colour.86e1d245.png",
     "static/media/recording grey.png": "/rentkar/static/media/recording grey.c4153e2a.png",
     "static/media/recording.png": "/rentkar/static/media/recording.b73201fe.png",
+    "static/media/styles.css": "/rentkar/static/media/revicons.2feb69cc.eot",
     "static/media/rigs color.png": "/rentkar/static/media/rigs color.7f651b18.png",
     "static/media/rigs grey.png": "/rentkar/static/media/rigs grey.90dd57f8.png",
     "static/media/search_boy.png": "/rentkar/static/media/search_boy.d6dc0b55.png",
@@ -112,9 +113,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
-    "static/css/2.baa86093.chunk.css",
-    "static/js/2.c309718e.chunk.js",
-    "static/css/main.1772e2c9.chunk.css",
-    "static/js/main.45d0a749.chunk.js"
+    "static/css/2.240414b9.chunk.css",
+    "static/js/2.fc509986.chunk.js",
+    "static/css/main.311b6596.chunk.css",
+    "static/js/main.9f768a44.chunk.js"
   ]
 }
