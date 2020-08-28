@@ -66,9 +66,9 @@ export class Login extends Component {
                         />
                         <i class="fas fa-eye" onClick={this.toggleShow}></i>
                     </div>
-                    <div className="loginbut">
-                        <Link to="/about" className="loginbut"><button className="loginbut">Log in</button></Link>
-                    </div>
+
+                    <Link to="/about" className="loginbut"><button className="loginbut" onClick={this.props.onHide}>Log in</button></Link>
+
                     <div className="signuptxt">
                         <p>Don’t have an  account?  <span id='signup'>Sign Up</span></p>
                     </div>
