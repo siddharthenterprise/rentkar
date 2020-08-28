@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2fd6b6bb84142c3699c0d065a6d2b59e",
+    "revision": "cba882ae77629d651ca2ea65d6601c27",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "004de0bd259496e7563e",
+    "revision": "d29a6c688d2cf07c1b92",
     "url": "/rentkar/static/css/2.240414b9.chunk.css"
   },
   {
-    "revision": "c42c97560768afc4cdb8",
-    "url": "/rentkar/static/css/main.311b6596.chunk.css"
+    "revision": "5dd874a9930b27bfd95d",
+    "url": "/rentkar/static/css/main.808d6530.chunk.css"
   },
   {
-    "revision": "004de0bd259496e7563e",
-    "url": "/rentkar/static/js/2.fc509986.chunk.js"
+    "revision": "d29a6c688d2cf07c1b92",
+    "url": "/rentkar/static/js/2.8d1253ab.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.fc509986.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.8d1253ab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c42c97560768afc4cdb8",
-    "url": "/rentkar/static/js/main.9f768a44.chunk.js"
+    "revision": "5dd874a9930b27bfd95d",
+    "url": "/rentkar/static/js/main.71dacbc3.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -120,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/catogories-40.f4ef8276.png"
   },
   {
+    "revision": "466da6d7bd1cddf34f0195e2333cb8f4",
+    "url": "/rentkar/static/media/catogories-42.466da6d7.png"
+  },
+  {
     "revision": "7315f0e8221e02360ca9ff1b5ff428d6",
     "url": "/rentkar/static/media/catogories-49.7315f0e8.png"
   },
@@ -138,6 +142,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "989b28a69c443bf2331f010712410d2d",
     "url": "/rentkar/static/media/console grey.989b28a6.png"
+  },
+  {
+    "revision": "0528a11ff9ef99ecee241ea67c7bc33c",
+    "url": "/rentkar/static/media/covid safety-07.0528a11f.png"
   },
   {
     "revision": "7f6216560d825dfd039bc51b626fd05a",
