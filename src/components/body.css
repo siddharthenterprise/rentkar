@@ -210,7 +210,7 @@
   flex-direction: column;
   min-height: 400px;
   margin-left: 10vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .list2 .Heading h1,
 .list3 .final .para h1,
@@ -225,10 +225,14 @@
   display: flex;
   flex-direction: row;
   margin: 20px 20px;
+  margin-right: 0px;
   border: none;
   flex-wrap: wrap-reverse;
   flex-flow: row;
+  /* overflow-x: scroll; */
 }
+
+
 .list2 .category .catcard {
   display: flex;
   flex-direction: column;
@@ -500,6 +504,7 @@
   min-width: 200px;
   min-height: 300px;
   margin: 20px;
+  margin-left: 7px;
   border: none;
   box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -679,7 +684,7 @@
   .list2 .Heading h1,
   .list3 .final .para h1,
   .list4 .final .para h1 {
-    font-size: 12px;
+    font-size: 16px;
     margin: -30px 0px;
   }
   .list .Heading h1,.list2 .Heading h1{
@@ -692,6 +697,15 @@
   }
   .list2 .category .catcard img {
     max-width: 40vw;
+  }
+  .list2 .category{
+    overflow-x: scroll;
+  }
+  .list2 .category::-webkit-scrollbar-thumb{
+    display: none;
+  }
+  .list2 .category::-webkit-scrollbar-track{
+    display: none;
   }
 
   /* -------------------- */
@@ -781,6 +795,7 @@
     font-size: 12px;
   }
   .promise .title{
+    font-size: 16px;
     padding: 0px 20px;
   }
   .promise .parts .same_card .cathead{
@@ -788,7 +803,7 @@
   }
   .promise .parts .same_card .cathead h4,
   .customers .custom .special h4 {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /* =========================== */
