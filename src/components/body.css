@@ -764,7 +764,9 @@
 
   .list3 .final .button {
     font-size: 10.4px;
-    min-width: 150px;
+    min-width: 40vw;
+    margin: 4px;
+    /* justify-content: space-between; */
   }
 
   .list3 .final .para .button .button1,
