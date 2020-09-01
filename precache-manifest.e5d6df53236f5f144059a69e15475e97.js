@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "76125eee273b26efb0af602597e2d563",
+    "revision": "38ea0991c16c95392ca1f8db6850bb31",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "d29a6c688d2cf07c1b92",
+    "revision": "178d253baa7443a406fd",
     "url": "/rentkar/static/css/2.240414b9.chunk.css"
   },
   {
-    "revision": "f7eb09851bd731a951d5",
-    "url": "/rentkar/static/css/main.bc4a4539.chunk.css"
+    "revision": "caf1d596e65095e50676",
+    "url": "/rentkar/static/css/main.61be38a1.chunk.css"
   },
   {
-    "revision": "d29a6c688d2cf07c1b92",
-    "url": "/rentkar/static/js/2.8d1253ab.chunk.js"
+    "revision": "178d253baa7443a406fd",
+    "url": "/rentkar/static/js/2.8930dc11.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.8d1253ab.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.8930dc11.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f7eb09851bd731a951d5",
-    "url": "/rentkar/static/js/main.71dacbc3.chunk.js"
+    "revision": "caf1d596e65095e50676",
+    "url": "/rentkar/static/js/main.a4a3710e.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
@@ -120,10 +120,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/catogories-40.f4ef8276.png"
   },
   {
-    "revision": "466da6d7bd1cddf34f0195e2333cb8f4",
-    "url": "/rentkar/static/media/catogories-42.466da6d7.png"
-  },
-  {
     "revision": "7315f0e8221e02360ca9ff1b5ff428d6",
     "url": "/rentkar/static/media/catogories-49.7315f0e8.png"
   },
@@ -142,10 +138,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "989b28a69c443bf2331f010712410d2d",
     "url": "/rentkar/static/media/console grey.989b28a6.png"
-  },
-  {
-    "revision": "0528a11ff9ef99ecee241ea67c7bc33c",
-    "url": "/rentkar/static/media/covid safety-07.0528a11f.png"
   },
   {
     "revision": "7f6216560d825dfd039bc51b626fd05a",
@@ -268,6 +260,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/lights grey.a9bd274f.png"
   },
   {
+    "revision": "113abc5f81994d020e6623144220d55b",
+    "url": "/rentkar/static/media/listing_g.113abc5f.png"
+  },
+  {
+    "revision": "c5b77b5de1bd836ba381784f64d1f279",
+    "url": "/rentkar/static/media/listing_s.c5b77b5d.png"
+  },
+  {
     "revision": "622a354e13ca19dd03bb68298e2de766",
     "url": "/rentkar/static/media/lock.622a354e.png"
   },
@@ -348,6 +348,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/recording.b73201fe.png"
   },
   {
+    "revision": "c09cad94642fae9fa44eb2a95284728c",
+    "url": "/rentkar/static/media/rental_g.c09cad94.png"
+  },
+  {
+    "revision": "b228414c0146152d7871b880fe2ccecf",
+    "url": "/rentkar/static/media/rental_s.b228414c.png"
+  },
+  {
     "revision": "04eb8fc57f27498e5ae37523e3bfb2c7",
     "url": "/rentkar/static/media/revicons.04eb8fc5.woff"
   },
@@ -396,8 +404,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/selectedCategory4.9fedb29b.png"
   },
   {
+    "revision": "7f29ce37df14508528e7e987c9817a11",
+    "url": "/rentkar/static/media/settings_g.7f29ce37.png"
+  },
+  {
+    "revision": "9c9a79e3f195ce0037d0e470f19ec7dc",
+    "url": "/rentkar/static/media/settings_s.9c9a79e3.png"
+  },
+  {
     "revision": "a4f0995223c763ed05e6fc09a99bf5e7",
     "url": "/rentkar/static/media/share.a4f09952.png"
+  },
+  {
+    "revision": "5641838f5aacbe447f92328db71da3d2",
+    "url": "/rentkar/static/media/shareCredit_g.5641838f.png"
+  },
+  {
+    "revision": "0cfa551165162b068dff511363cf042c",
+    "url": "/rentkar/static/media/shareCredit_s.0cfa5511.png"
   },
   {
     "revision": "44b2f1a1e674676aebbc5fbeab88fdd1",
@@ -412,6 +436,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/slide3.e17bb922.jpg"
   },
   {
+    "revision": "9ca461d5f21556e3c2a0df56c42af3d5",
+    "url": "/rentkar/static/media/support_g.9ca461d5.png"
+  },
+  {
+    "revision": "70f0f5bd1fe4bb387db375551a4cfc27",
+    "url": "/rentkar/static/media/support_s.70f0f5bd.png"
+  },
+  {
     "revision": "9ca7b8632422265c606cf735ecb7ff7e",
     "url": "/rentkar/static/media/tablet color.9ca7b863.png"
   },
@@ -422,6 +454,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "855265d615f99dbb0fb0cbbe4f6823d5",
     "url": "/rentkar/static/media/tick_circle.855265d6.png"
+  },
+  {
+    "revision": "c249527f9d33f843b1095cf1ad059dcf",
+    "url": "/rentkar/static/media/verification_g.c249527f.png"
+  },
+  {
+    "revision": "712cde71e66522831a42c6349ae83152",
+    "url": "/rentkar/static/media/verification_s.712cde71.png"
   },
   {
     "revision": "e6fcd0e0fca89bd606ced01eefbcca5a",
