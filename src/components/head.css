@@ -194,6 +194,7 @@ background-color: black; /* Green */
 
 .popup-content.pop-content{
     margin: 20px;
+    left: -9.0885px !important;
 }
     
 }

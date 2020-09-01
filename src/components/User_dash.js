@@ -1,17 +1,43 @@
 import React, { Component } from 'react'
-import rental from '../images/changes_icon-01.png';
-import listing from '../images/changes_icon-02.png';
-import shareCredit from '../images/changes_icon-03.png';
-import verification from '../images/icons/covid safety-07.png';
-import support from '../images/changes_icon-05.png';
-import settings from '../images/icons/catogories-42.png';
+
+import rental_s from '../images/icons/rental_s.png';
+import listing_s from '../images/icons/listing_s.png';
+import shareCredit_s from '../images/icons/shareCredit_s.png';
+import verification_s from '../images/icons/verification_s.png';
+import support_s from '../images/icons/support_s.png';
+import settings_s from '../images/icons/settings_s.png';
+
+import rental_g from '../images/icons/rental_g.png';
+import listing_g from '../images/icons/listing_g.png';
+import shareCredit_g from '../images/icons/shareCredit_g.png';
+import verification_g from '../images/icons/verification_g.png';
+import support_g from '../images/icons/support_g.png';
+import settings_g from '../images/icons/settings_g.png';
+
 import './user_dash.css';
 import { Card, Image } from "semantic-ui-react";
 
-const icons = [rental, listing, shareCredit, verification, support, settings]
+const icons = [rental_s, listing_s, shareCredit_s, verification_s, support_s, settings_s]
+const icons_g = [rental_g, listing_g, shareCredit_g, verification_g, support_g, settings_g]
 const iconDesc = ['My Rentals', 'My Listings', 'Share Credits', 'Verification', 'Help & Support', 'Settings']
 
+
+
 export class User_dash extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            index: 0
+        }
+    }
+
+    changeIndex(index) {
+        this.setState({
+            index: index,
+        })
+    }
+
     render() {
 
         const DetailsCard = ({ index }) => (
@@ -20,9 +46,10 @@ export class User_dash extends Component {
             >
                 <Card.Content>
                     <Image
-                        src={icons[index]}
+                        src={this.state.index == index ? icons[index] : icons_g[index]}
                         wrapped
                         ui={false}
+                        onClick={() => { this.changeIndex(index) }}
                     />
                     <p>{iconDesc[index]}</p>
                 </Card.Content>
