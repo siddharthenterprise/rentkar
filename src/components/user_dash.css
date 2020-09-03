@@ -67,6 +67,9 @@
     color: #fff;
     font-size: 18px;
 }
+.useropt .user_detail .second .marker #pencil{
+    width: 50px;
+}
 
 .useropt .details{
     display: flex;
@@ -132,6 +135,8 @@
     .useropt .details{
         justify-content: space-evenly;
         padding: 0px;
+        margin: 20px 0px;
+        margin-bottom: 0px;
     }
     .useropt .details .detailsCard{
         margin: 10px 5px;

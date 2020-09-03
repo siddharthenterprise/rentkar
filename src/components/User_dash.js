@@ -14,6 +14,8 @@ import verification_g from '../images/icons/verification_g.png';
 import support_g from '../images/icons/support_g.png';
 import settings_g from '../images/icons/settings_g.png';
 
+import pencil from '../images/icons/pencil_white.png';
+
 import './user_dash.css';
 import { Card, Image } from "semantic-ui-react";
 
@@ -77,7 +79,7 @@ export class User_dash extends Component {
                                 <h4>7000232401</h4>
                             </div>
                             <div className="marker">
-                                <i class="far fa-edit"></i>
+                                <img id="pencil" src={pencil}></img>
                             </div>
                         </div>
                     </div>
