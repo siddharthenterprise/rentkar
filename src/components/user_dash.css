@@ -1,3 +1,7 @@
+.dashboard{
+    display: flex;
+    flex-direction: row;
+}
 .useropt{
     max-width: 25%;
     float: left;
@@ -94,6 +98,7 @@
 
 }
 
+
 .useropt .details .detailsCard img{
     width: 70px;
     height: auto;
@@ -125,6 +130,148 @@
     text-align: left;
     padding-left: 20px;
 }
+
+/* Right screen=================================================== */
+.right_screen{
+    min-width: 75%;
+    
+}
+.right_screen .order_card{
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.right_screen .image_detail{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* min-width: 70%; */
+    
+}
+.right_screen .image_detail .detail h4{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.right_screen .image_detail .detail h6{
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.right_screen .image_detail .image{
+    margin: auto;
+}
+
+.right_screen .image_detail .image img{
+    width: 177px;
+    margin-bottom: 65px;
+}
+.right_screen .image_detail .detail{
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.right_screen .image_detail .detail .name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.right_screen .image_detail .detail .name .main_head{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.right_screen .image_detail .detail .name .edit_order img{
+    width: 30px;
+}
+.right_screen .image_detail .detail .price{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 70%;
+}
+.right_screen .image_detail .detail .price .rent,.right_screen .image_detail .detail .price .tenure,.right_screen .image_detail .detail .price .deposit{
+    display: flex;
+    flex-direction: column;
+}
+.right_screen .image_detail .detail .price .name__{
+    float: left;
+    text-align: left;
+}
+.right_screen .image_detail .detail .total
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.right_screen .image_detail .detail .total .mybag_button{
+    min-width: 36%;
+    display: flex;
+    justify-content: space-between;
+}
+.right_screen .image_detail .detail .total .mybag_button .but1{
+    float: right;
+    min-width: 30px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #1bacf4;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.right_screen .image_detail .detail .total .mybag_button .but2{
+    float: right;
+    min-width: 30px;
+    border: 0.7px solid black;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.right_screen .checkout{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    padding: 20px 40px;
+    margin: auto auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    
+}
+.right_screen .checkout .checkout_button button{
+    float: right;
+    min-width: 30px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #1bacf4;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+
 @media screen and (max-width: 992px){
     .useropt{
         min-width: 100%;
