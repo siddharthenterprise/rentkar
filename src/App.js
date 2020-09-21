@@ -17,19 +17,18 @@ function App() {
       <div className="App">
         <Floatnav className='floatnav' />
         <Head />
-        <Route exact path="/rentkar" render={props => (
-          <React.Fragment>
-            <Slideshow />
-            <Body />
+        <div className="PageContent">
+          <Route exact path="/rentkar" render={props => (
+            <React.Fragment>
+              <Slideshow />
+              <Body />
+            </React.Fragment>
 
-
-          </React.Fragment>
-
-        )} />
-        <Route path="/knowmore" render={props => (<Know_more />)}></Route>
-        <Route path="/category" render={props => (<Category />)}></Route>
-        <Route path="/about" render={props => (<User_dash />)}></Route>
-
+          )} />
+          <Route path="/knowmore" render={props => (<Know_more />)}></Route>
+          <Route path="/category" render={props => (<Category />)}></Route>
+          <Route path="/about" render={props => (<User_dash />)}></Route>
+        </div>
       </div>
       <Footer />
     </Router>

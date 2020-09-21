@@ -4,6 +4,14 @@
   background-color: #ffffff;
 }
 
+.category_overview .staticContent{
+  top: 90px;
+}
+
+.category_overview .scrollContent{
+    margin-top: 200px;
+  }
+
 .category_overview .pagePath {
   background-color: #fff;
   color: #000;
@@ -118,6 +126,7 @@
   padding-bottom: 10px;
   font-size: 12px;
 }
+
 .category_overview .product_overview button {
   float: right;
   border: none;
@@ -236,11 +245,19 @@
   min-width: 10vw;
 }
 
-/*************************************/
+/*************/
 
 @media screen and (max-width: 992px) {
   .category_overview {
     overflow: hidden;
+  }
+
+  .category_overview .staticContent{
+    top: 70px;
+  }
+
+  .category_overview .scrollContent{
+    margin-top: 200px;
   }
 
   .category_overview .pagePath {

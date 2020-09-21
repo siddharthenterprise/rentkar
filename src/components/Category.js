@@ -175,96 +175,100 @@ export class Category extends Component {
 
         return (
             <div className="category_overview">
-                <div className="categorizeHead">
-                    <div className="pagePath">
-                        <p style={{ marginTop: "5px" }}>Home</p>
-                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                        <p style={{ marginTop: "5px" }}>
-                            {categories[this.state.category]}
-                        </p>
-                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                        <p style={{ marginTop: "5px" }}>{sub[this.state.category][this.state.sub]}</p>
-                    </div>
-                    <div className="categoriesBackground">
-                        <div className="categories">
-                            <button
-                                id="musicButton"
-                                className={
-                                    this.state.category == 0 ? "selectedButton" : "categoryButton"
-                                }
-                                onClick={() => {
-                                    this.categorySelect(0);
-                                }}
-                            >
-                                {categories[0].toUpperCase()}
-                            </button>
-                            <button
-                                id="gamingButton"
-                                className={
-                                    this.state.category == 1 ? "selectedButton" : "categoryButton"
-                                }
-                                onClick={() => {
-                                    this.categorySelect(1);
-                                }}
-                            >
-                                {categories[1].toUpperCase()}
-                            </button>
-                            <button
-                                id="laptopButton"
-                                className={
-                                    this.state.category == 2 ? "selectedButton" : "categoryButton"
-                                }
-                                onClick={() => {
-                                    this.categorySelect(2);
-                                }}
-                            >
-                                {categories[2].toUpperCase()}
-                            </button>
-                            <button
-                                id="photographyButton"
-                                className={
-                                    this.state.category == 3 ? "selectedButton" : "categoryButton"
-                                }
-                                onClick={() => {
-                                    this.categorySelect(3);
-                                }}
-                            >
-                                {categories[3].toUpperCase()}
-                            </button>
+                <div className="staticContent fixed-top">
+                    <div className="categorizeHead">
+                        <div className="pagePath">
+                            <p style={{ marginTop: "5px" }}>Home</p>
+                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                            <p style={{ marginTop: "5px" }}>
+                                {categories[this.state.category]}
+                            </p>
+                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                            <p style={{ marginTop: "5px" }}>{sub[this.state.category][this.state.sub]}</p>
                         </div>
-                    </div>
-                    <div className="subCategoriesBackground">
-                        <div className="subCategories">
-                            {
-                                sub[this.state.category].map((item, index) => {
-                                    return <div>
-                                        <SubCard index={index} />
-                                        <hr className="subLine" id={"sub" + index.toString()} />
-                                    </div>
-                                })
-                            }
+                        <div className="categoriesBackground">
+                            <div className="categories">
+                                <button
+                                    id="musicButton"
+                                    className={
+                                        this.state.category == 0 ? "selectedButton" : "categoryButton"
+                                    }
+                                    onClick={() => {
+                                        this.categorySelect(0);
+                                    }}
+                                >
+                                    {categories[0].toUpperCase()}
+                                </button>
+                                <button
+                                    id="gamingButton"
+                                    className={
+                                        this.state.category == 1 ? "selectedButton" : "categoryButton"
+                                    }
+                                    onClick={() => {
+                                        this.categorySelect(1);
+                                    }}
+                                >
+                                    {categories[1].toUpperCase()}
+                                </button>
+                                <button
+                                    id="laptopButton"
+                                    className={
+                                        this.state.category == 2 ? "selectedButton" : "categoryButton"
+                                    }
+                                    onClick={() => {
+                                        this.categorySelect(2);
+                                    }}
+                                >
+                                    {categories[2].toUpperCase()}
+                                </button>
+                                <button
+                                    id="photographyButton"
+                                    className={
+                                        this.state.category == 3 ? "selectedButton" : "categoryButton"
+                                    }
+                                    onClick={() => {
+                                        this.categorySelect(3);
+                                    }}
+                                >
+                                    {categories[3].toUpperCase()}
+                                </button>
+                            </div>
+                        </div>
+                        <div className="subCategoriesBackground">
+                            <div className="subCategories">
+                                {
+                                    sub[this.state.category].map((item, index) => {
+                                        return <div>
+                                            <SubCard index={index} />
+                                            <hr className="subLine" id={"sub" + index.toString()} />
+                                        </div>
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="product_overview">
-                    <div className="category">
-                        {this.state.whats_hot.map((item, index) => {
-                            return <div key={index}>{item}</div>;
-                        })}
+                <div className="scrollContent">
+                    <div className="product_overview">
+                        <div className="category">
+                            {this.state.whats_hot.map((item, index) => {
+                                return <div key={index}>{item}</div>;
+                            })}
+                        </div>
                     </div>
-                </div>
-                <div className="search_boy_with_input">
-                    <div className="search_boy_header">
-                        <h1>DIDN'T FIND WHAT YOU ARE LOOKING FOR ?</h1>
-                    </div>
-                    <div className="search_boy">
-                        <img src={search_boy}></img>
-                    </div>
-                    <div className="search_boy_input">
-                        <input placeholder="Drop your queries here"></input>
-                        <button id="category_last_but" className="selectedButton">
-                            Submit
-            </button>
+                    <div className="search_boy_with_input">
+                        <div className="search_boy_header">
+                            <h1>DIDN'T FIND WHAT YOU ARE LOOKING FOR ?</h1>
+                        </div>
+                        <div className="search_boy">
+                            <img src={search_boy}></img>
+                        </div>
+                        <div className="search_boy_input">
+                            <input placeholder="Drop your queries here"></input>
+                            <button id="category_last_but" className="selectedButton">
+                                Submit
+                        </button>
+                        </div>
                     </div>
                 </div>
             </div>

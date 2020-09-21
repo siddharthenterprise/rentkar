@@ -40,11 +40,11 @@ class My_bag extends Component {
                                 <h4 style={{ 'fontWeight': '700' }}>Fender Bullet Stratocaster</h4>
                             </div>
                             <div>
-                                <h6 style={{ 'color': 'red' }}>Hurry? Only few in stock</h6>
+                                <h6 style={{ 'color': 'red', fontWeight: '600' }}>Hurry? Only few in stock</h6>
                             </div>
                         </div>
                         <div class="edit_order">
-                            <h6><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove<i class="fas fa-trash-alt"></i></a></h6>
+                            <h6 style={{ 'color': '#1bacf4' }}><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove<i class="fas fa-trash-alt"></i></a></h6>
                         </div>
                     </div>
                     <div class="price">
@@ -53,7 +53,7 @@ class My_bag extends Component {
                                 <h6 >Rent</h6>
                             </div>
                             <div>
-                                <h4><i class="fas fa-rupee-sign    "></i>190 /Day</h4>
+                                <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>190 /Day</h4>
                             </div>
                         </div>
                         <div class="tenure">
@@ -61,7 +61,7 @@ class My_bag extends Component {
                                 <h6>Tenure <i class="far fa-clock"></i></h6>
                             </div>
                             <div>
-                                <h4>2 Weeks</h4>
+                                <h4 style={{ fontWeight: "600" }}>2 Weeks</h4>
                             </div>
                         </div>
                         <div class="deposit">
@@ -69,7 +69,7 @@ class My_bag extends Component {
                                 <h6>Deposit</h6>
                             </div>
 
-                            <h4>0</h4>
+                            <h4 style={{ fontWeight: "600" }}>0</h4>
                         </div>
 
                     </div>
@@ -85,8 +85,8 @@ class My_bag extends Component {
 
                         <div>
                             <div class="total_price">
-                                <h4>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
-                                <h6><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
+                                <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
+                                <h6 style={{ fontWeight: "600", color: "#1bacf4" }}><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
                             </div>
                         </div>
                     </div>
@@ -191,6 +191,14 @@ export class User_dash extends Component {
                     </div>
                 </div>
                 <div class="right_screen">
+                    <div class="userdash_header">
+                        <p style={{ marginTop: "5px" }}>Home</p>
+                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                        <p style={{ marginTop: "5px" }}>My Account
+                            </p>
+                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                        <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
+                    </div>
                     <My_bag />
                 </div>
             </div>

@@ -8,6 +8,9 @@ import tick from "../images/tick_circle.png";
 import VPlayer from './VPlayer';
 import { DotsMobileStepper } from './ListItem';
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 import Testimonials from './Testimonials';
 import cust1 from '../images/cust1.png';
@@ -28,6 +31,44 @@ export class Know_more extends Component {
         this.state = { addModalshow: false };
     }
     render() {
+
+        const responsive = {
+            tablet: {
+                breakpoint: { max: 1024, min: 464 },
+                items: 2,
+            },
+            mobile: {
+                breakpoint: { max: 464, min: 0 },
+                items: 1.2,
+            },
+        };
+
+        const left_but = {
+            backgroundColor: "#e4e4e4",
+            padding: "5px 10px",
+            borderRadius: "20px",
+            margin: "2vw",
+        };
+
+        const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+            const { carouselState: { currentSlide } } = rest;
+            return (
+                <div
+                    className="carousel-button-group"
+                    style={{
+                        marginLeft: `40vw`,
+                        PaddingBottom: `20vh`,
+                    }}>
+                    <a style={left_but} onClick={() => previous()}>
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a style={left_but} onClick={() => next()}>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            );
+        };
+
         let addModalclose = () => { this.setState({ addModalshow: false }) };
 
         return (
@@ -37,17 +78,28 @@ export class Know_more extends Component {
                         <h2 className='headers'>JOIN OUR COMMUNITY OF LENDERS SHARING THEIR ITEMS</h2>
                         <div className='introPara'>
                             <div>
-                                <p>Share any underused products lying down at your home securely.</p>
-                                <p>From mobile phones, cameras, Gaming consoles, furniture and anything that you can think of can be shared and earned a passive income from.</p>
-                                <p>Make your investments recover securely.</p>
+                                <div className="pcPara">
+                                    <p>Share any underused products lying down at your home securely.</p>
+                                    <p>From mobile phones, cameras, Gaming consoles, furniture and anything that you can think of can be shared and earned a passive income from.</p>
+                                    <p>Make your investments recover securely.</p>
+                                    <Button className='listingButton' onClick={() => this.setState({ addModalshow: true })}>Start Listing</Button>
+                                    <DotsMobileStepper
+                                        show={this.state.addModalshow}
+                                        onHide={addModalclose} />
+                                </div>
+                                <div className="mobilePara">
+                                    <p>Share any underused products lying down at your home securely. From mobile phones, cameras, Gaming consoles, furniture and anything that you can think of can be shared and earned a passive income from. Make your investments recover securely.</p>
+                                </div>
                                 {/* <Button className='listingButton' floated='left'>Start Listing</Button> */}
-                                <Button className='listingButton' onClick={() => this.setState({ addModalshow: true })}>Start Listing</Button>
+                            </div>
+                            <div>
+                                <img className="KnowImg" src={KnowImg} />
+                            </div>
+                            <div className="mobileButtonDiv">
+                                <Button className='mobileListingButton' onClick={() => this.setState({ addModalshow: true })}>Start Listing</Button>
                                 <DotsMobileStepper
                                     show={this.state.addModalshow}
                                     onHide={addModalclose} />
-                            </div>
-                            <div>
-                                <img src={KnowImg} />
                             </div>
                         </div>
                     </div>
@@ -117,6 +169,98 @@ export class Know_more extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div className="mobileTestimonials">
+                    <div className="custom">
+                        <div className="special">
+                            <h2 className="headers">LENDER'S TESTIMONIALS</h2>
+                        </div>
+                        <Carousel arrows={false} containerClass="carousel-container" responsive={responsive} renderButtonGroupOutside={true} customButtonGroup={<ButtonGroup />}>
+                            <Card className="descr">
+                                <div className="straight">
+                                    <div>
+                                        <img src={cust1}></img>
+                                    </div>
+                                    <div className="name_rating">
+                                        <div>
+                                            <h4>Shivam Wadhwa</h4>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Ordered Yamaha acoustic guitar through rentkar, they offer
+                                        great gadgets at a very cheap price 🤘🏽. Highly
+                                        recommended.
+                                        </p>
+                                </div>
+                            </Card>
+                            <Card className="descr">
+                                <div className="straight">
+                                    <div>
+                                        <img src={cust2}></img>
+                                    </div>
+                                    <div className="name_rating">
+                                        <div>
+                                            <h4>Shivam Wadhwa</h4>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Rentkar is really good!! The quality of the product is
+                                        brilliant. The service is also spot on. They make sure
+                                        that the product is delivered as well as picked up on
+                                        time. Highly recommended..
+                                        </p>
+                                </div>
+                            </Card>
+                            <Card className="descr">
+                                <div className="straight">
+                                    <div>
+                                        <img src={cust1}></img>
+                                    </div>
+                                    <div className="name_rating">
+                                        <div>
+                                            <h4>Shivam Wadhwa</h4>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Rentkar is really good!! The quality of the product is
+                                        brilliant. The service is also spot on. They make sure
+                                        that the product is delivered as well as picked up on
+                                        time. Highly recommended..
+                                        </p>
+                                </div>
+                            </Card>
+                        </Carousel>
+                    </div>
+                </div>
+
+
                 <div className="covid">
                     <div>
                         <img src={imgcovid} />
@@ -159,9 +303,12 @@ export class Know_more extends Component {
                                     <h3>HIGHLY SECURE</h3>
                                 </div>
                                 <div>
-                                    <p>We stand completely liable for any damages caused to your product.
+                                    <p className="pcPara">We stand completely liable for any damages caused to your product.
                                     We also have a strong verified customer base for seamless transaction.
                                     Your product is perfectly secure in our hands. TRUST is our core value.</p>
+                                    <p className="mobilePara">
+                                        Pursue your passion, don’t limit your choices
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -174,9 +321,12 @@ export class Know_more extends Component {
                                     <h3> HIGHLY SECURE</h3>
                                 </div>
                                 <div>
-                                    <p> We stand completely liable for any damages caused to your product.
+                                    <p className="pcPara">We stand completely liable for any damages caused to your product.
                                     We also have a strong verified customer base for seamless transaction.
                                     Your product is perfectly secure in our hands. TRUST is our core value.</p>
+                                    <p className="mobilePara">
+                                        Pursue your passion, don’t limit your choices
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -189,9 +339,12 @@ export class Know_more extends Component {
                                     <h3> HIGHLY SECURE</h3>
                                 </div>
                                 <div>
-                                    <p> We stand completely liable for any damages caused to your product.
+                                    <p className="pcPara">We stand completely liable for any damages caused to your product.
                                     We also have a strong verified customer base for seamless transaction.
                                     Your product is perfectly secure in our hands. TRUST is our core value.</p>
+                                    <p className="mobilePara">
+                                        Pursue your passion, don’t limit your choices
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -62,7 +62,7 @@ export class Head extends Component {
     render() {
         let addModalclose = () => { this.setState({ addModalshow: false }) };
         return (
-            <div class="container">
+            <div class="container fixed-top">
                 <div className='main'>
                     <div className='image'>
                         <img src={logo}></img>
