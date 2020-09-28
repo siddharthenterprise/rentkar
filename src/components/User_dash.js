@@ -53,7 +53,7 @@ class My_bag extends Component {
                                 <h6 >Rent</h6>
                             </div>
                             <div>
-                                <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>190 /Day</h4>
+                                <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>  190 /Day</h4>
                             </div>
                         </div>
                         <div class="tenure">
@@ -64,13 +64,13 @@ class My_bag extends Component {
                                 <h4 style={{ fontWeight: "600" }}>2 Weeks</h4>
                             </div>
                         </div>
-                        <div class="deposit">
+                        {/* <div class="deposit">
                             <div className="name__">
                                 <h6>Deposit</h6>
                             </div>
 
                             <h4 style={{ fontWeight: "600" }}>0</h4>
-                        </div>
+                        </div> */}
 
                     </div>
                     <div class="total">
@@ -86,7 +86,7 @@ class My_bag extends Component {
                         <div>
                             <div class="total_price">
                                 <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
-                                <h6 style={{ fontWeight: "600", color: "#1bacf4" }}><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
+                                <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
                             </div>
                         </div>
                     </div>

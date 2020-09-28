@@ -211,7 +211,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 70%;
+    max-width: 30%;
 }
 .right_screen .image_detail .detail .price .rent,.right_screen .image_detail .detail .price .tenure,.right_screen .image_detail .detail .price .deposit{
     display: flex;
@@ -227,6 +227,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+}
+.right_screen .image_detail .detail .total .pricebreakdown{
+    cursor: pointer;
 }
 .right_screen .image_detail .detail .total .mybag_button{
     min-width: 36%;
@@ -266,7 +269,14 @@
     border-radius: 10px;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
     justify-content: space-between;
-    
+}
+.right_screen .checkout .cost{
+    align-items: center;
+    margin:auto 0px ;
+    justify-content: center;
+}
+.right_screen .checkout .cost >h6{
+    margin-bottom: 0px;
 }
 .right_screen .checkout .checkout_button button{
     float: right;
@@ -279,6 +289,7 @@
     font-weight: bold;
     color: white;
 }
+
 
 
 
