@@ -20,11 +20,11 @@ import guitar from "../images/guitar2.png";
 
 
 import './user_dash.css';
-import { Card, Image } from "semantic-ui-react";
+import { Button, Card, Image } from "semantic-ui-react";
 
-const icons = [rental_s, listing_s, shareCredit_s, verification_s, support_s, settings_s]
-const icons_g = [rental_g, listing_g, shareCredit_g, verification_g, support_g, settings_g]
-const iconDesc = ['My Rentals', 'My Listings', 'Share Credits', 'Verification', 'Help & Support', 'Settings']
+const icons = [rental_s, listing_s, verification_s, support_s, settings_s]
+const icons_g = [rental_g, listing_g, verification_g, support_g, settings_g]
+const iconDesc = ['My Rentals', 'My Listings', 'Verification', 'Help & Support', 'Settings']
 
 class My_bag extends Component {
     render() {
@@ -115,6 +115,58 @@ class My_bag extends Component {
     }
 }
 
+class MyListing extends Component {
+    render() {
+        const Order_card = () => (
+            <div class="image_detail">
+                <div class="image">
+                    <img src={guitar} alt="product" />
+                </div>
+                <div class="detail">
+                    <div class="name">
+                        <div class="main_head">
+                            <div>
+                                <h4 style={{ 'fontWeight': '700' }}>Fender Bullet Stratocaster</h4>
+                            </div>
+                            <div>
+                                <h6 style={{ 'color': ' #19eeb5', fontWeight: '600', fontSize: '15px' }}>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product__status">
+                        <div>
+                            <h6 style={{ 'color': '#1bacf4', textAlign: 'initial', fontWeight: 'bold', cursor: 'pointer' }}><i class="fas fa-circle"></i> &nbsp; Your Product is Live</h6>
+                        </div>
+                        <div>
+                            <h6 style={{ 'color': 'red', textAlign: 'initial', fontWeight: 'bold', cursor: 'pointer' }}><i class="fas fa-trash-alt"></i> &nbsp; Remove</h6>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div >
+        )
+        return (
+            <div>
+                <div className="my__listing">
+                    <Order_card />
+
+                </div>
+                <div className="my__listing">
+                    <Order_card />
+                </div>
+            </div>
+        );
+    }
+
+}
 
 export class User_dash extends Component {
 
@@ -191,15 +243,20 @@ export class User_dash extends Component {
                     </div>
                 </div>
                 <div class="right_screen">
-                    <div class="userdash_header">
-                        <p style={{ marginTop: "5px" }}>Home</p>
-                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                        <p style={{ marginTop: "5px" }}>My Account
+                    <div class="userdash">
+                        <div class="userdash_header">
+                            <p style={{ marginTop: "5px" }}>Home</p>
+                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                            <p style={{ marginTop: "5px" }}>My Account
                             </p>
-                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                        <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
+                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                            <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
+                            {this.state.index == 1 ? <Button className="mylisting__button">ADD +</Button> : null}
+                        </div>
                     </div>
-                    <My_bag />
+                    {this.state.index == 1 ? <MyListing /> : null}
+                    {this.state.index == 0 ? <My_bag /> : null}
+
                 </div>
             </div>
         )

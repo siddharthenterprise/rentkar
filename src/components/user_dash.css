@@ -76,10 +76,13 @@
 }
 
 .useropt .details{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:0px 8px;
+    /* grid-column: 3; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    padding: 0px 10px;
     justify-content: space-around;
 }
 
@@ -136,18 +139,22 @@
     min-width: 75%;
     
 }
+.right_screen .userdash{
+    max-width: 100%;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
 .right_screen .userdash_header{
     /* background-color: #fff; */
   color: #000;
   font-weight: bolder;
   display: flex;
   flex-direction: row;
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 98%;
+  
   padding: 10px;
   padding-left: 10px;
   /* max-height: 28px; */
-  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  
 }
 .right_screen .order_card{
     width: 95%;
@@ -246,6 +253,7 @@
     border-radius: 5px;
     font-weight: bold;
     color: white;
+
 }
 
 .right_screen .image_detail .detail .total .mybag_button .but2{
@@ -288,6 +296,84 @@
     border-radius: 5px;
     font-weight: bold;
     color: white;
+}
+
+/* My listing all css are similar to myRental card only below are added */
+/* ------------------------------------------------------- */
+
+.right_screen .userdash_header .mylisting__button{
+    /* background-color: black; */
+    /* border: none; */
+    
+    min-width: 8vw;
+    /* height: 40px; */
+    color: #00CEFF;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1.9px solid #00CEFF;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: auto;
+    font-weight: bold;
+    
+
+}
+.right_screen .my__listing{
+    width: 95%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.right_screen .my__listing .image_detail{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* min-width: 70%; */
+    
+}
+.right_screen .my__listing .image_detail .detail h4{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.right_screen .my__listing .image_detail .detail h6{
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.right_screen .my__listing .image_detail .image{
+    margin: auto;
+}
+
+.right_screen .my__listing .image_detail .image img{
+    width: 177px;
+    margin-bottom: 65px;
+}
+.right_screen .my__listing .image_detail .detail{
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.right_screen .my__listing .image_detail .detail .name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.right_screen .my__listing .image_detail .detail .name .main_head{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 
