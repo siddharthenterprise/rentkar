@@ -17,7 +17,11 @@ import settings_g from '../images/icons/settings_g.png';
 import pencil from '../images/icons/pencil_white.png';
 import pencil_b from '../images/icons/pencil.png';
 import guitar from "../images/guitar2.png";
-
+import person from '../images/person.png'
+import add from "../images/add.png"
+import upload from "../images/upload.png"
+import edit from "../images/edit.png"
+import radio_button from "../images/radio_button.png"
 
 import './user_dash.css';
 import { Button, Card, Image } from "semantic-ui-react";
@@ -168,6 +172,57 @@ class MyListing extends Component {
 
 }
 
+class Verification extends Component{
+    render(){
+        return (<div className = "right_content">
+        <div className="verificationList">
+            <div className = "listItem">
+                <div>
+                <Image className = "verifyImage1" src={person}/>
+                </div>
+                <p>Personal Information</p>
+                <div className = "changeButton">
+                    <Image src={edit}/>
+                    <p>Change</p>
+                </div>
+            </div>
+            <div className = "listItem">
+                <Image className = "verifyImage1" src={add}/>
+                <p>ADD A SELFIE (Upload your selfie)</p>
+            </div>
+            <div className = "listItem">
+                <Image className = "verifyImage2" src={upload}/>
+                <p>Upload Documents (Verification with Driving License / Passport)</p>
+            </div>
+            <div className = "listItem">
+                <Image className = "verifyImage2" src={upload}/>
+                <p>Verify Instantly with Aadhar Card</p>
+            </div>
+            <div id = "financialVerification" className = "listItem">
+                <Image className = "verifyImage2" src={upload}/>
+                <p>Financial Verification (Upload bank statement for 3 months)</p>
+            </div>
+        </div>
+        <div className = "verificationProgressComplete">
+            <div className="progressDiv">
+                <Image className = "vButton1" src = { radio_button }/>
+                <p>10%</p>
+            </div>
+            <div className="vl1"/>
+            <div className = "progressDiv">
+                <Image className = "vButton2" src = { radio_button }/>
+                <p>80%</p>
+            </div>
+            <div className="vl2"/>
+            <div className = "progressDiv">
+                <Image className = "vButton2" src = { radio_button }/>
+                <p>100%</p>
+            </div>
+        </div>
+    </div>)
+    }
+}
+
 export class User_dash extends Component {
 
     constructor(props) {
@@ -256,6 +311,7 @@ export class User_dash extends Component {
                     </div>
                     {this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}
+                    {this.state.index == 2 ? <Verification/> : null}
 
                 </div>
             </div>
