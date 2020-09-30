@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/rentkar/static/css/main.53c81b01.chunk.css",
-    "main.js": "/rentkar/static/js/main.e7a953f5.chunk.js",
-    "main.js.map": "/rentkar/static/js/main.e7a953f5.chunk.js.map",
+    "main.css": "/rentkar/static/css/main.706a485b.chunk.css",
+    "main.js": "/rentkar/static/js/main.1626adac.chunk.js",
+    "main.js.map": "/rentkar/static/js/main.1626adac.chunk.js.map",
     "runtime-main.js": "/rentkar/static/js/runtime-main.c01f0d97.js",
     "runtime-main.js.map": "/rentkar/static/js/runtime-main.c01f0d97.js.map",
     "static/css/2.240414b9.chunk.css": "/rentkar/static/css/2.240414b9.chunk.css",
-    "static/js/2.65997baf.chunk.js": "/rentkar/static/js/2.65997baf.chunk.js",
-    "static/js/2.65997baf.chunk.js.map": "/rentkar/static/js/2.65997baf.chunk.js.map",
+    "static/js/2.c6a08a0b.chunk.js": "/rentkar/static/js/2.c6a08a0b.chunk.js",
+    "static/js/2.c6a08a0b.chunk.js.map": "/rentkar/static/js/2.c6a08a0b.chunk.js.map",
     "index.html": "/rentkar/index.html",
-    "precache-manifest.95df6d9a7e2cf8e730f56b1491abdd32.js": "/rentkar/precache-manifest.95df6d9a7e2cf8e730f56b1491abdd32.js",
+    "precache-manifest.96c8ea57f7d22a3e96eb13bd7c42a9f7.js": "/rentkar/precache-manifest.96c8ea57f7d22a3e96eb13bd7c42a9f7.js",
     "service-worker.js": "/rentkar/service-worker.js",
     "static/css/2.240414b9.chunk.css.map": "/rentkar/static/css/2.240414b9.chunk.css.map",
-    "static/css/main.53c81b01.chunk.css.map": "/rentkar/static/css/main.53c81b01.chunk.css.map",
-    "static/js/2.65997baf.chunk.js.LICENSE.txt": "/rentkar/static/js/2.65997baf.chunk.js.LICENSE.txt",
+    "static/css/main.706a485b.chunk.css.map": "/rentkar/static/css/main.706a485b.chunk.css.map",
+    "static/js/2.c6a08a0b.chunk.js.LICENSE.txt": "/rentkar/static/js/2.c6a08a0b.chunk.js.LICENSE.txt",
     "static/media/GUITAR GRADIENT.png": "/rentkar/static/media/GUITAR GRADIENT.c5bb0659.png",
     "static/media/GUITAR GREY.png": "/rentkar/static/media/GUITAR GREY.515fa585.png",
     "static/media/Mumbai.png": "/rentkar/static/media/Mumbai.8511cbb5.png",
@@ -128,8 +128,8 @@
   "entrypoints": [
     "static/js/runtime-main.c01f0d97.js",
     "static/css/2.240414b9.chunk.css",
-    "static/js/2.65997baf.chunk.js",
-    "static/css/main.53c81b01.chunk.css",
-    "static/js/main.e7a953f5.chunk.js"
+    "static/js/2.c6a08a0b.chunk.js",
+    "static/css/main.706a485b.chunk.css",
+    "static/js/main.1626adac.chunk.js"
   ]
 }
