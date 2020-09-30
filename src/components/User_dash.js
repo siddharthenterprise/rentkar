@@ -307,6 +307,7 @@ export class User_dash extends Component {
                             <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
                             <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
                             {this.state.index == 1 ? <Button className="mylisting__button">ADD +</Button> : null}
+                            {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px"}}>Verification status: 100%</p> : null}
                         </div>
                     </div>
                     {this.state.index == 1 ? <MyListing /> : null}
