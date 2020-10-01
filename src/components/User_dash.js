@@ -172,54 +172,97 @@ class MyListing extends Component {
 
 }
 
-class Verification extends Component{
-    render(){
-        return (<div className = "right_content">
-        <div className="verificationList">
-            <div className = "listItem">
-                <div>
-                <Image className = "verifyImage1" src={person}/>
+class Verification extends Component {
+    render() {
+        return (<div className="right_content">
+            <div className="verificationList">
+                <div className="listItem">
+                    <div>
+                        <Image className="verifyImage1" src={person} />
+                    </div>
+                    <p>Personal Information</p>
+                    <div className="changeButton">
+                        <Image src={edit} />
+                        <p>Change</p>
+                    </div>
                 </div>
-                <p>Personal Information</p>
-                <div className = "changeButton">
-                    <Image src={edit}/>
-                    <p>Change</p>
+                <div className="listItem">
+                    <Image className="verifyImage1" src={add} />
+                    <p>ADD A SELFIE (Upload your selfie)</p>
+                </div>
+                <div className="listItem">
+                    <Image className="verifyImage2" src={upload} />
+                    <p>Upload Documents (Verification with Driving License / Passport)</p>
+                </div>
+                <div className="listItem">
+                    <Image className="verifyImage2" src={upload} />
+                    <p>Verify Instantly with Aadhar Card</p>
+                </div>
+                <div id="financialVerification" className="listItem">
+                    <Image className="verifyImage2" src={upload} />
+                    <p>Financial Verification (Upload bank statement for 3 months)</p>
                 </div>
             </div>
-            <div className = "listItem">
-                <Image className = "verifyImage1" src={add}/>
-                <p>ADD A SELFIE (Upload your selfie)</p>
+            <div className="verificationProgressComplete">
+                <div className="progressDiv">
+                    <Image className="vButton1" src={radio_button} />
+                    <p>10%</p>
+                </div>
+                <div className="vl1" />
+                <div className="progressDiv">
+                    <Image className="vButton2" src={radio_button} />
+                    <p>80%</p>
+                </div>
+                <div className="vl2" />
+                <div className="progressDiv">
+                    <Image className="vButton2" src={radio_button} />
+                    <p>100%</p>
+                </div>
             </div>
-            <div className = "listItem">
-                <Image className = "verifyImage2" src={upload}/>
-                <p>Upload Documents (Verification with Driving License / Passport)</p>
+        </div>)
+    }
+}
+
+class Settings extends Component {
+    render() {
+        const Setting_detail_card = (props) => {
+            return (
+                <div className="setting_detail_card">
+                    <div class="setting__userdetail">
+                        <div class="name">
+                            <p>{props.name}</p>
+                        </div>
+                        <div class="userName">
+                            <h6>{props.username}</h6>
+                        </div>
+                    </div>
+                    <div class="setting__change">
+                        <h6 style={{ 'color': '#1bacf4', fontSize: '12px' }}><a>Change<img src={pencil_b}></img></a></h6>
+                    </div>
+                </div>);
+        }
+        return (
+            <div className="settings">
+                <div class="setting__profile">
+                    <div class="profile_photo">
+                        <img class="user_icon" src={require('../images/float_nav/abouto.png')} aria-hidden="true"></img>
+                    </div>
+                    <div class="profile__name__address">
+                        <div class="name">
+                            Arnab Dey
+                        </div>
+                        <div class="location">
+                            <i class="fa fa-map-marker"></i><p>Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                <Setting_detail_card name={"Name"} username={"Siddharth"} />
+                <Setting_detail_card name={"Email"} username={"sid@rentkar.com"} />
+                <Setting_detail_card name={"Mobile Number"} username={"982304234"} />
+                <Setting_detail_card name={"Date Of Birth"} username={"31/03/2001"} />
+                <Button>Change Password</Button>
             </div>
-            <div className = "listItem">
-                <Image className = "verifyImage2" src={upload}/>
-                <p>Verify Instantly with Aadhar Card</p>
-            </div>
-            <div id = "financialVerification" className = "listItem">
-                <Image className = "verifyImage2" src={upload}/>
-                <p>Financial Verification (Upload bank statement for 3 months)</p>
-            </div>
-        </div>
-        <div className = "verificationProgressComplete">
-            <div className="progressDiv">
-                <Image className = "vButton1" src = { radio_button }/>
-                <p>10%</p>
-            </div>
-            <div className="vl1"/>
-            <div className = "progressDiv">
-                <Image className = "vButton2" src = { radio_button }/>
-                <p>80%</p>
-            </div>
-            <div className="vl2"/>
-            <div className = "progressDiv">
-                <Image className = "vButton2" src = { radio_button }/>
-                <p>100%</p>
-            </div>
-        </div>
-    </div>)
+        );
     }
 }
 
@@ -307,12 +350,13 @@ export class User_dash extends Component {
                             <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
                             <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
                             {this.state.index == 1 ? <Button className="mylisting__button">ADD +</Button> : null}
-                            {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px"}}>Verification status: 100%</p> : null}
+                            {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px" }}>Verification status: 100%</p> : null}
                         </div>
                     </div>
                     {this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}
-                    {this.state.index == 2 ? <Verification/> : null}
+                    {this.state.index == 2 ? <Verification /> : null}
+                    {this.state.index == 4 ? <Settings /> : null}
 
                 </div>
             </div>

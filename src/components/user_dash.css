@@ -483,6 +483,89 @@
     margin-left: 10px;
 }
 
+/* Setting--------------------------------------- */
+.right_screen .settings{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin:20px auto;
+}
+.right_screen .settings .setting__profile{
+    display: flex;
+    flex-direction: row;
+}
+.right_screen .settings .setting__profile .profile_photo img{
+    width: 100px;
+}
+.right_screen .settings .setting__profile .profile__name__address{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px;
+    text-align: start;
+}
+.right_screen .settings .setting__profile .profile__name__address .location{
+    display: flex;
+    flex-direction: row;
+    margin: auto 0px;
+    font-size: 12px;
+    color: #00CEFF;
+}
+.right_screen .settings .setting__profile .profile__name__address .location >i{
+    margin: auto 5px;
+    color: #00CEFF;
+    font-size: 12px;
+    margin-left: 0px;
+    /* margin: 5px; */
+}
+
+
+.right_screen .settings .setting_detail_card{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F0F0F0;
+    border-bottom:6px solid #27BECE;
+    margin: 20px;
+    padding: 5px;
+
+}
+.right_screen .settings .setting_detail_card .setting__userdetail{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.right_screen .settings .setting_detail_card .setting__userdetail p{
+    font-size: 8px;
+}
+.right_screen .settings .setting_detail_card .setting__userdetail h6{
+    /* font-size: 8px; */
+    font-weight: 500;
+    
+}
+.right_screen .settings .setting_detail_card .setting__change{
+    margin: auto 0px;
+    cursor: pointer;
+}
+.right_screen .settings .setting_detail_card .setting__change img{
+    width: 30px;
+}
+.right_screen .settings Button{
+    max-width: 150px;
+    height: 50px;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border: 0.1px solid #00CEFF;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right,#1bacf4,#19eeb5);
+    margin: 20px;
+}
+
+
+
+
 
 
 
