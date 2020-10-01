@@ -6,6 +6,12 @@ import shareCredit_s from '../images/icons/shareCredit_s.png';
 import verification_s from '../images/icons/verification_s.png';
 import support_s from '../images/icons/support_s.png';
 import settings_s from '../images/icons/settings_s.png';
+import support_person from "../images/supportPerson.png"
+import down_arrow from "../images/down_arrow.png"
+import ques from "../images/ques.png"
+import whatsAppSupport from "../images/whatsAppSupport.png"
+import phone from "../images/phone.png"
+
 
 import rental_g from '../images/icons/rental_g.png';
 import listing_g from '../images/icons/listing_g.png';
@@ -266,6 +272,96 @@ class Settings extends Component {
     }
 }
 
+class Support extends Component{
+
+    constructor(props){
+        super(props)
+        this.state = {
+            drop1: 0,
+            drop2: 0
+        }
+
+        this.dropMenu1 = this.dropMenu1.bind(this)
+    }
+
+    dropMenu1(){
+        if(this.state.drop1 == 1){
+            this.setState({drop1: 0})
+            document.getElementById("dropContent1").style.display = "none"
+        }
+        else{
+            document.getElementById("dropContent1").style.display = "block"
+            this.setState({ drop1: 1 })
+        }
+    }
+
+    dropMenu2(){
+        if(this.state.drop2 == 1){
+            this.setState({drop2: 0})
+            document.getElementById("dropContent2").style.display = "none"
+        }
+        else{
+            document.getElementById("dropContent2").style.display = "block"
+            this.setState({ drop2: 1 })
+        }
+    }
+
+    render(){
+        return (
+            <div className = "supportScreen">
+                <div className="supportButtonDiv">
+                    <button className="supportButton" onClick = { () => this.dropMenu1() }>
+                        <div className = "buttonContent">
+                            <Image className = "iconImage" src = { support_person }/>
+                            <p>Generate a quick request</p>
+                            <Image src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "30px" }}/>
+                        </div>
+                    </button>
+                    <div id = "dropContent1" className="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div className="supportButtonDiv">
+                    <button className="supportButton">
+                        <div className = "buttonContent">
+                            <Image className = "iconImage" src = { phone } style = {{ width: "20px", height: "30px" }}/>
+                            <p>Call Us</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div className="supportButtonDiv">
+                    <button className="supportButton">
+                        <div className = "buttonContent">
+                            <Image className = "iconImage" src = { whatsAppSupport }/>
+                            <p>Ping us on WhatsApp</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div className="supportButtonDiv">
+                    <button className="supportButton" onClick = { () => this.dropMenu2() }>
+                        <div className = "buttonContent">
+                            <i className = "iconImage fa fa-question-circle" />
+                            <p>FAQs</p>
+                            <Image src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "30px" }}/>
+                        </div>
+                    </button>
+                    <div id = "dropContent2" className="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+
 export class User_dash extends Component {
 
     constructor(props) {
@@ -356,6 +452,7 @@ export class User_dash extends Component {
                     {this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}
                     {this.state.index == 2 ? <Verification /> : null}
+                    {this.state.index == 3 ? <Support /> : null}
                     {this.state.index == 4 ? <Settings /> : null}
 
                 </div>
