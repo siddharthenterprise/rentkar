@@ -140,7 +140,7 @@
     
 }
 .right_screen .userdash{
-    max-width: 100%;
+    min-width: 100vw;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
 }
 .right_screen .userdash_header{
@@ -157,11 +157,15 @@
   
 }
 .right_screen .order_card{
+    
     width: 95%;
     padding: 10px;
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.right_screen .mobile_button{
+    display: none;
 }
 .right_screen .image_detail{
     display: flex;
@@ -195,7 +199,7 @@
     margin-bottom: 65px;
 }
 .right_screen .image_detail .detail{
-    min-width: 80%;
+    min-width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -278,7 +282,11 @@
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
     justify-content: space-between;
 }
+.right_screen .checkout .cost_mobile{
+    display: none;
+}
 .right_screen .checkout .cost{
+    /* display: flex; */
     align-items: center;
     margin:auto 0px ;
     justify-content: center;
@@ -643,6 +651,7 @@
 @media screen and (max-width: 992px){
     .useropt{
         min-width: 100%;
+        display: none;
     }
     .useropt .user_detail{
 
@@ -658,4 +667,111 @@
         height: 100px;
         width:100px
     }
+    .right_screen .image_detail .image{
+        order: 1;
+    }
+    .right_screen .image_detail .detail{
+        order: 2;
+    }
+    .right_screen .image_detail .detail .price {
+        float: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 80%;
+    }
+    .right_screen .image_detail .detail h4{
+        font-size: 12px;
+        font-weight: 400;
+    
+    }
+    
+    .right_screen .image_detail .detail h6{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .right_screen .image_detail .detail .name .edit_order{
+        display: none;
+    }
+    .right_screen .image_detail .image img {
+        width: 100px;
+        margin-bottom: 65px;
+    }
+    .right_screen .image_detail .detail .total{
+        display: none;
+    }
+    .right_screen .mobile_button{
+        display: inline;
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .right_screen .mobile_button .mybag_button{
+        min-width: 36%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .right_screen .mobile_button .mybag_button .placeorder .but1,.but2{
+        border: 0.9px solid black;
+    padding: 5px 5px;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    margin: 2px;
+    }
+    .right_screen .mobile_button .total_price h4,h6{
+        font-size: 10px;
+    }
+    .right_screen .mobile_button .total_price .cost  br{
+        display: block;
+    }
+    .right_screen .checkout{
+        padding: 10px;
+        margin: 10px auto;
+        align-items: center;
+    }
+    .right_screen .checkout .cost{
+        display: none;
+    }
+    .right_screen .checkout .cost_mobile{
+        display: block;
+        align-items: center;
+    margin:auto 0px ;
+    justify-content: center;
+    text-align: initial;
+    }
+    /* .right_screen .checkout .cost{
+        display: flex;
+        flex-direction: column;
+    } */
+    /* ----------------------------------------------------------------- */
+    /* setting */
+    .right_screen .settings{
+        width: 100%;
+    }
+    .right_screen .settings .setting__profile{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right_screen .settings Button{
+        min-width: 150px;
+        margin: 10px auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

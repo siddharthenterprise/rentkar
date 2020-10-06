@@ -39,42 +39,43 @@ const iconDesc = ['My Rentals', 'My Listings', 'Verification', 'Help & Support',
 class My_bag extends Component {
     render() {
         const Order_card = () => (
-            <div class="image_detail">
-                <div class="image">
-                    <img src={guitar} alt="product" />
-                </div>
-                <div class="detail">
-                    <div class="name">
-                        <div class="main_head">
-                            <div>
-                                <h4 style={{ 'fontWeight': '700' }}>Fender Bullet Stratocaster</h4>
-                            </div>
-                            <div>
-                                <h6 style={{ 'color': 'red', fontWeight: '600' }}>Hurry? Only few in stock</h6>
-                            </div>
-                        </div>
-                        <div class="edit_order">
-                            <h6 style={{ 'color': '#1bacf4' }}><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove<i class="fas fa-trash-alt"></i></a></h6>
-                        </div>
+            <div class="buttons_mobileview">
+                <div class="image_detail">
+                    <div class="image">
+                        <img src={guitar} alt="product" />
                     </div>
-                    <div class="price">
-                        <div class="rent">
-                            <div className="name__">
-                                <h6 >Rent</h6>
+                    <div class="detail">
+                        <div class="name">
+                            <div class="main_head">
+                                <div>
+                                    <h4 style={{ 'fontWeight': '700' }}>Fender Bullet Stratocaster</h4>
+                                </div>
+                                <div>
+                                    <h6 style={{ 'color': 'red', fontWeight: '600' }}>Hurry? Only few in stock</h6>
+                                </div>
                             </div>
-                            <div>
-                                <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>  190 /Day</h4>
-                            </div>
-                        </div>
-                        <div class="tenure">
-                            <div className="name__">
-                                <h6>Tenure <i class="far fa-clock"></i></h6>
-                            </div>
-                            <div>
-                                <h4 style={{ fontWeight: "600" }}>2 Weeks</h4>
+                            <div class="edit_order">
+                                <h6 style={{ 'color': '#1bacf4' }}><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove<i class="fas fa-trash-alt"></i></a></h6>
                             </div>
                         </div>
-                        {/* <div class="deposit">
+                        <div class="price">
+                            <div class="rent">
+                                <div className="name__">
+                                    <h6 >Rent</h6>
+                                </div>
+                                <div>
+                                    <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>  190 /Day</h4>
+                                </div>
+                            </div>
+                            <div class="tenure">
+                                <div className="name__">
+                                    <h6>Tenure <i class="far fa-clock"></i></h6>
+                                </div>
+                                <div>
+                                    <h4 style={{ fontWeight: "600" }}>2 Weeks</h4>
+                                </div>
+                            </div>
+                            {/* <div class="deposit">
                             <div className="name__">
                                 <h6>Deposit</h6>
                             </div>
@@ -82,26 +83,48 @@ class My_bag extends Component {
                             <h4 style={{ fontWeight: "600" }}>0</h4>
                         </div> */}
 
-                    </div>
-                    <div class="total">
-                        <div class="mybag_button">
-                            <div class="placeorder">
-                                <button className="but1">Place Order</button>
+                        </div>
+                        <div class="total">
+                            <div class="mybag_button">
+                                <div class="placeorder">
+                                    <button className="but1">Place Order</button>
+                                </div>
+                                <div class="saveforlater">
+                                    <button className="but2">Save for Later</button>
+                                </div>
+
                             </div>
-                            <div class="saveforlater">
-                                <button className="but2">Save for Later</button>
+
+                            <div>
+                                <div class="total_price">
+                                    <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
+                                    <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div >
+                <div class="mobile_button">
+                    <div class="mybag_button">
+                        <div class="placeorder">
+                            <button className="but1">Place Order</button>
+                        </div>
+                        <div class="saveforlater">
+                            <button className="but2">Save for Later</button>
+                        </div>
+                        <div class="saveforlater">
+                            <button className="but2">Remove</button>
+                        </div>
+                    </div>
 
-                        <div>
-                            <div class="total_price">
-                                <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
-                                <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
-                            </div>
+                    <div>
+                        <div class="total_price">
+                            <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
+                            <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         )
         return (
             <div>
@@ -112,11 +135,16 @@ class My_bag extends Component {
                 <div className="order_card">
                     <Order_card />
                 </div>
-                <div class="checkout">
-                    <div class="cost">
-                        <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fa fa-truck" aria-hidden="true"></i> Delivery by 21 September</h6>
+                <div className="checkout">
+                    <div className="cost">
+                        <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 &nbsp;&nbsp;|&nbsp;&nbsp; Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
                     </div>
-                    <div class="checkout_button">
+                    <div class="cost_mobile">
+                        <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 <br></br> Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
+
+                    </div>
+
+                    <div className="checkout_button">
                         <button>Place Order</button>
                     </div>
                 </div>
@@ -272,9 +300,9 @@ class Settings extends Component {
     }
 }
 
-class Support extends Component{
+class Support extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             drop1: 0,
@@ -284,40 +312,40 @@ class Support extends Component{
         this.dropMenu1 = this.dropMenu1.bind(this)
     }
 
-    dropMenu1(){
-        if(this.state.drop1 == 1){
-            this.setState({drop1: 0})
+    dropMenu1() {
+        if (this.state.drop1 == 1) {
+            this.setState({ drop1: 0 })
             document.getElementById("dropContent1").style.display = "none"
         }
-        else{
+        else {
             document.getElementById("dropContent1").style.display = "block"
             this.setState({ drop1: 1 })
         }
     }
 
-    dropMenu2(){
-        if(this.state.drop2 == 1){
-            this.setState({drop2: 0})
+    dropMenu2() {
+        if (this.state.drop2 == 1) {
+            this.setState({ drop2: 0 })
             document.getElementById("dropContent2").style.display = "none"
         }
-        else{
+        else {
             document.getElementById("dropContent2").style.display = "block"
             this.setState({ drop2: 1 })
         }
     }
 
-    render(){
+    render() {
         return (
-            <div className = "supportScreen">
+            <div className="supportScreen">
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick = { () => this.dropMenu1() }>
-                        <div className = "buttonContent">
-                            <Image className = "iconImage" src = { support_person }/>
+                    <button className="supportButton" onClick={() => this.dropMenu1()}>
+                        <div className="buttonContent">
+                            <Image className="iconImage" src={support_person} />
                             <p>Generate a quick request</p>
-                            <Image src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "30px" }}/>
+                            <Image src={down_arrow} style={{ marginLeft: "auto", marginRight: "30px" }} />
                         </div>
                     </button>
-                    <div id = "dropContent1" className="dropdown-content">
+                    <div id="dropContent1" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -326,8 +354,8 @@ class Support extends Component{
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className = "buttonContent">
-                            <Image className = "iconImage" src = { phone } style = {{ width: "20px", height: "30px" }}/>
+                        <div className="buttonContent">
+                            <Image className="iconImage" src={phone} style={{ width: "20px", height: "30px" }} />
                             <p>Call Us</p>
                         </div>
                     </button>
@@ -335,22 +363,22 @@ class Support extends Component{
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className = "buttonContent">
-                            <Image className = "iconImage" src = { whatsAppSupport }/>
+                        <div className="buttonContent">
+                            <Image className="iconImage" src={whatsAppSupport} />
                             <p>Ping us on WhatsApp</p>
                         </div>
                     </button>
                 </div>
 
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick = { () => this.dropMenu2() }>
-                        <div className = "buttonContent">
-                            <i className = "iconImage fa fa-question-circle" />
+                    <button className="supportButton" onClick={() => this.dropMenu2()}>
+                        <div className="buttonContent">
+                            <i className="iconImage fa fa-question-circle" />
                             <p>FAQs</p>
-                            <Image src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "30px" }}/>
+                            <Image src={down_arrow} style={{ marginLeft: "auto", marginRight: "30px" }} />
                         </div>
                     </button>
-                    <div id = "dropContent2" className="dropdown-content">
+                    <div id="dropContent2" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
