@@ -11,7 +11,10 @@ import down_arrow from "../images/down_arrow.png"
 import ques from "../images/ques.png"
 import whatsAppSupport from "../images/whatsAppSupport.png"
 import phone from "../images/phone.png"
-
+import selectedPage from "../images/selectedPage.png"
+import unSelectedPage from "../images/unselectedPage.png"
+import camera from "../images/camera.png"
+import uploadSelfie from "../images/uploadSelfie.png"
 
 import rental_g from '../images/icons/rental_g.png';
 import listing_g from '../images/icons/listing_g.png';
@@ -257,6 +260,175 @@ class Verification extends Component {
     }
 }
 
+class MobileVerification extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            index: 0
+        }
+    }
+
+    
+
+    render(){
+
+        const Verify_detail_card = (props) => {
+            return (
+                <div className="verify_detail_card">
+                    <div class="verify__userdetail">
+                        <div class="name">
+                            <p>{props.name}</p>
+                        </div>
+                        <div class="userName">
+                            <h6>{props.username}</h6>
+                        </div>
+                    </div>
+                    <div class="verify__change">
+                        <h6 style={{ 'color': '#1bacf4', fontSize: '12px' }}><a>Change<img src={pencil_b}></img></a></h6>
+                    </div>
+                </div>);
+        }
+
+        const Address_detail_card = (props) => {
+            return (
+                <div className="verify_detail_card">
+                    <input className = "addressDetail" for="text" placeholder = {props.placeholder}/>
+                </div>
+            );
+        }
+
+
+        return (
+            <div className="mobileVerification">
+                <div className = "verifyPage1">
+                    <div className = "Page">
+                        <h2>Personal Verification</h2>
+                        <Verify_detail_card name = {"Name"} username = {"Arnab Dey"} />
+                        <Verify_detail_card name = {"Date of Birth"} username = {"31/03/2001"} />
+                        <Address_detail_card line = { 1 } placeholder = "Address Line 1"/>
+                        <p className = "Label">Enter Address</p>
+                        <Address_detail_card line = { 2 } placeholder = "Address Line 2"/>
+                        <Button onClick = {() => { 
+                            document.getElementsByClassName('verifyPage2')[0].style.display = "block"
+                            document.getElementsByClassName('verifyPage1')[0].style.display = "none"
+                            }
+                        }>Continue</Button>
+                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 10%</p>
+                        <div className = "selections">
+                            <img src = { selectedPage}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        </div>
+                    </div>
+                </div>
+                <div className = "verifyPage2">
+                    <div className = "Page">
+                        <h2>Selfie Verification</h2>
+                        <Card className="selfieCard">
+                            <Card.Content>
+                                <Image
+                                    src={camera}
+                                    wrapped
+                                    ui={false}
+                                    onClick={() => {  }}
+                                />
+                                <p>Take a Selfie</p>
+                            </Card.Content>
+                        </Card>
+                        <Button className = "selfieButton" style = {{ opacity: "0.3", background: "#fff", color: "#000"}}>
+                            <div className = "buttonContent">
+                                <img src={uploadSelfie}/>
+                                <p>Upload a Selfie</p>
+                            </div>
+                        </Button>
+                        <Button className = "selfieButton" style = {{ opacity: "0.3", background: "#fff", color: "#000", marginTop: "20px"}}>
+                            <div className = "buttonContent">
+                                <img src={pencil_b} style ={{width: "70px", marginTop: "-10px"}}/>
+                                <p style = {{marginTop: "-10px"}}>Change Selfie</p>
+                            </div>
+                        </Button>
+                        <Button style = {{ opacity: "0.3"}} onClick = {() => { 
+                            document.getElementsByClassName('verifyPage3')[0].style.display = "block"
+                            document.getElementsByClassName('verifyPage2')[0].style.display = "none"
+                            }
+                        }>Continue</Button>
+                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 50%</p>
+                        <div className = "selections">
+                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = { selectedPage}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        </div>
+                    </div>
+                </div>
+                <div className = "verifyPage3">
+                    <div className = "Page">
+                        <h2>Identity Verification</h2>
+                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
+                            <div className = "buttonContent">
+                                <img src={uploadSelfie}/>
+                                <p>Upload Driving License</p>
+                            </div>
+                        </Button>
+                        <h6>OR</h6>
+                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
+                            <div className = "buttonContent">
+                                <img src={uploadSelfie} />
+                                <p style = {{marginTop: "-10px"}}>Update Passport</p>
+                            </div>
+                        </Button>
+                        <h6>OR</h6>
+                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
+                            <div className = "buttonContent">
+                                <img src={uploadSelfie} />
+                                <p style = {{marginTop: "-10px"}}>Verify instantly with Aadhaar Card</p>
+                            </div>
+                        </Button>
+                        <Button >Complete Verification</Button>
+                        <Button className = "selfieButton" 
+                                style = {{ background: "#fff", color: "#000", marginTop: "20px"}}
+                                onClick = {() => { 
+                                    document.getElementsByClassName('verifyPage4')[0].style.display = "block"
+                                    document.getElementsByClassName('verifyPage3')[0].style.display = "none"
+                                    }
+                                }>
+                            Continue with your Order
+                        </Button>
+                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 10%</p>
+                        <div className = "selections">
+                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = { selectedPage}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        </div>
+                    </div>
+                </div>
+                <div className = "verifyPage4">
+                    <div className = "Page">
+                        <h2>Financial Verification</h2>
+                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "10px"}}>
+                            <div className = "buttonContent">
+                                <img src={uploadSelfie}/>
+                                <p>Upload Bank Statement</p>
+                            </div>
+                        </Button>
+                        <p className = "Label" style = {{marginTop: "5px"}}>Upload Bank Statement for 3 months</p>
+                        <Button style = {{ marginTop: "300px" }} onClick = {() => { } }>Finish</Button>
+                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 100%</p>
+                        <div className = "selections">
+                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                            <img src = { selectedPage}></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
 class Settings extends Component {
     render() {
         const Setting_detail_card = (props) => {
@@ -300,9 +472,9 @@ class Settings extends Component {
     }
 }
 
-class Support extends Component {
+class Support extends Component{
 
-    constructor(props) {
+    constructor(props){
         super(props)
         this.state = {
             drop1: 0,
@@ -312,40 +484,40 @@ class Support extends Component {
         this.dropMenu1 = this.dropMenu1.bind(this)
     }
 
-    dropMenu1() {
-        if (this.state.drop1 == 1) {
-            this.setState({ drop1: 0 })
+    dropMenu1(){
+        if(this.state.drop1 == 1){
+            this.setState({drop1: 0})
             document.getElementById("dropContent1").style.display = "none"
         }
-        else {
+        else{
             document.getElementById("dropContent1").style.display = "block"
             this.setState({ drop1: 1 })
         }
     }
 
-    dropMenu2() {
-        if (this.state.drop2 == 1) {
-            this.setState({ drop2: 0 })
+    dropMenu2(){
+        if(this.state.drop2 == 1){
+            this.setState({drop2: 0})
             document.getElementById("dropContent2").style.display = "none"
         }
-        else {
+        else{
             document.getElementById("dropContent2").style.display = "block"
             this.setState({ drop2: 1 })
         }
     }
 
-    render() {
+    render(){
         return (
-            <div className="supportScreen">
+            <div className = "supportScreen">
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick={() => this.dropMenu1()}>
-                        <div className="buttonContent">
-                            <Image className="iconImage" src={support_person} />
+                    <button className="supportButton" onClick = { () => this.dropMenu1() }>
+                        <div className = "buttonContent">
+                            <img className = "iconImage" src = { support_person }/>
                             <p>Generate a quick request</p>
-                            <Image src={down_arrow} style={{ marginLeft: "auto", marginRight: "30px" }} />
+                            <img src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px"  }}/>
                         </div>
                     </button>
-                    <div id="dropContent1" className="dropdown-content">
+                    <div id = "dropContent1" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -354,8 +526,8 @@ class Support extends Component {
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className="buttonContent">
-                            <Image className="iconImage" src={phone} style={{ width: "20px", height: "30px" }} />
+                        <div className = "buttonContent">
+                            <img className = "iconImage" src = { phone } style = {{ width: "20px", height: "30px" }}/>
                             <p>Call Us</p>
                         </div>
                     </button>
@@ -363,22 +535,22 @@ class Support extends Component {
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className="buttonContent">
-                            <Image className="iconImage" src={whatsAppSupport} />
+                        <div className = "buttonContent">
+                            <img className = "iconImage" src = { whatsAppSupport }/>
                             <p>Ping us on WhatsApp</p>
                         </div>
                     </button>
                 </div>
 
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick={() => this.dropMenu2()}>
-                        <div className="buttonContent">
-                            <i className="iconImage fa fa-question-circle" />
+                    <button className="supportButton" onClick = { () => this.dropMenu2() }>
+                        <div className = "buttonContent">
+                            <i className = "iconImage fa fa-question-circle" />
                             <p>FAQs</p>
-                            <Image src={down_arrow} style={{ marginLeft: "auto", marginRight: "30px" }} />
+                            <img src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px" }}/>
                         </div>
                     </button>
-                    <div id="dropContent2" className="dropdown-content">
+                    <div id = "dropContent2" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -394,6 +566,12 @@ export class User_dash extends Component {
 
     constructor(props) {
         super(props);
+        var w = window.screen.width
+        if(w < 992)
+            this.state = {
+                index: -1
+            }
+        else
         this.state = {
             index: 0
         }
@@ -403,6 +581,10 @@ export class User_dash extends Component {
         this.setState({
             index: index,
         })
+        var w = window.screen.width
+        if(w < 992)
+            document.getElementsByClassName('useropt')[0].style.display = 'none'
+            document.getElementsByClassName('right_screen')[0].style.display = 'block'
     }
 
     render() {
@@ -480,6 +662,7 @@ export class User_dash extends Component {
                     {this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}
                     {this.state.index == 2 ? <Verification /> : null}
+                    {this.state.index == 2 ? <MobileVerification /> : null}
                     {this.state.index == 3 ? <Support /> : null}
                     {this.state.index == 4 ? <Settings /> : null}
 
