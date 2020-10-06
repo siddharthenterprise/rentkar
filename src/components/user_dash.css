@@ -885,7 +885,7 @@
     }
     .right_screen .image_detail .image img {
         width: 100px;
-        margin-bottom: 65px;
+        margin-bottom: 30px;
     }
     .right_screen .image_detail .detail .total{
         display: none;
@@ -932,10 +932,7 @@
     justify-content: center;
     text-align: initial;
     }
-    /* .right_screen .checkout .cost{
-        display: flex;
-        flex-direction: column;
-    } */
+
     /* ----------------------------------------------------------------- */
     /* setting */
     .right_screen .settings{
@@ -949,6 +946,31 @@
     .right_screen .settings Button{
         min-width: 150px;
         margin: 10px auto;
+    }
+
+    /* ------------------------------------------------------------------------ */
+    /* Mylisting */
+    .right_screen .my__listing .image_detail .image img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    .right_screen .my__listing .image_detail .detail {
+        min-width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 0px;
+    }
+    .right_screen .my__listing .image_detail .detail h4 {
+        font-size: 12px;
+        /* font-weight: 400; */
+    }
+    .right_screen .my__listing .image_detail .detail h6 {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .right_screen .my__listing .image_detail .detail h6 >i{
+        font-size:10px;
     }
 
 
