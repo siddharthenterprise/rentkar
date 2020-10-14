@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState, useContext, useEffect } from "react";
 import Corousel from "./corousel";
 import guitar from "../images/guitar2.png";
 import search_boy from "../images/search_boy.png";
 
 // import './category.css';
+
 import { Card, Image } from "semantic-ui-react";
 
 
@@ -103,177 +104,179 @@ const selectedImg = [
     [l1s, l2s, l3s, l4s, l5s, l6s, l7s],
     [c1s, c2s, c3s, c4s, c5s, c6s]];
 
-export class Category extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            whats_hot: [
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-                <Corousel imgname={guitar} />,
-            ],
-            category: 0,
-            sub: 0,
-        };
-        this.categorySelect = this.categorySelect.bind(this);
-    }
+export const Category = (props) => {
 
-    componentDidMount() {
+
+    const [whats_hot, setwhats_hot] = useState([
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+    ]);
+    const [category, setcategory] = useState(0);
+    const [subb, setsubb] = useState(0);
+    // sub: 0,
+
+
+    useEffect(() => {
+        // return () => {
         document.getElementById("sub0").style.opacity = "1";
-    }
+        // }
+    }, [sub]);
 
-    subSelect(index) {
-        for (var i = 0; i < sub[this.state.category].length; i++) {
+    const subSelect = (index) => {
+        for (var i = 0; i < sub[category].length; i++) {
             if (i == index)
                 document.getElementById("sub" + index.toString()).style.opacity = "1";
             else document.getElementById("sub" + i.toString()).style.opacity = "0";
         }
-        this.setState({
-            sub: index,
-        })
+        // setState({
+        setsubb(index);
+
         console.log(index);
-        console.log(this.state.sub);
+        console.log(subb);
     }
 
-    categorySelect(index) {
-        this.subSelect(0);
-        this.setState((prevState) => {
-            return {
-                category: index,
-                sub: 0,
-            };
-        });
+    const categorySelect = (index) => {
+        subSelect(0);
+        // setState((prevState) => {
+        //     return {
+        //         category: index,
+        //         sub: 0,
+        //     };
+        // });
+        setcategory(index);
+        setsubb(0);
     }
 
-    render() {
-        const SubCard = ({ index }) => (
-            <Card
-                className="subCard"
-                onClick={() => {
-                    this.subSelect(index);
-                }}
-            >
-                <Card.Content>
-                    <Image
-                        src={this.state.sub == index ? selectedImg[this.state.category][index] : img[this.state.category][index]}
-                        wrapped
-                        ui={false}
-                    />
-                    <p>{sub[this.state.category][index]}</p>
-                </Card.Content>
-            </Card>
-        );
 
-        return (
-            <div className="category_overview">
-                <div className="staticContent fixed-top">
-                    <div className="categorizeHead">
-                        <div className="pagePath">
-                            <p style={{ marginTop: "5px" }}>Home</p>
-                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                            <p style={{ marginTop: "5px" }}>
-                                {categories[this.state.category]}
-                            </p>
-                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                            <p style={{ marginTop: "5px" }}>{sub[this.state.category][this.state.sub]}</p>
-                        </div>
-                        <div className="categoriesBackground">
-                            <div className="categories">
-                                <button
-                                    id="musicButton"
-                                    className={
-                                        this.state.category == 0 ? "selectedButton" : "categoryButton"
-                                    }
-                                    onClick={() => {
-                                        this.categorySelect(0);
-                                    }}
-                                >
-                                    {categories[0].toUpperCase()}
-                                </button>
-                                <button
-                                    id="gamingButton"
-                                    className={
-                                        this.state.category == 1 ? "selectedButton" : "categoryButton"
-                                    }
-                                    onClick={() => {
-                                        this.categorySelect(1);
-                                    }}
-                                >
-                                    {categories[1].toUpperCase()}
-                                </button>
-                                <button
-                                    id="laptopButton"
-                                    className={
-                                        this.state.category == 2 ? "selectedButton" : "categoryButton"
-                                    }
-                                    onClick={() => {
-                                        this.categorySelect(2);
-                                    }}
-                                >
-                                    {categories[2].toUpperCase()}
-                                </button>
-                                <button
-                                    id="photographyButton"
-                                    className={
-                                        this.state.category == 3 ? "selectedButton" : "categoryButton"
-                                    }
-                                    onClick={() => {
-                                        this.categorySelect(3);
-                                    }}
-                                >
-                                    {categories[3].toUpperCase()}
-                                </button>
-                            </div>
-                        </div>
-                        <div className="subCategoriesBackground">
-                            <div className="subCategories">
-                                {
-                                    sub[this.state.category].map((item, index) => {
-                                        return <div>
-                                            <SubCard index={index} />
-                                            <hr className="subLine" id={"sub" + index.toString()} />
-                                        </div>
-                                    })
+    const SubCard = ({ index }) => (
+        <Card
+            className="subCard"
+            onClick={() => {
+                subSelect(index);
+            }}
+        >
+            <Card.Content>
+                <Image
+                    src={subb == index ? selectedImg[category][index] : img[category][index]}
+                    wrapped
+                    ui={false}
+                />
+                <p>{sub[category][index]}</p>
+            </Card.Content>
+        </Card>
+    );
+
+    return (
+        <div className="category_overview">
+            <div className="staticContent fixed-top">
+                <div className="categorizeHead">
+                    <div className="pagePath">
+                        <p style={{ marginTop: "5px" }}>Home</p>
+                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                        <p style={{ marginTop: "5px" }}>
+                            {categories[category]}
+                        </p>
+                        <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                        <p style={{ marginTop: "5px" }}>{sub[category][subb]}</p>
+                    </div>
+                    <div className="categoriesBackground">
+                        <div className="categories">
+                            <button
+                                id="musicButton"
+                                className={
+                                    category == 0 ? "selectedButton" : "categoryButton"
                                 }
-                            </div>
+                                onClick={() => {
+                                    categorySelect(0);
+                                }}
+                            >
+                                {categories[0].toUpperCase()}
+                            </button>
+                            <button
+                                id="gamingButton"
+                                className={
+                                    category == 1 ? "selectedButton" : "categoryButton"
+                                }
+                                onClick={() => {
+                                    categorySelect(1);
+                                }}
+                            >
+                                {categories[1].toUpperCase()}
+                            </button>
+                            <button
+                                id="laptopButton"
+                                className={
+                                    category == 2 ? "selectedButton" : "categoryButton"
+                                }
+                                onClick={() => {
+                                    categorySelect(2);
+                                }}
+                            >
+                                {categories[2].toUpperCase()}
+                            </button>
+                            <button
+                                id="photographyButton"
+                                className={
+                                    category == 3 ? "selectedButton" : "categoryButton"
+                                }
+                                onClick={() => {
+                                    categorySelect(3);
+                                }}
+                            >
+                                {categories[3].toUpperCase()}
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div className="scrollContent">
-                    <div className="product_overview">
-                        <div className="category">
-                            {this.state.whats_hot.map((item, index) => {
-                                return <div key={index}>{item}</div>;
-                            })}
-                        </div>
-                    </div>
-                    <div className="search_boy_with_input">
-                        <div className="search_boy_header">
-                            <h1>DIDN'T FIND WHAT YOU ARE LOOKING FOR ?</h1>
-                        </div>
-                        <div className="search_boy">
-                            <img src={search_boy}></img>
-                        </div>
-                        <div className="search_boy_input">
-                            <input placeholder="Drop your queries here"></input>
-                            <button id="category_last_but" className="selectedButton">
-                                Submit
-                        </button>
+                    <div className="subCategoriesBackground">
+                        <div className="subCategories">
+                            {
+                                sub[category].map((item, index) => {
+                                    return <div>
+                                        <SubCard index={index} />
+                                        <hr className="subLine" id={"sub" + index.toString()} />
+                                    </div>
+                                })
+                            }
                         </div>
                     </div>
                 </div>
             </div>
-        );
-    }
+            <div className="scrollContent">
+                <div className="product_overview">
+                    <div className="category">
+                        {whats_hot.map((item, index) => {
+                            return <div key={index}>{item}</div>;
+                        })}
+                    </div>
+                </div>
+                <div className="search_boy_with_input">
+                    <div className="search_boy_header">
+                        <h1>DIDN'T FIND WHAT YOU ARE LOOKING FOR ?</h1>
+                    </div>
+                    <div className="search_boy">
+                        <img src={search_boy}></img>
+                    </div>
+                    <div className="search_boy_input">
+                        <input placeholder="Drop your queries here"></input>
+                        <button id="category_last_but" className="selectedButton">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
 }
 
 export default Category;

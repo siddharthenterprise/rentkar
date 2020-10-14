@@ -137,6 +137,13 @@
   font-weight: 700;
   color: #fff;
 }
+.category_overview .product_overview button :active{
+  background-color: #19eeb5;
+  /* transition-duration: 300; */
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.2);
+  
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 /* ----------------------------------------------- */
 .category_overview .product_overview {
@@ -195,6 +202,13 @@
   border-radius: 5px;
   font-weight: bold;
   color: white;
+}
+.category_overview .product_overview button:active{
+  background-color: #19eeb5;
+  transition-duration: 300;
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.2);
+  
+  /* animation: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 .category_overview .product_overview .header {
   font-family: "Roboto", sans-serif;

@@ -1,11 +1,15 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useContext } from 'react'
 import './body.css';
 import { Card, Icon, Feed, Image, Button } from "semantic-ui-react";
+import { ProductContext } from '../components/ProductContext';
 
 
 
 function Corousel({ imgname }) {
-
+    const [product, setproduct] = useContext(ProductContext);
+    const addcart = (name, price) => {
+        setproduct(prevproduct => [...prevproduct, { name: 'Fender Bullet Strat', price: 100, duration: 5 }]);
+    }
     return (
         <div className='catcard'>
             <Card className='ccard'>
@@ -19,7 +23,7 @@ function Corousel({ imgname }) {
                     <Card.Description>
                         <i class="fas fa-rupee-sign"></i>****/day
                                      </Card.Description>
-                    <Button>ADD TO BAG</Button>
+                    <Button onClick={addcart}>ADD TO BAG</Button>
                 </Card.Content>
             </Card>
         </div>

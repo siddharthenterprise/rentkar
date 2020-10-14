@@ -1,4 +1,6 @@
 import React from 'react';
+import { ProductProvider } from './components/ProductContext';
+
 import { Head } from './components/Head';
 import './App.css';
 import { Slideshow } from './components/Slider';
@@ -14,22 +16,24 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Floatnav className='floatnav' />
-        <Head />
-        <div className="PageContent">
-          <Route exact path="/rentkar" render={props => (
-            <React.Fragment>
-              <Slideshow />
-              <Body />
-            </React.Fragment>
+      <ProductProvider>
+        <div className="App">
+          <Floatnav className='floatnav' />
+          <Head />
+          <div className="PageContent">
+            <Route exact path="/rentkar" render={props => (
+              <React.Fragment>
+                <Slideshow />
+                <Body />
+              </React.Fragment>
 
-          )} />
-          <Route path="/knowmore" render={props => (<Know_more />)}></Route>
-          <Route path="/category" render={props => (<Category />)}></Route>
-          <Route path="/about" render={props => (<User_dash />)}></Route>
+            )} />
+            <Route path="/knowmore" render={props => (<Know_more />)}></Route>
+            <Route path="/category" render={props => (<Category />)}></Route>
+            <Route path="/about" render={props => (<User_dash />)}></Route>
+          </div>
         </div>
-      </div>
+      </ProductProvider>
       <Footer />
     </Router>
   );

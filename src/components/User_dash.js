@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useContext } from 'react'
 
 import rental_s from '../images/icons/rental_s.png';
 import listing_s from '../images/icons/listing_s.png';
@@ -35,50 +35,66 @@ import radio_button from "../images/radio_button.png"
 import './user_dash.css';
 import { Button, Card, Image } from "semantic-ui-react";
 
+import { ProductContext } from '../components/ProductContext';
+
 const icons = [rental_s, listing_s, verification_s, support_s, settings_s]
 const icons_g = [rental_g, listing_g, verification_g, support_g, settings_g]
 const iconDesc = ['My Rentals', 'My Listings', 'Verification', 'Help & Support', 'Settings']
 
-class My_bag extends Component {
-    render() {
-        const Order_card = () => (
-            <div class="buttons_mobileview">
-                <div class="image_detail">
-                    <div class="image">
-                        <img src={guitar} alt="product" />
-                    </div>
-                    <div class="detail">
-                        <div class="name">
-                            <div class="main_head">
-                                <div>
-                                    <h4 style={{ 'fontWeight': '700' }}>Fender Bullet Stratocaster</h4>
-                                </div>
-                                <div>
-                                    <h6 style={{ 'color': 'red', fontWeight: '600' }}>Hurry? Only few in stock</h6>
-                                </div>
+function My_bag() {
+
+    const [product, setProduct] = useContext(ProductContext);
+    // const [total_single_item, settotal_single_item] = useState()
+    const tenure_change = (e) => {
+        console.log(e.target.value);
+        console.log(e);
+        console.log(document.getElementsByClassName('total_price'));
+    }
+
+    const Order_card = (props) => (
+        <div class="buttons_mobileview">
+            <div class="image_detail">
+                <div class="image">
+                    <img src={guitar} alt="product" />
+                </div>
+                <div class="detail">
+                    <div class="name">
+                        <div class="main_head">
+                            <div>
+                                <h4 style={{ 'fontWeight': '700' }}>{props.name}</h4>
                             </div>
-                            <div class="edit_order">
-                                <h6 style={{ 'color': '#1bacf4' }}><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove<i class="fas fa-trash-alt"></i></a></h6>
+                            <div>
+                                <h6 style={{ 'color': 'red', fontWeight: '600' }}>Hurry? Only few in stock</h6>
                             </div>
                         </div>
-                        <div class="price">
-                            <div class="rent">
-                                <div className="name__">
-                                    <h6 >Rent</h6>
-                                </div>
-                                <div>
-                                    <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>  190 /Day</h4>
-                                </div>
+                        <div class="edit_order">
+                            <h6 style={{ 'color': '#1bacf4' }}><a>Edit Order<img src={pencil_b}></img></a><span> | </span><a style={{ 'color': 'red' }}>Remove&nbsp;&nbsp;<i class="fas fa-trash-alt"></i></a></h6>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="rent">
+                            <div className="name__">
+                                <h6 >Rent</h6>
                             </div>
-                            <div class="tenure">
-                                <div className="name__">
-                                    <h6>Tenure <i class="far fa-clock"></i></h6>
-                                </div>
-                                <div>
-                                    <h4 style={{ fontWeight: "600" }}>2 Weeks</h4>
-                                </div>
+                            <div>
+                                <h4 style={{ fontWeight: "600" }}><i class="fas fa-rupee-sign    "></i>  {props.price} /Day</h4>
                             </div>
-                            {/* <div class="deposit">
+                        </div>
+                        <div class="tenure">
+                            <div className="name__">
+                                <h6>Tenure <i class="far fa-clock"></i></h6>
+                            </div>
+                            <div>
+                                <select onChange={tenure_change} name="tenure" id="tenure" style={{ fontWeight: "600", border: 'none', outline: 'none' }}>
+                                    <option value={2}>2 Weeks</option>
+                                    <option value={3}>3 Weeks</option>
+                                    <option value={4}>4 Weeks</option>
+                                    <option value={5}>5 Weeks</option>
+                                </select>
+                                {/* <h4 >2 Weeks</h4> */}
+                            </div>
+                        </div>
+                        {/* <div class="deposit">
                             <div className="name__">
                                 <h6>Deposit</h6>
                             </div>
@@ -86,74 +102,78 @@ class My_bag extends Component {
                             <h4 style={{ fontWeight: "600" }}>0</h4>
                         </div> */}
 
-                        </div>
-                        <div class="total">
-                            <div class="mybag_button">
-                                <div class="placeorder">
-                                    <button className="but1">Place Order</button>
-                                </div>
-                                <div class="saveforlater">
-                                    <button className="but2">Save for Later</button>
-                                </div>
-
+                    </div>
+                    <div class="total">
+                        <div class="mybag_button">
+                            <div class="placeorder">
+                                <button className="but1">Place Order</button>
+                            </div>
+                            <div class="saveforlater">
+                                <button className="but2">Save for Later</button>
                             </div>
 
-                            <div>
-                                <div class="total_price">
-                                    <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
-                                    <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
-                                </div>
+                        </div>
+
+                        <div>
+                            <div class="total_price">
+                                <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> {props.price * props.duration}</h4>
+                                <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
                             </div>
                         </div>
                     </div>
-                </div >
-                <div class="mobile_button">
-                    <div class="mybag_button">
-                        <div class="placeorder">
-                            <button className="but1">Place Order</button>
-                        </div>
-                        <div class="saveforlater">
-                            <button className="but2">Save for Later</button>
-                        </div>
-                        <div class="saveforlater">
-                            <button className="but2">Remove</button>
-                        </div>
+                </div>
+            </div >
+            <div class="mobile_button">
+                <div class="mybag_button">
+                    <div class="placeorder">
+                        <button className="but1">Place Order</button>
                     </div>
+                    <div class="saveforlater">
+                        <button className="but2">Save for Later</button>
+                    </div>
+                    <div class="saveforlater">
+                        <button className="but2">Remove</button>
+                    </div>
+                </div>
 
-                    <div>
-                        <div class="total_price">
-                            <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> 2660</h4>
-                            <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
-                        </div>
+                <div>
+                    <div class="total_price">
+                        <h4 style={{ fontWeight: "600" }}>Total: <i class="fas fa-rupee-sign    "></i> {props.price * props.duration}</h4>
+                        <h6 style={{ fontWeight: "600", color: "#1bacf4" }} className="pricebreakdown"><i class="fas fa-exclamation-circle"></i>Price Breakdown</h6>
                     </div>
                 </div>
             </div>
-        )
-        return (
-            <div>
-                <div className="order_card">
-                    <Order_card />
+        </div>
+    )
+    return (
+        <div style={{ maxHeight: '700px', overflowY: 'scroll' }}>
+
+            {
+                product.map(product => (
+                    <div className="order_card">
+                        <Order_card name={product.name} price={product.price} duration={product.duration} />
+                    </div>
+                ))
+            }
+
+
+
+            <div className="checkout">
+                <div className="cost">
+                    <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 &nbsp;&nbsp;|&nbsp;&nbsp; Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
+                </div>
+                <div class="cost_mobile">
+                    <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 <br></br> Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
 
                 </div>
-                <div className="order_card">
-                    <Order_card />
-                </div>
-                <div className="checkout">
-                    <div className="cost">
-                        <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 &nbsp;&nbsp;|&nbsp;&nbsp; Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
-                    </div>
-                    <div class="cost_mobile">
-                        <h6>Total:  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-rupee-sign    "></i>5460 <br></br> Delivery by 21 September <i class="fa fa-truck" aria-hidden="true"></i></h6>
 
-                    </div>
-
-                    <div className="checkout_button">
-                        <button>Place Order</button>
-                    </div>
+                <div className="checkout_button">
+                    <button>Place Order</button>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
+
 }
 
 class MyListing extends Component {
@@ -260,17 +280,17 @@ class Verification extends Component {
     }
 }
 
-class MobileVerification extends Component{
-    constructor(props){
+class MobileVerification extends Component {
+    constructor(props) {
         super(props);
         this.state = {
             index: 0
         }
     }
 
-    
 
-    render(){
+
+    render() {
 
         const Verify_detail_card = (props) => {
             return (
@@ -292,7 +312,7 @@ class MobileVerification extends Component{
         const Address_detail_card = (props) => {
             return (
                 <div className="verify_detail_card">
-                    <input className = "addressDetail" for="text" placeholder = {props.placeholder}/>
+                    <input className="addressDetail" for="text" placeholder={props.placeholder} />
                 </div>
             );
         }
@@ -300,30 +320,30 @@ class MobileVerification extends Component{
 
         return (
             <div className="mobileVerification">
-                <div className = "verifyPage1">
-                    <div className = "Page">
+                <div className="verifyPage1">
+                    <div className="Page">
                         <h2>Personal Verification</h2>
-                        <Verify_detail_card name = {"Name"} username = {"Arnab Dey"} />
-                        <Verify_detail_card name = {"Date of Birth"} username = {"31/03/2001"} />
-                        <Address_detail_card line = { 1 } placeholder = "Address Line 1"/>
-                        <p className = "Label">Enter Address</p>
-                        <Address_detail_card line = { 2 } placeholder = "Address Line 2"/>
-                        <Button onClick = {() => { 
+                        <Verify_detail_card name={"Name"} username={"Arnab Dey"} />
+                        <Verify_detail_card name={"Date of Birth"} username={"31/03/2001"} />
+                        <Address_detail_card line={1} placeholder="Address Line 1" />
+                        <p className="Label">Enter Address</p>
+                        <Address_detail_card line={2} placeholder="Address Line 2" />
+                        <Button onClick={() => {
                             document.getElementsByClassName('verifyPage2')[0].style.display = "block"
                             document.getElementsByClassName('verifyPage1')[0].style.display = "none"
-                            }
+                        }
                         }>Continue</Button>
-                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 10%</p>
-                        <div className = "selections">
-                            <img src = { selectedPage}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
+                        <div className="selections">
+                            <img src={selectedPage}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
                         </div>
                     </div>
                 </div>
-                <div className = "verifyPage2">
-                    <div className = "Page">
+                <div className="verifyPage2">
+                    <div className="Page">
                         <h2>Selfie Verification</h2>
                         <Card className="selfieCard">
                             <Card.Content>
@@ -331,96 +351,96 @@ class MobileVerification extends Component{
                                     src={camera}
                                     wrapped
                                     ui={false}
-                                    onClick={() => {  }}
+                                    onClick={() => { }}
                                 />
                                 <p>Take a Selfie</p>
                             </Card.Content>
                         </Card>
-                        <Button className = "selfieButton" style = {{ opacity: "0.3", background: "#fff", color: "#000"}}>
-                            <div className = "buttonContent">
-                                <img src={uploadSelfie}/>
+                        <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000" }}>
+                            <div className="buttonContent">
+                                <img src={uploadSelfie} />
                                 <p>Upload a Selfie</p>
                             </div>
                         </Button>
-                        <Button className = "selfieButton" style = {{ opacity: "0.3", background: "#fff", color: "#000", marginTop: "20px"}}>
-                            <div className = "buttonContent">
-                                <img src={pencil_b} style ={{width: "70px", marginTop: "-10px"}}/>
-                                <p style = {{marginTop: "-10px"}}>Change Selfie</p>
+                        <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000", marginTop: "20px" }}>
+                            <div className="buttonContent">
+                                <img src={pencil_b} style={{ width: "70px", marginTop: "-10px" }} />
+                                <p style={{ marginTop: "-10px" }}>Change Selfie</p>
                             </div>
                         </Button>
-                        <Button style = {{ opacity: "0.3"}} onClick = {() => { 
+                        <Button style={{ opacity: "0.3" }} onClick={() => {
                             document.getElementsByClassName('verifyPage3')[0].style.display = "block"
                             document.getElementsByClassName('verifyPage2')[0].style.display = "none"
-                            }
+                        }
                         }>Continue</Button>
-                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 50%</p>
-                        <div className = "selections">
-                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = { selectedPage}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 50%</p>
+                        <div className="selections">
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={selectedPage}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
                         </div>
                     </div>
                 </div>
-                <div className = "verifyPage3">
-                    <div className = "Page">
+                <div className="verifyPage3">
+                    <div className="Page">
                         <h2>Identity Verification</h2>
-                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
-                            <div className = "buttonContent">
-                                <img src={uploadSelfie}/>
+                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                            <div className="buttonContent">
+                                <img src={uploadSelfie} />
                                 <p>Upload Driving License</p>
                             </div>
                         </Button>
                         <h6>OR</h6>
-                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
-                            <div className = "buttonContent">
+                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                            <div className="buttonContent">
                                 <img src={uploadSelfie} />
-                                <p style = {{marginTop: "-10px"}}>Update Passport</p>
+                                <p style={{ marginTop: "-10px" }}>Update Passport</p>
                             </div>
                         </Button>
                         <h6>OR</h6>
-                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "20px"}}>
-                            <div className = "buttonContent">
+                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                            <div className="buttonContent">
                                 <img src={uploadSelfie} />
-                                <p style = {{marginTop: "-10px"}}>Verify instantly with Aadhaar Card</p>
+                                <p style={{ marginTop: "-10px" }}>Verify instantly with Aadhaar Card</p>
                             </div>
                         </Button>
                         <Button >Complete Verification</Button>
-                        <Button className = "selfieButton" 
-                                style = {{ background: "#fff", color: "#000", marginTop: "20px"}}
-                                onClick = {() => { 
-                                    document.getElementsByClassName('verifyPage4')[0].style.display = "block"
-                                    document.getElementsByClassName('verifyPage3')[0].style.display = "none"
-                                    }
-                                }>
+                        <Button className="selfieButton"
+                            style={{ background: "#fff", color: "#000", marginTop: "20px" }}
+                            onClick={() => {
+                                document.getElementsByClassName('verifyPage4')[0].style.display = "block"
+                                document.getElementsByClassName('verifyPage3')[0].style.display = "none"
+                            }
+                            }>
                             Continue with your Order
                         </Button>
-                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 10%</p>
-                        <div className = "selections">
-                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = { selectedPage}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
+                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
+                        <div className="selections">
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={selectedPage}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
                         </div>
                     </div>
                 </div>
-                <div className = "verifyPage4">
-                    <div className = "Page">
+                <div className="verifyPage4">
+                    <div className="Page">
                         <h2>Financial Verification</h2>
-                        <Button className = "selfieButton" style = {{ background: "#fff", color: "#000", marginTop: "10px"}}>
-                            <div className = "buttonContent">
-                                <img src={uploadSelfie}/>
+                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "10px" }}>
+                            <div className="buttonContent">
+                                <img src={uploadSelfie} />
                                 <p>Upload Bank Statement</p>
                             </div>
                         </Button>
-                        <p className = "Label" style = {{marginTop: "5px"}}>Upload Bank Statement for 3 months</p>
-                        <Button style = {{ marginTop: "300px" }} onClick = {() => { } }>Finish</Button>
-                        <p className = "Label" style = {{ marginTop: "20px", textAlign: "center", marginBottom: "20px"}}>Verification Score : 100%</p>
-                        <div className = "selections">
-                            <img src = { unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = {unSelectedPage} style = {{ border: "none", width: "20px", height: "20px"}}></img>
-                            <img src = { selectedPage}></img>
+                        <p className="Label" style={{ marginTop: "5px" }}>Upload Bank Statement for 3 months</p>
+                        <Button style={{ marginTop: "300px" }} onClick={() => { }}>Finish</Button>
+                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 100%</p>
+                        <div className="selections">
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                            <img src={selectedPage}></img>
                         </div>
                     </div>
                 </div>
@@ -472,9 +492,9 @@ class Settings extends Component {
     }
 }
 
-class Support extends Component{
+class Support extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             drop1: 0,
@@ -484,40 +504,40 @@ class Support extends Component{
         this.dropMenu1 = this.dropMenu1.bind(this)
     }
 
-    dropMenu1(){
-        if(this.state.drop1 == 1){
-            this.setState({drop1: 0})
+    dropMenu1() {
+        if (this.state.drop1 == 1) {
+            this.setState({ drop1: 0 })
             document.getElementById("dropContent1").style.display = "none"
         }
-        else{
+        else {
             document.getElementById("dropContent1").style.display = "block"
             this.setState({ drop1: 1 })
         }
     }
 
-    dropMenu2(){
-        if(this.state.drop2 == 1){
-            this.setState({drop2: 0})
+    dropMenu2() {
+        if (this.state.drop2 == 1) {
+            this.setState({ drop2: 0 })
             document.getElementById("dropContent2").style.display = "none"
         }
-        else{
+        else {
             document.getElementById("dropContent2").style.display = "block"
             this.setState({ drop2: 1 })
         }
     }
 
-    render(){
+    render() {
         return (
-            <div className = "supportScreen">
+            <div className="supportScreen">
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick = { () => this.dropMenu1() }>
-                        <div className = "buttonContent">
-                            <img className = "iconImage" src = { support_person }/>
+                    <button className="supportButton" onClick={() => this.dropMenu1()}>
+                        <div className="buttonContent">
+                            <img className="iconImage" src={support_person} />
                             <p>Generate a quick request</p>
-                            <img src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px"  }}/>
+                            <img src={down_arrow} style={{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px" }} />
                         </div>
                     </button>
-                    <div id = "dropContent1" className="dropdown-content">
+                    <div id="dropContent1" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -526,8 +546,8 @@ class Support extends Component{
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className = "buttonContent">
-                            <img className = "iconImage" src = { phone } style = {{ width: "20px", height: "30px" }}/>
+                        <div className="buttonContent">
+                            <img className="iconImage" src={phone} style={{ width: "20px", height: "30px" }} />
                             <p>Call Us</p>
                         </div>
                     </button>
@@ -535,22 +555,22 @@ class Support extends Component{
 
                 <div className="supportButtonDiv">
                     <button className="supportButton">
-                        <div className = "buttonContent">
-                            <img className = "iconImage" src = { whatsAppSupport }/>
+                        <div className="buttonContent">
+                            <img className="iconImage" src={whatsAppSupport} />
                             <p>Ping us on WhatsApp</p>
                         </div>
                     </button>
                 </div>
 
                 <div className="supportButtonDiv">
-                    <button className="supportButton" onClick = { () => this.dropMenu2() }>
-                        <div className = "buttonContent">
-                            <i className = "iconImage fa fa-question-circle" />
+                    <button className="supportButton" onClick={() => this.dropMenu2()}>
+                        <div className="buttonContent">
+                            <i className="iconImage fa fa-question-circle" />
                             <p>FAQs</p>
-                            <img src = { down_arrow }  style = {{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px" }}/>
+                            <img src={down_arrow} style={{ marginLeft: "auto", marginRight: "0px", paddingLeft: "5px" }} />
                         </div>
                     </button>
-                    <div id = "dropContent2" className="dropdown-content">
+                    <div id="dropContent2" className="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -567,14 +587,14 @@ export class User_dash extends Component {
     constructor(props) {
         super(props);
         var w = window.screen.width
-        if(w < 992)
+        if (w < 992)
             this.state = {
                 index: -1
             }
         else
-        this.state = {
-            index: 0
-        }
+            this.state = {
+                index: 0
+            }
     }
 
     changeIndex(index) {
@@ -582,9 +602,9 @@ export class User_dash extends Component {
             index: index,
         })
         var w = window.screen.width
-        if(w < 992)
+        if (w < 992)
             document.getElementsByClassName('useropt')[0].style.display = 'none'
-            document.getElementsByClassName('right_screen')[0].style.display = 'block'
+        document.getElementsByClassName('right_screen')[0].style.display = 'block'
     }
 
     render() {
