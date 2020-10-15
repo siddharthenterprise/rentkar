@@ -36,6 +36,7 @@ import './user_dash.css';
 import { Button, Card, Image } from "semantic-ui-react";
 
 import { ProductContext } from '../components/ProductContext';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 
 const icons = [rental_s, listing_s, verification_s, support_s, settings_s]
 const icons_g = [rental_g, listing_g, verification_g, support_g, settings_g]
@@ -317,134 +318,137 @@ class MobileVerification extends Component {
             );
         }
 
+        const VerifyPage1 = (props) => (<div className="verifyPage1">
+                                            <div className="Page">
+                                                <h2>Personal Verification</h2>
+                                                <Verify_detail_card name={"Name"} username={"Arnab Dey"} />
+                                                <Verify_detail_card name={"Date of Birth"} username={"31/03/2001"} />
+                                                <Address_detail_card line={1} placeholder="Address Line 1" />
+                                                <p className="Label">Enter Address</p>
+                                                <Address_detail_card line={2} placeholder="Address Line 2" />
+                                                <Link to = '/about/verification/page2'>
+                                                    <Button>Continue</Button>
+                                                </Link>
+                                                <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
+                                                <div className="selections">
+                                                    <img src={selectedPage}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                </div>
+                                            </div>
+                                        </div>)
 
+        const VerifyPage2 = (props) => (<div className="verifyPage2">
+                                            <div className="Page">
+                                                <h2>Selfie Verification</h2>
+                                                <Card className="selfieCard">
+                                                    <Card.Content>
+                                                        <Image
+                                                            src={camera}
+                                                            wrapped
+                                                            ui={false}
+                                                            onClick={() => { }}
+                                                        />
+                                                        <p>Take a Selfie</p>
+                                                    </Card.Content>
+                                                </Card>
+                                                <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={uploadSelfie} />
+                                                        <p>Upload a Selfie</p>
+                                                    </div>
+                                                </Button>
+                                                <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000", marginTop: "20px" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={pencil_b} style={{ width: "70px", marginTop: "-10px" }} />
+                                                        <p style={{ marginTop: "-10px" }}>Change Selfie</p>
+                                                    </div>
+                                                </Button>
+                                                <Link style ={{ textDecoration: 'none' }} to = '/about/verification/page3'>
+                                                <Button style={{ opacity: "0.3" }} >Continue</Button>
+                                                </Link>
+                                                <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 50%</p>
+                                                <div className="selections">
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={selectedPage}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                </div>
+                                            </div>
+                                        </div>)
+        const VerifyPage3 = (props) => (<div className="verifyPage3">
+                                            <div className="Page">
+                                                <h2>Identity Verification</h2>
+                                                <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={uploadSelfie} />
+                                                        <p>Upload Driving License</p>
+                                                    </div>
+                                                </Button>
+                                                <h6>OR</h6>
+                                                <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={uploadSelfie} />
+                                                        <p style={{ marginTop: "-10px" }}>Update Passport</p>
+                                                    </div>
+                                                </Button>
+                                                <h6>OR</h6>
+                                                <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={uploadSelfie} />
+                                                        <p style={{ marginTop: "-10px" }}>Verify instantly with Aadhaar Card</p>
+                                                    </div>
+                                                </Button>
+                                                <Button >Complete Verification</Button>
+                                                <Link style ={{ textDecoration: 'none' }} to = '/about/verification/page4'>
+                                                <Button className="selfieButton"
+                                                    style={{ background: "#fff", color: "#000", marginTop: "20px" }}
+                                                    >
+                                                    Continue with your Order
+                                                </Button>
+                                                </Link>
+                                                <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
+                                                <div className="selections">
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={selectedPage}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                </div>
+                                            </div>
+                                        </div>)
+        
+        const VerifyPage4 = (props) => (<div className="verifyPage4">
+                                            <div className="Page">
+                                                <h2>Financial Verification</h2>
+                                                <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "10px" }}>
+                                                    <div className="buttonContent">
+                                                        <img src={uploadSelfie} />
+                                                        <p>Upload Bank Statement</p>
+                                                    </div>
+                                                </Button>
+                                                <p className="Label" style={{ marginTop: "5px" }}>Upload Bank Statement for 3 months</p>
+                                                <Button style={{ marginTop: "300px" }} onClick={() => { }}>Finish</Button>
+                                                <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 100%</p>
+                                                <div className="selections">
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
+                                                    <img src={selectedPage}></img>
+                                                </div>
+                                            </div>
+                                        </div>)
+        
         return (
-            <div className="mobileVerification">
-                <div className="verifyPage1">
-                    <div className="Page">
-                        <h2>Personal Verification</h2>
-                        <Verify_detail_card name={"Name"} username={"Arnab Dey"} />
-                        <Verify_detail_card name={"Date of Birth"} username={"31/03/2001"} />
-                        <Address_detail_card line={1} placeholder="Address Line 1" />
-                        <p className="Label">Enter Address</p>
-                        <Address_detail_card line={2} placeholder="Address Line 2" />
-                        <Button onClick={() => {
-                            document.getElementsByClassName('verifyPage2')[0].style.display = "block"
-                            document.getElementsByClassName('verifyPage1')[0].style.display = "none"
-                        }
-                        }>Continue</Button>
-                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
-                        <div className="selections">
-                            <img src={selectedPage}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                        </div>
-                    </div>
+            <Router>
+                <Redirect to='/about/verification/page1'/>
+                <div className="mobileVerification">
+                    <Route path='/about/verification/page1' render = {props => (<VerifyPage1 />)}/>
+                    <Route path='/about/verification/page2' render = {props => (<VerifyPage2 />)}/>
+                    <Route path='/about/verification/page3' render = {props => (<VerifyPage3 />)}/>
+                    <Route path='/about/verification/page4' render = {props => (<VerifyPage4 />)}/>
                 </div>
-                <div className="verifyPage2">
-                    <div className="Page">
-                        <h2>Selfie Verification</h2>
-                        <Card className="selfieCard">
-                            <Card.Content>
-                                <Image
-                                    src={camera}
-                                    wrapped
-                                    ui={false}
-                                    onClick={() => { }}
-                                />
-                                <p>Take a Selfie</p>
-                            </Card.Content>
-                        </Card>
-                        <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000" }}>
-                            <div className="buttonContent">
-                                <img src={uploadSelfie} />
-                                <p>Upload a Selfie</p>
-                            </div>
-                        </Button>
-                        <Button className="selfieButton" style={{ opacity: "0.3", background: "#fff", color: "#000", marginTop: "20px" }}>
-                            <div className="buttonContent">
-                                <img src={pencil_b} style={{ width: "70px", marginTop: "-10px" }} />
-                                <p style={{ marginTop: "-10px" }}>Change Selfie</p>
-                            </div>
-                        </Button>
-                        <Button style={{ opacity: "0.3" }} onClick={() => {
-                            document.getElementsByClassName('verifyPage3')[0].style.display = "block"
-                            document.getElementsByClassName('verifyPage2')[0].style.display = "none"
-                        }
-                        }>Continue</Button>
-                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 50%</p>
-                        <div className="selections">
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={selectedPage}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                        </div>
-                    </div>
-                </div>
-                <div className="verifyPage3">
-                    <div className="Page">
-                        <h2>Identity Verification</h2>
-                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
-                            <div className="buttonContent">
-                                <img src={uploadSelfie} />
-                                <p>Upload Driving License</p>
-                            </div>
-                        </Button>
-                        <h6>OR</h6>
-                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
-                            <div className="buttonContent">
-                                <img src={uploadSelfie} />
-                                <p style={{ marginTop: "-10px" }}>Update Passport</p>
-                            </div>
-                        </Button>
-                        <h6>OR</h6>
-                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "20px" }}>
-                            <div className="buttonContent">
-                                <img src={uploadSelfie} />
-                                <p style={{ marginTop: "-10px" }}>Verify instantly with Aadhaar Card</p>
-                            </div>
-                        </Button>
-                        <Button >Complete Verification</Button>
-                        <Button className="selfieButton"
-                            style={{ background: "#fff", color: "#000", marginTop: "20px" }}
-                            onClick={() => {
-                                document.getElementsByClassName('verifyPage4')[0].style.display = "block"
-                                document.getElementsByClassName('verifyPage3')[0].style.display = "none"
-                            }
-                            }>
-                            Continue with your Order
-                        </Button>
-                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
-                        <div className="selections">
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={selectedPage}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                        </div>
-                    </div>
-                </div>
-                <div className="verifyPage4">
-                    <div className="Page">
-                        <h2>Financial Verification</h2>
-                        <Button className="selfieButton" style={{ background: "#fff", color: "#000", marginTop: "10px" }}>
-                            <div className="buttonContent">
-                                <img src={uploadSelfie} />
-                                <p>Upload Bank Statement</p>
-                            </div>
-                        </Button>
-                        <p className="Label" style={{ marginTop: "5px" }}>Upload Bank Statement for 3 months</p>
-                        <Button style={{ marginTop: "300px" }} onClick={() => { }}>Finish</Button>
-                        <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 100%</p>
-                        <div className="selections">
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={unSelectedPage} style={{ border: "none", width: "20px", height: "20px" }}></img>
-                            <img src={selectedPage}></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </Router>
         );
     }
 }
@@ -608,88 +612,101 @@ export class User_dash extends Component {
     }
 
     render() {
+        var indexMap = {0: '/about/mybag', 1: '/about/mylisting', 2: '/about/verification/', 3: '/about/support', 4: '/about/settings'}
 
         const DetailsCard = ({ index }) => (
-            <Card
-                className="detailsCard"
-            >
-                <Card.Content>
-                    <Image
-                        src={this.state.index == index ? icons[index] : icons_g[index]}
-                        wrapped
-                        ui={false}
-                        onClick={() => { this.changeIndex(index) }}
-                    />
-                    <p>{iconDesc[index]}</p>
-                </Card.Content>
-            </Card>
+            <Link style={{ textDecoration: 'none' }} to =  {indexMap[index]}>
+                <Card className="detailsCard">
+                    <Card.Content onClick = {() => { this.changeIndex(index);}}>
+                        <Image
+                            src={this.state.index == index ? icons[index] : icons_g[index]}
+                            wrapped
+                            ui={false}
+                        />
+                        <p className = 'detailsCardName'>{iconDesc[index]}</p>
+                    </Card.Content>
+                </Card>
+            </Link>
         );
 
         return (
-            <div className="dashboard">
-                <div className="useropt">
-                    <div className="user_detail">
-                        <div className="first">
-                            <div>
-                                <img class="user_icon" src={require('../images/float_nav/abouto.png')} aria-hidden="true"></img>
-                            </div>
-                            <div className="user_name">
-                                Username
-                            </div>
-                            <div className="userlocation">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i><p>Mumbai</p>
-                            </div>
-                        </div>
-                        <div className="second">
-                            <div className="mail">
-                                <h4>userxyz@gmail.com</h4>
-                                <h4>7000232401</h4>
-                            </div>
-                            <div className="marker">
-                                <img id="pencil" src={pencil}></img>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='details'>
-                        {
-                            iconDesc.map((item, index) => {
-                                return <div>
-                                    <DetailsCard index={index} />
+            <Router>
+                {window.screen.width < 992 ? null : <Redirect to= '/about/mybag'/>}
+                <div className="dashboard">
+                    <div className="useropt">
+                        <div className="user_detail">
+                            <div className="first">
+                                <div>
+                                    <img class="user_icon" src={require('../images/float_nav/abouto.png')} aria-hidden="true"></img>
                                 </div>
-                            })
-                        }
+                                <div className="user_name">
+                                    Username
+                                </div>
+                                <div className="userlocation">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i><p>Mumbai</p>
+                                </div>
+                            </div>
+                            <div className="second">
+                                <div className="mail">
+                                    <h4>userxyz@gmail.com</h4>
+                                    <h4>7000232401</h4>
+                                </div>
+                                <div className="marker">
+                                    <img id="pencil" src={pencil}></img>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='details'>
+                            {
+                                iconDesc.map((item, index) => {
+                                    return <div>
+                                        <DetailsCard index={index} />
+                                    </div>
+                                })
+                            }
+                        </div>
+                        <div className='buttons'>
+                            <a href='#'>Terms & Conditions</a>
+                            <a href='#'>Insurance Policy</a>
+                            <a href='#'>Privacy Policy</a>
+                            <a href='#'>Privacy Policy</a>
+                        </div>
                     </div>
-                    <div className='buttons'>
-                        <a href='#'>Terms & Conditions</a>
-                        <a href='#'>Insurance Policy</a>
-                        <a href='#'>Privacy Policy</a>
-                        <a href='#'>Privacy Policy</a>
+                    <div class="right_screen">
+                        <div class="userdash">
+                            <div class="userdash_header">
+                                <p style={{ marginTop: "5px" }}>Home</p>
+                                <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                                <p style={{ marginTop: "5px" }}>My Account
+                                </p>
+                                <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
+                                <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
+                                {this.state.index == 1 ? <Button className="mylisting__button">ADD +</Button> : null}
+                                {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px" }}>Verification status: 100%</p> : null}
+                            </div>
+                        </div>
+                        <Route path="/about/mybag" render={props => (<My_bag />)}></Route>
+                        <Route path="/about/mylisting" render={props => (<MyListing />)}></Route>
+                        <Route path="/about/verification" render={props => (<Verification />)}></Route>
+                        <Route path="/about/verification" render={props => (<MobileVerification />)}></Route>
+                        <Route path="/about/support" render={props => (<Support />)}></Route>
+                        <Route path="/about/settings" render={props => (<Settings />)}></Route>
                     </div>
                 </div>
-                <div class="right_screen">
-                    <div class="userdash">
-                        <div class="userdash_header">
-                            <p style={{ marginTop: "5px" }}>Home</p>
-                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                            <p style={{ marginTop: "5px" }}>My Account
-                            </p>
-                            <h3 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{">"}</h3>
-                            <p style={{ marginTop: "5px", color: "#1bacf4" }}>{iconDesc[this.state.index]}</p>
-                            {this.state.index == 1 ? <Button className="mylisting__button">ADD +</Button> : null}
-                            {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px" }}>Verification status: 100%</p> : null}
-                        </div>
-                    </div>
-                    {this.state.index == 1 ? <MyListing /> : null}
+            </Router>
+        )
+    }
+}
+
+export default User_dash
+
+/*
+
+{this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}
                     {this.state.index == 2 ? <Verification /> : null}
                     {this.state.index == 2 ? <MobileVerification /> : null}
                     {this.state.index == 3 ? <Support /> : null}
                     {this.state.index == 4 ? <Settings /> : null}
 
-                </div>
-            </div>
-        )
-    }
-}
-
-export default User_dash
+*/
