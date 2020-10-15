@@ -3,6 +3,7 @@ import Popup from "reactjs-popup";
 import { Grid, Header } from 'semantic-ui-react';
 import Login from './Login';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import guitar from "../images/guitar2.png";
 
 
 import './head.css'
@@ -69,6 +70,44 @@ export const Head = (props) => {
 
     }
 
+    const Cart_list = (props) => (
+        <div className="cart__main">
+            <div class="cart__info">
+                <div class="cart__image">
+                    <img src={guitar}></img>
+                </div>
+                <div class="cart__detail">
+                    <div class="cart__productname">
+                        <h4>{props.name}</h4>
+                    </div>
+                    <div class="cart__productinfo">
+                        <div class="cart__tenure">
+                            <h6>Tenure</h6>
+                            <h6>{props.duration} Day</h6>
+                        </div>
+                        <div class="cart__rent">
+                            <h6>Rent</h6>
+                            <h6><i class="fas fa-rupee-sign    "></i>&nbsp;&nbsp;{props.price}/day</h6>
+                        </div>
+                        <div class="cart__deposit">
+                            <h6>Deposit</h6>
+                            <h6>0</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart__button">
+                <div class="cart__edit">
+                    <button>EDIT DETAILS</button>
+                </div>
+                <div class="cart__checkout">
+                    <button>PROCEED TO CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    )
+
     let addModalclose = () => { setaddModalshow(false) };
     return (
         <div class="container fixed-top">
@@ -101,7 +140,18 @@ export const Head = (props) => {
 
                 </div>
                 <div className='but' id="bag">
-                    <Link to="/category"><button><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button></Link>
+                    <Popup trigger={<button><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
+                        {/* <div style={{ 'overflowY': 'scroll' }}> */}
+                        {
+                            product.map(p => (
+
+                                <Cart_list name={p.name} price={p.price} duration={p.duration} />
+                            ))
+                        }
+                        {/* </div> */}
+
+                    </Popup>
+                    {/* <Link to="/category"><button><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button></Link> */}
                 </div>
                 <div className='but' id='sign'>
                     <button onClick={() => setaddModalshow(true)}>Login/Sign Up</button>
