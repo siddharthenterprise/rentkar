@@ -441,12 +441,13 @@ class MobileVerification extends Component {
         
         return (
             <Router>
-                <Redirect to='/about/verification/page1'/>
                 <div className="mobileVerification">
-                    <Route path='/about/verification/page1' render = {props => (<VerifyPage1 />)}/>
-                    <Route path='/about/verification/page2' render = {props => (<VerifyPage2 />)}/>
-                    <Route path='/about/verification/page3' render = {props => (<VerifyPage3 />)}/>
-                    <Route path='/about/verification/page4' render = {props => (<VerifyPage4 />)}/>
+                    <Switch>
+                        <Route path='/about/verification/page2' render = {props => (<VerifyPage2 />)}/>
+                        <Route path='/about/verification/page3' render = {props => (<VerifyPage3 />)}/>
+                        <Route path='/about/verification/page4' render = {props => (<VerifyPage4 />)}/>
+                        <Route path='/about/verification/' render = {props => (<VerifyPage1 />)}/>
+                    </Switch>
                 </div>
             </Router>
         );
@@ -590,29 +591,25 @@ export class User_dash extends Component {
 
     constructor(props) {
         super(props);
-        var w = window.screen.width
-        if (w < 992)
-            this.state = {
-                index: -1
-            }
-        else
-            this.state = {
-                index: 0
-            }
+        this.state = {
+            index: this.props.ind
+        }
     }
 
     changeIndex(index) {
         this.setState({
             index: index,
         })
+        
         var w = window.screen.width
         if (w < 992)
             document.getElementsByClassName('useropt')[0].style.display = 'none'
         document.getElementsByClassName('right_screen')[0].style.display = 'block'
+        
     }
 
     render() {
-        var indexMap = {0: '/about/mybag', 1: '/about/mylisting', 2: '/about/verification/', 3: '/about/support', 4: '/about/settings'}
+        var indexMap = {0: '/about/', 1: '/about/mylisting', 2: '/about/verification/', 3: '/about/support', 4: '/about/settings'}
 
         const DetailsCard = ({ index }) => (
             <Link style={{ textDecoration: 'none' }} to =  {indexMap[index]}>
@@ -630,8 +627,6 @@ export class User_dash extends Component {
         );
 
         return (
-            <Router>
-                {window.screen.width < 992 ? null : <Redirect to= '/about/mybag'/>}
                 <div className="dashboard">
                     <div className="useropt">
                         <div className="user_detail">
@@ -685,15 +680,14 @@ export class User_dash extends Component {
                                 {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px" }}>Verification status: 100%</p> : null}
                             </div>
                         </div>
-                        <Route path="/about/mybag" render={props => (<My_bag />)}></Route>
-                        <Route path="/about/mylisting" render={props => (<MyListing />)}></Route>
-                        <Route path="/about/verification" render={props => (<Verification />)}></Route>
-                        <Route path="/about/verification" render={props => (<MobileVerification />)}></Route>
-                        <Route path="/about/support" render={props => (<Support />)}></Route>
-                        <Route path="/about/settings" render={props => (<Settings />)}></Route>
+                        {this.state.index == 1 ? <MyListing /> : null}
+                        {this.state.index == 0 ? <My_bag /> : null}
+                        {this.state.index == 2 ? <Verification /> : null}
+                        {this.state.index == 2 ? <MobileVerification /> : null}
+                        {this.state.index == 3 ? <Support /> : null}
+                        {this.state.index == 4 ? <Settings /> : null}
                     </div>
                 </div>
-            </Router>
         )
     }
 }
@@ -701,6 +695,13 @@ export class User_dash extends Component {
 export default User_dash
 
 /*
+
+<Route path="/about/mybag" render={props => (<My_bag />)}></Route>
+                        <Route path="/about/mylisting" render={props => (<MyListing />)}></Route>
+                        <Route path="/about/verification" render={props => (<Verification />)}></Route>
+                        <Route path="/about/verification" render={props => (<MobileVerification />)}></Route>
+                        <Route path="/about/support" render={props => (<Support />)}></Route>
+                        <Route path="/about/settings" render={props => (<Settings />)}></Route>
 
 {this.state.index == 1 ? <MyListing /> : null}
                     {this.state.index == 0 ? <My_bag /> : null}

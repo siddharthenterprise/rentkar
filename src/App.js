@@ -14,6 +14,8 @@ import { User_dash } from './components/User_dash';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
+  var w = window.screen.width
+
   return (
     <Router>
       <ProductProvider>
@@ -30,7 +32,14 @@ function App() {
             )} />
             <Route path="/knowmore" render={props => (<Know_more />)}></Route>
             <Route path="/category" render={props => (<Category />)}></Route>
-            <Route path="/about" render={props => (<User_dash />)}></Route>
+            <Switch>
+              <Route path = '/about/mylisting' render={props => (<User_dash ind = {1}/>)} />
+              <Route path = '/about/verification' render = {props => (<User_dash ind = {2}/>)}/>
+              <Route path = '/about/verification' render = {props => (<User_dash ind = {2}/>)}/>
+              <Route path = '/about/settings' render = {props => (<User_dash ind = {4}/>)}/>
+              <Route path = '/about/support' render = {props => (<User_dash ind = {3}/>)}/>
+              { w < 992 ? <Route exact path="/about" render={props => (<User_dash ind = {-1}/>)} /> : <Route exact path="/about" render={props => (<User_dash ind = {0}/>)}/>}
+            </Switch>
           </div>
         </div>
       </ProductProvider>
