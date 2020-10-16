@@ -11,9 +11,9 @@ import './head.css'
 import logo from '../images/logo.png'
 import map from '../images/map.png';
 import bag from '../images/bag.png';
-import mumbai_c from '../images/Mumbai.png';
+import mumbai_c from '../images/mumbai.png';
 import pune_c from '../images/PuneC.png';
-import mumbaig from '../images/Mumbaig.png';
+import mumbaig from '../images/mumbaig.png';
 import puneg from '../images/PuneCG.png';
 import bar from "../images/icons/new icin-16.png";
 

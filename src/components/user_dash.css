@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: row;
 }
+
+.right_screen .useroptMobile{
+    display: none;
+}
+
 .useropt{
     max-width: 25%;
     float: left;
@@ -10,6 +15,7 @@
     overflow: hidden;
     
 }
+
 .useropt .user_detail{
     display: flex;
     flex-direction: column;
@@ -140,8 +146,14 @@
 /* Right screen=================================================== */
 .right_screen{
     min-width: 75%;
-    
 }
+
+.right_screen .userdashMobile{
+    display: none;
+    min-width: 100%;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
 .right_screen .userdash{
     min-width: 100%;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.2);
@@ -153,9 +165,7 @@
   display: flex;
   flex-direction: row;
   max-width: 98%;
-  
   padding: 10px;
-  padding-left: 10px;
   /* max-height: 28px; */
   
 }
@@ -170,6 +180,7 @@
 .right_screen .mobile_button{
     display: none;
 }
+
 .right_screen .image_detail{
     display: flex;
     flex-direction: row;
@@ -675,24 +686,154 @@
 
 
 @media screen and (max-width: 992px){
+    
     .useropt{
-        min-width: 100%;
+        display: none;
     }
-    .useropt .user_detail{
 
+    .right_screen{
+        width: 100%;
     }
-    .useropt .details{
+
+    .right_screen .useroptMobile{
+        max-width: 25%;
+        float: left;
+        box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.2);
+        max-height: 800px;
+        overflow: hidden;
+        min-width: 100%;
+        display: block;
+    }
+    
+    .right_screen .useroptMobile .user_detail{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: auto;
+        background-image:linear-gradient(to bottom right,#1bacf4,#19eeb5);
+    }
+    .right_screen .useroptMobile .user_detail .first{
+        display: flex;
+        flex-direction: column;
+        /* float:center; */
+        margin: auto;
+    }
+    .right_screen .useroptMobile .user_detail .first img{
+        width: 60px;
+        height: auto;
+        /* padding: 10px; */
+    }
+    
+    .right_screen .useroptMobile .user_detail .first i{
+        padding: 10px;
+        color: white;
+    }
+    
+    .right_screen .useroptMobile .user_detail .first .user_name{
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    .right_screen .useroptMobile .user_detail .first .userlocation{
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #fff;
+        /* padding-bottom: 10px; */
+    }
+    
+    .right_screen .useroptMobile .user_detail .first .userlocation i{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .right_screen .useroptMobile .user_detail .second{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .right_screen .useroptMobile .user_detail .second .mail{
+        float: left;
+       
+    }
+    .right_screen .useroptMobile .user_detail .second .mail h4{
+        font-size: 12px;
+        text-align: left;
+        color: #fff;
+    }
+    .right_screen .useroptMobile .user_detail .second .marker{
+        float: right;
+        margin: auto,none;
+        color: #fff;
+        font-size: 18px;
+    }
+    .right_screen .useroptMobile .user_detail .second .marker #pencil{
+        width: 50px;
+    }
+    
+    .right_screen .useroptMobile .details{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap:0px 8px;
+        /* grid-column: 3; */
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
         justify-content: space-evenly;
         padding: 0px;
         margin: 20px 0px;
         margin-bottom: 0px;
     }
-    .useropt .details .detailsCard{
+    
+    .right_screen .useroptMobile .details .detailsCard {
+        margin: 20px 5px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.2);
+        border: none;
+        /* padding: 0px 20px 0px 20px; */
+        border-radius: 10px;  
         margin: 10px 5px;
         height: 100px;
         width:100px
     }
-
+    
+    .right_screen .useroptMobile .details .detailsCard img{
+        width: 70px;
+        height: auto;
+    }
+    
+    .right_screen .useroptMobile .details .detailsCard:hover {
+      text-decoration: none;
+    }
+    
+    .right_screen .useroptMobile .details .detailsCard p {
+      font-weight: 700;
+      color: #000;
+      padding-bottom: 10px;
+      font-size: 9px;
+      text-decoration: none;
+    }
+    
+    .right_screen .useroptMobile .details .detailsCard p:hover{
+        text-decoration: none;
+    }
+    
+    .right_screen .useroptMobile .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .right_screen .useroptMobile .buttons a{
+        padding: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: #dffbf8;
+        color: #000;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 20px;
+    }
 
     .supportButtonDiv .supportButton{
         width: 100%;
@@ -711,13 +852,6 @@
         flex-direction: row;
     }
 
-
-
-
-    .right_screen{
-        display: none;
-    }
-    
     .right_screen .right_content{
         display: none;
     }
@@ -861,10 +995,15 @@
       .mobileVerification .Page .selfieButton .buttonContent p{
           align-self: center;
       }
-
     .right_screen .userdash{
-        width: 100vw;
+        display: none;
     }
+
+    .right_screen .userdashMobile{
+        width: 100vw;
+        display: block;
+    }
+
     .right_screen .image_detail .image{
         order: 1;
     }

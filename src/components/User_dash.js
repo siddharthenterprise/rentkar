@@ -1,4 +1,4 @@
-import React, { Component, useState, useContext } from 'react'
+import React, { Component, useState, useContext, useEffect } from 'react'
 
 import rental_s from '../images/icons/rental_s.png';
 import listing_s from '../images/icons/listing_s.png';
@@ -11,10 +11,7 @@ import down_arrow from "../images/down_arrow.png"
 import ques from "../images/ques.png"
 import whatsAppSupport from "../images/whatsAppSupport.png"
 import phone from "../images/phone.png"
-import selectedPage from "../images/selectedPage.png"
-import unSelectedPage from "../images/unselectedPage.png"
-import camera from "../images/camera.png"
-import uploadSelfie from "../images/uploadSelfie.png"
+
 
 import rental_g from '../images/icons/rental_g.png';
 import listing_g from '../images/icons/listing_g.png';
@@ -30,13 +27,17 @@ import person from '../images/person.png'
 import add from "../images/add.png"
 import upload from "../images/upload.png"
 import edit from "../images/edit.png"
+import selectedPage from "../images/selectedPage.png"
+import unSelectedPage from "../images/unselectedPage.png"
+import camera from "../images/camera.png"
+import uploadSelfie from "../images/uploadSelfie.png"
 import radio_button from "../images/radio_button.png"
-
 import './user_dash.css';
 import { Button, Card, Image } from "semantic-ui-react";
 
 import { ProductContext } from '../components/ProductContext';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom'
+
 
 const icons = [rental_s, listing_s, verification_s, support_s, settings_s]
 const icons_g = [rental_g, listing_g, verification_g, support_g, settings_g]
@@ -289,10 +290,7 @@ class MobileVerification extends Component {
         }
     }
 
-
-
     render() {
-
         const Verify_detail_card = (props) => {
             return (
                 <div className="verify_detail_card">
@@ -326,7 +324,7 @@ class MobileVerification extends Component {
                                                 <Address_detail_card line={1} placeholder="Address Line 1" />
                                                 <p className="Label">Enter Address</p>
                                                 <Address_detail_card line={2} placeholder="Address Line 2" />
-                                                <Link to = '/about/verification/page2'>
+                                                <Link to = '/verification/page2'>
                                                     <Button>Continue</Button>
                                                 </Link>
                                                 <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 10%</p>
@@ -365,7 +363,7 @@ class MobileVerification extends Component {
                                                         <p style={{ marginTop: "-10px" }}>Change Selfie</p>
                                                     </div>
                                                 </Button>
-                                                <Link style ={{ textDecoration: 'none' }} to = '/about/verification/page3'>
+                                                <Link style ={{ textDecoration: 'none' }} to = '/verification/page3'>
                                                 <Button style={{ opacity: "0.3" }} >Continue</Button>
                                                 </Link>
                                                 <p className="Label" style={{ marginTop: "20px", textAlign: "center", marginBottom: "20px" }}>Verification Score : 50%</p>
@@ -401,7 +399,7 @@ class MobileVerification extends Component {
                                                     </div>
                                                 </Button>
                                                 <Button >Complete Verification</Button>
-                                                <Link style ={{ textDecoration: 'none' }} to = '/about/verification/page4'>
+                                                <Link style ={{ textDecoration: 'none' }} to = '/verification/page4'>
                                                 <Button className="selfieButton"
                                                     style={{ background: "#fff", color: "#000", marginTop: "20px" }}
                                                     >
@@ -443,16 +441,17 @@ class MobileVerification extends Component {
             <Router>
                 <div className="mobileVerification">
                     <Switch>
-                        <Route path='/about/verification/page2' render = {props => (<VerifyPage2 />)}/>
-                        <Route path='/about/verification/page3' render = {props => (<VerifyPage3 />)}/>
-                        <Route path='/about/verification/page4' render = {props => (<VerifyPage4 />)}/>
-                        <Route path='/about/verification/' render = {props => (<VerifyPage1 />)}/>
+                        <Route path='/verification/page2' render = {props => (<VerifyPage2 />)}/>
+                        <Route path='/verification/page3' render = {props => (<VerifyPage3 />)}/>
+                        <Route path='/verification/page4' render = {props => (<VerifyPage4 />)}/>
+                        <Route path='/verification/' render = {props => (<VerifyPage1 />)}/>
                     </Switch>
                 </div>
             </Router>
         );
     }
 }
+
 
 class Settings extends Component {
     render() {
@@ -586,7 +585,6 @@ class Support extends Component {
     }
 }
 
-
 export class User_dash extends Component {
 
     constructor(props) {
@@ -595,7 +593,14 @@ export class User_dash extends Component {
             index: this.props.ind
         }
     }
-
+/*
+    componentDidUpdate(prevProps){
+        const { history } = this.props;
+        const locationChanged = this.props.location !== prevProps.location;
+        if(locationChanged == true && history)
+            this.props.history.push(this.props.location)
+    }
+*/
     changeIndex(index) {
         this.setState({
             index: index,
@@ -607,9 +612,16 @@ export class User_dash extends Component {
         document.getElementsByClassName('right_screen')[0].style.display = 'block'
         
     }
-
+/*
+    goBack = () => {
+        const { history } = this.props;
+        console.log(history)
+        if(history) 
+            history.goBack();
+    }
+*/
     render() {
-        var indexMap = {0: '/about/', 1: '/about/mylisting', 2: '/about/verification/', 3: '/about/support', 4: '/about/settings'}
+        var indexMap = {0: '/about', 1: '/mylisting', 2: '/verification/', 3: '/support', 4: '/settings'}
 
         const DetailsCard = ({ index }) => (
             <Link style={{ textDecoration: 'none' }} to =  {indexMap[index]}>
@@ -626,6 +638,45 @@ export class User_dash extends Component {
             </Link>
         );
 
+        const Home = () => (<div className="useroptMobile">
+        <div className="user_detail">
+            <div className="first">
+                <div>
+                    <img class="user_icon" src={require('../images/float_nav/abouto.png')} aria-hidden="true"></img>
+                </div>
+                <div className="user_name">
+                    Username
+                </div>
+                <div className="userlocation">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><p>Mumbai</p>
+                </div>
+            </div>
+            <div className="second">
+                <div className="mail">
+                    <h4>userxyz@gmail.com</h4>
+                    <h4>7000232401</h4>
+                </div>
+                <div className="marker">
+                    <img id="pencil" src={pencil}></img>
+                </div>
+            </div>
+        </div>
+        <div className='details'>
+            {
+                iconDesc.map((item, index) => {
+                    return <div>
+                        <DetailsCard index={index} />
+                    </div>
+                })
+            }
+        </div>
+        <div className='buttons'>
+            <a href='#'>Terms & Conditions</a>
+            <a href='#'>Insurance Policy</a>
+            <a href='#'>Privacy Policy</a>
+            <a href='#'>Privacy Policy</a>
+        </div>
+    </div>)
         return (
                 <div className="dashboard">
                     <div className="useropt">
@@ -667,6 +718,7 @@ export class User_dash extends Component {
                             <a href='#'>Privacy Policy</a>
                         </div>
                     </div>
+                    
                     <div class="right_screen">
                         <div class="userdash">
                             <div class="userdash_header">
@@ -680,6 +732,15 @@ export class User_dash extends Component {
                                 {this.state.index == 2 ? <p style={{ marginTop: "5px", color: "#0B90D3", marginLeft: "auto", marginRight: "0px" }}>Verification status: 100%</p> : null}
                             </div>
                         </div>
+                        {this.state.index == -1 ? <Home /> : 
+                        <div className="userdashMobile">
+                            <div class="userdash_header">
+                                <Link to = '/home' style = {{ textDecoration: 'none' }}> 
+                                    <h4 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{"<"}</h4>
+                                </Link>
+                                <p style={{ margin: "0px auto"}}>{iconDesc[this.state.index]}</p>
+                            </div>
+                        </div>}
                         {this.state.index == 1 ? <MyListing /> : null}
                         {this.state.index == 0 ? <My_bag /> : null}
                         {this.state.index == 2 ? <Verification /> : null}
@@ -692,7 +753,7 @@ export class User_dash extends Component {
     }
 }
 
-export default User_dash
+export default withRouter(User_dash)
 
 /*
 
