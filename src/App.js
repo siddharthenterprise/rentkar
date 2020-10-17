@@ -35,7 +35,7 @@ function App() {
             <Route path='/verification' render={props => (<User_dash ind={2} />)} />
             <Route path='/settings' render={props => (<User_dash ind={4} />)} />
             <Route path='/support' render={props => (<User_dash ind={3} />)} />
-            {w < 992 ? <Route exact path="/home" render={props => (<User_dash ind={-1} />)} /> : null}
+            <Route exact path="/home" render={props => (<User_dash ind={-1} />)} />
             <Route exact path="/about" render={props => (<User_dash ind={0} />)} />
           </div>
         </div>

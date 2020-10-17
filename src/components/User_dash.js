@@ -698,7 +698,7 @@ export const User_dash = (props) => {
             <Card className="detailsCard">
                 <Card.Content onClick={() => { changeIndex(index); }}>
                     <Image
-                        src={index == index ? icons[index] : icons_g[index]}
+                        src={props.ind == index ? icons[index] : icons_g[index]}
                         wrapped
                         ui={false}
                     />
