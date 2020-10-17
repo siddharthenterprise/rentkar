@@ -69,6 +69,10 @@ export const Head = (props) => {
         // document.getElementsByClassName('pop').style.display = 'none';
 
     }
+    const add_to_cart = (e) => {
+        console.log('fe');
+        document.getElementById('chutiya').click();
+    }
 
     const Cart_list = (props) => (
         <div className="cart__main">
@@ -113,7 +117,7 @@ export const Head = (props) => {
         <div class="container fixed-top">
             <div className='main'>
                 <div className='image'>
-                    <img src={logo}></img>
+                    <Link to="/rentkar"> <img src={logo}></img></Link>
                 </div>
                 <div className='but' id="navmap">
                     <Popup className="pop" trigger={<button id="city"><img src={map}></img> {mumbai ? 'Mumbai' : 'Pune'} </button>} flowing hoverable>
@@ -140,7 +144,7 @@ export const Head = (props) => {
 
                 </div>
                 <div className='but' id="bag">
-                    <Popup trigger={<button><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
+                    <Popup trigger={<button id="chutiya"><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
                         {/* <div style={{ 'overflowY': 'scroll' }}> */}
                         {
                             product.map(p => (
@@ -148,6 +152,7 @@ export const Head = (props) => {
                                 <Cart_list name={p.name} price={p.price} duration={p.duration} />
                             ))
                         }
+                        <Link to="/about"><button className="take_me_to_cart_but" onClick={add_to_cart}>Take me to Cart</button></Link>
                         {/* </div> */}
 
                     </Popup>

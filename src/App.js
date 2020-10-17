@@ -15,7 +15,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   var w = window.screen.width
-
   return (
     <Router>
       <ProductProvider>
@@ -31,20 +30,18 @@ function App() {
 
             )} />
             <Route path="/knowmore" render={props => (<Know_more />)}></Route>
-            <Route path="/category" render={props => (<Category />)}></Route>
-            <Switch>
-              <Route path = '/about/mylisting' render={props => (<User_dash ind = {1}/>)} />
-              <Route path = '/about/verification' render = {props => (<User_dash ind = {2}/>)}/>
-              <Route path = '/about/verification' render = {props => (<User_dash ind = {2}/>)}/>
-              <Route path = '/about/settings' render = {props => (<User_dash ind = {4}/>)}/>
-              <Route path = '/about/support' render = {props => (<User_dash ind = {3}/>)}/>
-              { w < 992 ? <Route exact path="/about" render={props => (<User_dash ind = {-1}/>)} /> : <Route exact path="/about" render={props => (<User_dash ind = {0}/>)}/>}
-            </Switch>
+            <Route path="/category" render={props => (<Category index={props.location.index} index_product={props.location.index_product} />)}></Route>
+            <Route path='/mylisting' render={props => (<User_dash ind={1} />)} />
+            <Route path='/verification' render={props => (<User_dash ind={2} />)} />
+            <Route path='/settings' render={props => (<User_dash ind={4} />)} />
+            <Route path='/support' render={props => (<User_dash ind={3} />)} />
+            {w < 992 ? <Route exact path="/home" render={props => (<User_dash ind={-1} />)} /> : null}
+            <Route exact path="/about" render={props => (<User_dash ind={0} />)} />
           </div>
         </div>
       </ProductProvider>
       <Footer />
-    </Router>
+    </Router >
   );
 }
 

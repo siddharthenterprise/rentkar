@@ -65,9 +65,13 @@ background-color: black; /* Green */
 #bag .popup-content{
     width: 400px !important;
     padding: 0px;
-    height: 375px;
+    height: 390px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+#bag ::-webkit-scrollbar{
+    width: 10px;
+    overflow: hidden;
 }
 #bag .popup-content .popup-arrow{
     position: fixed !important;
@@ -79,6 +83,7 @@ background-color: black; /* Green */
     display: flex;
     flex-direction: column;
     padding: 0px;
+    margin-bottom: 35px;
     /* background-color: red; */
 
 }
@@ -134,6 +139,27 @@ background-color: black; /* Green */
     justify-content: space-between;
     padding: 0px;
     width: 98%;
+}
+.but .take_me_to_cart_but{
+    pointer-events: all;
+    background-position: bottom;
+    margin: 10px 0px;
+    background-image: linear-gradient(to bottom right,#1bacf4,#19eeb5);
+    width: 400px;
+    height: 35px;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    position: fixed;
+    right: 159px;
+    top: 64vh;
+    border-radius: 0px;
+  
+
 }
 .but .cart__main .cart__button .cart__edit,.cart__checkout{
     width: 100%;

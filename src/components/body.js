@@ -301,6 +301,7 @@ export class Body extends Component {
                             >
                                 {categories[1].toUpperCase()}
                             </button>
+
                             <button
                                 id="laptopButton"
                                 className={
@@ -312,6 +313,8 @@ export class Body extends Component {
                             >
                                 {categories[2].toUpperCase()}
                             </button>
+
+
                             <button
                                 id="photographyButton"
                                 className={
@@ -323,6 +326,7 @@ export class Body extends Component {
                             >
                                 {categories[3].toUpperCase()}
                             </button>
+
                         </div>
                     </div>
                     <div className="subCategoriesBackground">
@@ -330,8 +334,10 @@ export class Body extends Component {
                             {
                                 sub[this.state.category].map((item, index) => {
                                     return <div>
-                                        <SubCard index={index} />
-                                        <hr className="subLine" id={"sub" + index.toString()} />
+                                        <Link to={{ pathname: "/category", index_product: index, index: this.state.category }} >
+                                            <SubCard index={index} />
+                                            <hr className="subLine" id={"sub" + index.toString()} />
+                                        </Link>
                                     </div>
                                 })
                             }

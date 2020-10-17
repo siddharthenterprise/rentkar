@@ -121,14 +121,15 @@ export const Category = (props) => {
         <Corousel imgname={guitar} />,
         <Corousel imgname={guitar} />,
     ]);
-    const [category, setcategory] = useState(0);
-    const [subb, setsubb] = useState(0);
+    const [category, setcategory] = useState(props.index ? props.index : 0);
+    const [subb, setsubb] = useState(props.index_product ? props.index_product : 0);
     // sub: 0,
+    console.log(props.index)
 
 
     useEffect(() => {
         // return () => {
-        document.getElementById("sub0").style.opacity = "1";
+        document.getElementById("sub" + (subb).toString()).style.opacity = "1";
         // }
     }, [sub]);
 
