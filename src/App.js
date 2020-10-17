@@ -30,7 +30,7 @@ function App() {
 
             )} />
             <Route path="/knowmore" render={props => (<Know_more />)}></Route>
-            <Route path="/category" render={props => (<Category index={props.location.index} index_product={props.locationzy.index_product} />)}></Route>
+            <Route path="/category" render={props => (<Category index={props.location.index} index_product={props.location.index_product} />)}></Route>
             <Route path='/mylisting' render={props => (<User_dash ind={1} />)} />
             <Route path='/verification' render={props => (<User_dash ind={2} />)} />
             <Route path='/settings' render={props => (<User_dash ind={4} />)} />
