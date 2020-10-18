@@ -31,6 +31,14 @@ export const Head = (props) => {
 
     }, [product])
 
+    const delete_product = (name) => {
+        // console.log(document.getElementById(id));
+        let new_product = product.filter((p) => {
+            return p.name != name;
+        });
+        setproduct(new_product);
+    }
+
 
     const [addModalshow, setaddModalshow] = useState(false);
     const [mumbai, setmumbai] = useState(true);
@@ -71,7 +79,7 @@ export const Head = (props) => {
     }
     const add_to_cart = (e) => {
         console.log('fe');
-        document.getElementById('chutiya').click();
+        document.getElementById('samsun').click();
     }
 
     const Cart_list = (props) => (
@@ -81,8 +89,10 @@ export const Head = (props) => {
                     <img src={guitar}></img>
                 </div>
                 <div class="cart__detail">
-                    <div class="cart__productname">
-                        <h4>{props.name}</h4>
+                    <div id={props.id} class="cart__productname">
+
+                        <h4 >{props.name}</h4>
+                        <a><i style={{ color: "red" }} onClick={() => delete_product(props.name)} class="fas fa-trash-alt"></i></a>
                     </div>
                     <div class="cart__productinfo">
                         <div class="cart__tenure">
@@ -144,16 +154,20 @@ export const Head = (props) => {
 
                 </div>
                 <div className='but' id="bag">
-                    <Popup trigger={<button id="chutiya"><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
-                        {/* <div style={{ 'overflowY': 'scroll' }}> */}
-                        {
-                            product.map(p => (
 
-                                <Cart_list name={p.name} price={p.price} duration={p.duration} />
+                    <Popup trigger={<button id="samsun"><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
+
+
+                        {
+                            product.map((p, index) => (
+                                <div>
+                                    <Cart_list id={index} name={p.name} price={p.price} duration={p.duration} /><hr></hr></div>
                             ))
                         }
-                        <Link to="/about"><button className="take_me_to_cart_but" onClick={add_to_cart}>Take me to Cart</button></Link>
-                        {/* </div> */}
+
+                        <Link to="/about"><div className="take_me_to_cart_but"><button className="cart_but" onClick={add_to_cart}>Take me to Cart</button></div></Link>
+
+
 
                     </Popup>
                     {/* <Link to="/category"><button><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button></Link> */}
@@ -169,8 +183,8 @@ export const Head = (props) => {
                     <img src={bar} />
                 </div>
 
-            </div>
-        </div>
+            </div >
+        </div >
 
     )
 

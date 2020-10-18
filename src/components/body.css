@@ -232,6 +232,7 @@
   border: none;
   flex-wrap: wrap-reverse;
   flex-flow: row;
+  margin-left: 0px;
   /* overflow-x: scroll; */
 }
 
@@ -300,6 +301,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
+  padding-left: 0px;
 }
 .list3 .final .para .button,
 .list3 .final .button {
