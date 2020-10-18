@@ -38,7 +38,7 @@ import { Button, Card, Image } from "semantic-ui-react";
 
 import { ProductContext } from '../components/ProductContext';
 import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom'
-
+import {SaveProductContext} from "../components/SaveProductContext";
 
 const icons = [rental_s, listing_s, verification_s, support_s, settings_s]
 const icons_g = [rental_g, listing_g, verification_g, support_g, settings_g]
@@ -50,10 +50,27 @@ function My_bag() {
 
     const [product, setProduct] = useContext(ProductContext);
     // const [total_single_item, settotal_single_item] = useState()
+    const [saveForLater, setSaveForLater] = useState([]);
     const tenure_change = (e) => {
         console.log(e.target.value);
         console.log(e);
         console.log(document.getElementsByClassName('total_price'));
+    }
+
+    const sendToSaveForLater = (name, price, duration) => {
+        let saveForLaterProduct = {
+                name: name,
+                price: price,
+                duration: duration
+        }
+        setSaveForLater(prevArray => [...prevArray, saveForLaterProduct])
+        let currentArray = saveForLater
+        console.log(currentArray)
+        let new_product = product.filter((p) => {
+            return p.name != name;
+        });
+        setProduct(new_product);
+        
     }
 
     const Order_card = (props) => (
@@ -112,9 +129,12 @@ function My_bag() {
                             <div class="placeorder">
                                 <button className="but1">Place Order</button>
                             </div>
-                            <div class="saveforlater">
-                                <button className="but2">Save for Later</button>
-                            </div>
+                            { props.flag == 0 ? <div class="saveforlater">
+                                                    <button className="but2" onClick = {() => sendToSaveForLater(props.name, props.price, props.duration)}>Save for Later</button>
+                                                </div>: 
+                            
+                            null}
+                            
 
                         </div>
 
@@ -132,9 +152,11 @@ function My_bag() {
                     <div class="placeorder">
                         <button className="but1">Place Order</button>
                     </div>
-                    <div class="saveforlater">
-                        <button className="but2">Save for Later</button>
-                    </div>
+                    { props.flag == 0 ? <div class="saveforlater">
+                                            <button className="but2" onClick = {() => sendToSaveForLater(props.name, props.price, props.duration)}>Save for Later</button>
+                                        </div>: 
+                    null}
+                    
                     <div class="saveforlater">
                         <button className="but2">Remove</button>
                     </div>
@@ -155,7 +177,7 @@ function My_bag() {
             {
                 product.map(product => (
                     <div className="order_card">
-                        <Order_card name={product.name} price={product.price} duration={product.duration} />
+                        <Order_card name={product.name} price={product.price} duration={product.duration} flag = { 0 }/>
                     </div>
                 ))
             }
@@ -175,6 +197,13 @@ function My_bag() {
                     <button>Place Order</button>
                 </div>
             </div>
+            {
+                saveForLater.map(saveForLater => (
+                    <div className="order_card">
+                        <Order_card name={saveForLater.name} price={saveForLater.price} duration={saveForLater.duration} flag = { -1 }/>
+                    </div>
+                ))
+            }
         </div>
     );
 
