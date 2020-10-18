@@ -157,6 +157,7 @@ export const Head = (props) => {
 
                     <Popup trigger={<button id="samsun"><img src={bag}></img>Bag<span style={{ position: 'relative', top: '-10px', right: '-8px', padding: '5px 10px', borderRadius: '100%', background: 'red', color: 'white', marginRight: '-25px' }}>{count}</span></button>}>
 
+                        <Link to="/about"><div className="take_me_to_cart_but"><button className="cart_but" onClick={add_to_cart}>Take me to Cart</button></div></Link>
 
                         {
                             product.map((p, index) => (
@@ -165,7 +166,7 @@ export const Head = (props) => {
                             ))
                         }
 
-                        <Link to="/about"><div className="take_me_to_cart_but"><button className="cart_but" onClick={add_to_cart}>Take me to Cart</button></div></Link>
+                        
 
 
 
