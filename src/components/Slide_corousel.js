@@ -10,6 +10,8 @@ function Slide_corousel() {
         <Corousel imgname={guitar} />,
         <Corousel imgname={guitar} />,
         <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
+        <Corousel imgname={guitar} />,
     ];
     const left_but = {
         backgroundColor: `#e4e4e4`,

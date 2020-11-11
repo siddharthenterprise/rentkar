@@ -11,8 +11,8 @@ function Corousel({ imgname }) {
         setproduct(prevproduct => [...prevproduct, { name: 'Fender Bullet Strat', price: 100, duration: 5 }]);
     }
     return (
-        <div className='catcard'>
-            <Card className='ccard'>
+        <div className='catcard' >
+            <Card className='ccard' href = "/product">
                 <Image src={imgname} wrapped ui={false} />
                 <Card.Content
                     className='cathead'>
@@ -22,7 +22,7 @@ function Corousel({ imgname }) {
                     </Card.Meta>
                     <Card.Description>
                         <i class="fas fa-rupee-sign"></i>****/day
-                                     </Card.Description>
+                                    </Card.Description>
                     <Button onClick={addcart}>ADD TO BAG</Button>
                 </Card.Content>
             </Card>

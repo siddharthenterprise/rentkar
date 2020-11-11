@@ -10,7 +10,7 @@ import { Floatnav } from './components/Floatnav';
 import { Know_more } from './components/Know_more';
 import { Category } from './components/Category';
 import { User_dash } from './components/User_dash';
-
+import { ProductPage } from './components/product_page';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
               </React.Fragment>
 
             )} />
+            <Route path='/product' render={props => (<ProductPage/>)}></Route>
             <Route path="/knowmore" render={props => (<Know_more />)}></Route>
             <Route path="/category" render={props => (<Category index={props.location.index} index_product={props.location.index_product} />)}></Route>
             <Route path='/mylisting' render={props => (<User_dash ind={1} />)} />

@@ -201,7 +201,8 @@
 }
 
 .list2 .category .catcard .ccard {
-  border: none;
+  border: n
+  one;
   border-radius: 10px;
   min-height: 246px;
     justify-content: space-around;
@@ -259,9 +260,15 @@
   padding: 10px 20px;
   text-align: left;
   font-weight: bold;
-
+  color: black;
   /* margin: 200px; */
 }
+
+.list2 .category .catcard .ccard:hover{
+  color: black;
+  text-decoration: none;
+}
+
 .list2 button {
   float: right;
   border: none;
@@ -668,6 +675,12 @@
   .list2 .category .catcard .ccard{
     min-height: 170px;
     padding: 8px;
+    color: black;
+  }
+
+  .list2 .category .catcard .ccard:hover{
+    text-decoration: none;
+    color: black;
   }
 
   .list2 .category .catcard .ccard img {
@@ -676,6 +689,7 @@
     height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: black;
   }
 
   .list2 .category .catcard .ccard .cathead {
@@ -683,6 +697,7 @@
     font-size: 9px;
     padding: 3px 4px;
     min-width: 100px;
+    color: black;
   }
 
   /* ---------------------- */
