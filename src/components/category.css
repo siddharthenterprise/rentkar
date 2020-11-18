@@ -180,7 +180,14 @@
   border-radius: 10px;
   border: none;
   justify-content: space-evenly;
+  text-decoration: none;
 }
+
+.category_overview .product_overview .category .ccard:hover{
+  color: black;
+  text-decoration: none;
+}
+
 .category_overview .product_overview .category .catcard img {
   /* height: 30vh; */
   max-width: 16vw;
@@ -219,6 +226,8 @@
   border: 0px transparent;
   justify-content: space-around;
   min-height: 245px;
+  color: black;
+  text-decoration: none;
 }
 .category_overview .product_overview .date {
   font-size: 9px;
