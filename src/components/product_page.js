@@ -107,7 +107,7 @@ export class ProductPage extends React.Component{
                         </button>
                     </div>
                     <h3 style = {{textAlign: "left"}}>Enter delivery and pickup dates</h3>
-                    <div style = {{ margin: "20px", display: "flex", flexDirection: "row", border: "1px solid #707070", borderRadius: "10px", marginRight: "220px", padding:"2px" }}>
+                    <div style = {{ margin: "20px", display: "table",  border: "1px solid #707070", borderRadius: "10px", marginLeft: "20px", marginRight: "auto", padding:"2px" }}>
                         <button style = {{ border: "none" }}>
                             <div style = {{ display: "flex", flexDirection: "row", padding: "10px", backgroundColor: "#fff"}}>
                                 <p style = {{marginRight: "40px"}}>Delivery Date</p>
@@ -427,7 +427,7 @@ export class ProductPage extends React.Component{
             </div>
             <div className = "Recommendations">
                 <h2>Recommended Products</h2>
-                <div className="productCarousel">
+                <div className="productCarousel" style={{ overflow: "hidden" }}>
                     <Slide_corousel />
                 </div>
             </div>
