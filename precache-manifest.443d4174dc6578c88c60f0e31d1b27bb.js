@@ -1,31 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96bb7b130249e89c8d0ada05df356dec",
+    "revision": "067604021a13ae28e573957e4ee430ab",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "dda5da07af3721c45f12",
+    "revision": "bdd562bc3b08c9c3fbc1",
     "url": "/rentkar/static/css/2.240414b9.chunk.css"
   },
   {
-    "revision": "996d442ca6470e810aaf",
-    "url": "/rentkar/static/css/main.f6516b39.chunk.css"
+    "revision": "9988fb1a1db4f9ab2701",
+    "url": "/rentkar/static/css/main.8f195e33.chunk.css"
   },
   {
-    "revision": "dda5da07af3721c45f12",
-    "url": "/rentkar/static/js/2.9dd78f04.chunk.js"
+    "revision": "bdd562bc3b08c9c3fbc1",
+    "url": "/rentkar/static/js/2.b4d58921.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.9dd78f04.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.b4d58921.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "996d442ca6470e810aaf",
-    "url": "/rentkar/static/js/main.e9f5860d.chunk.js"
+    "revision": "9988fb1a1db4f9ab2701",
+    "url": "/rentkar/static/js/main.84b329b9.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
     "url": "/rentkar/static/js/runtime-main.c01f0d97.js"
+  },
+  {
+    "revision": "2f4c116cc3844a03280a0fb26973c5fa",
+    "url": "/rentkar/static/media/Console.2f4c116c.png"
+  },
+  {
+    "revision": "cf618bc4b9942ee829383c46e0d1ed21",
+    "url": "/rentkar/static/media/FIFA.cf618bc4.png"
   },
   {
     "revision": "c5bb0659762a6eedb8d0ae4d00fd4a94",
@@ -92,6 +100,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rentkar/static/media/bago.87620698.png"
   },
   {
+    "revision": "602880709a37aeefc5c71427f8a0aefb",
+    "url": "/rentkar/static/media/battlefield.60288070.png"
+  },
+  {
     "revision": "123c5a903a0ff498f4ffeaaaab49fb98",
     "url": "/rentkar/static/media/camera colour.123c5a90.png"
   },
@@ -138,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "989b28a69c443bf2331f010712410d2d",
     "url": "/rentkar/static/media/console grey.989b28a6.png"
+  },
+  {
+    "revision": "650569aba792cc9fbe92724ee22b6ad9",
+    "url": "/rentkar/static/media/controller.650569ab.png"
   },
   {
     "revision": "7f6216560d825dfd039bc51b626fd05a",
