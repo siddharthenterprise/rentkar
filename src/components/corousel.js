@@ -14,22 +14,24 @@ function Corousel({ imgname }) {
     }
     return (
         <div className='catcard' >
-            <Link to="/product">
-                <Card className='ccard'>
-                    <Image src={imgname} wrapped ui={false} />
-                    <Card.Content
-                        className='cathead'>
+
+            <Card className='ccard'>
+                <Image src={imgname} wrapped ui={false} />
+                <Card.Content
+                    className='cathead'>
+                    <Link to="/product">
                         <Card.Header>Fender Bullet Strat</Card.Header>
-                        <Card.Meta>
-                            <span className="date">Starting at</span>
-                        </Card.Meta>
-                        <Card.Description>
-                            <i class="fas fa-rupee-sign"></i>****/day
+                    </Link>
+                    <Card.Meta>
+                        <span className="date">Starting at</span>
+                    </Card.Meta>
+                    <Card.Description>
+                        <i class="fas fa-rupee-sign"></i>****/day
                                     </Card.Description>
-                        <Button onClick={addcart}>ADD TO BAG</Button>
-                    </Card.Content>
-                </Card>
-            </Link>
+                    <Button onClick={addcart}>ADD TO BAG</Button>
+                </Card.Content>
+            </Card>
+
         </div>
     );
 }
