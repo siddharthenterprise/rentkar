@@ -19,7 +19,7 @@ function Corousel({ imgname }) {
                 <Image src={imgname} wrapped ui={false} />
                 <Card.Content
                     className='cathead'>
-                    <Link to="/product">
+                    <Link to="/product" style={{ color: "black" }}>
                         <Card.Header>Fender Bullet Strat</Card.Header>
                     </Link>
                     <Card.Meta>
