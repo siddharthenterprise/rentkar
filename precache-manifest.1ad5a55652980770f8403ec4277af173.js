@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "864b4f3b9ebbe5e8e457fadd7b24a0de",
+    "revision": "39bfd8fcec86ac81fa9831e193433667",
     "url": "/rentkar/index.html"
   },
   {
-    "revision": "bdd562bc3b08c9c3fbc1",
+    "revision": "264157ee7cf555a865f0",
     "url": "/rentkar/static/css/2.240414b9.chunk.css"
   },
   {
-    "revision": "bf038b475c03ca2ffd29",
+    "revision": "837cef2b5c24857863e8",
     "url": "/rentkar/static/css/main.590d2516.chunk.css"
   },
   {
-    "revision": "bdd562bc3b08c9c3fbc1",
-    "url": "/rentkar/static/js/2.b4d58921.chunk.js"
+    "revision": "264157ee7cf555a865f0",
+    "url": "/rentkar/static/js/2.f6023a34.chunk.js"
   },
   {
     "revision": "0402b89d528e0e52652a95c7f62dfea7",
-    "url": "/rentkar/static/js/2.b4d58921.chunk.js.LICENSE.txt"
+    "url": "/rentkar/static/js/2.f6023a34.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf038b475c03ca2ffd29",
-    "url": "/rentkar/static/js/main.84b329b9.chunk.js"
+    "revision": "837cef2b5c24857863e8",
+    "url": "/rentkar/static/js/main.6641284c.chunk.js"
   },
   {
     "revision": "16cac70053133ebf7232",
