@@ -109,14 +109,14 @@ export class ProductPage extends React.Component{
                     <h3 style = {{textAlign: "left"}}>Enter delivery and pickup dates</h3>
                     <div style = {{ margin: "20px", display: "table",  border: "1px solid #707070", borderRadius: "10px", marginLeft: "20px", marginRight: "auto", padding:"2px" }}>
                         <button style = {{ border: "none" }}>
-                            <div style = {{ display: "flex", flexDirection: "row", padding: "10px", backgroundColor: "#fff"}}>
+                            <div style = {{ display: "flex", flexDirection: "row", padding: "5px 10px 5px 10px", backgroundColor: "#fff"}}>
                                 <p style = {{marginRight: "40px"}}>Delivery Date</p>
                                 <p>{">"}</p>
                             </div>
                         </button>
                         <vl></vl>
                         <button style = {{ borderLeft: "0.5px solid #707070", borderRight: "none", borderBottom: "none", borderTop: "none" }}>
-                            <div style = {{ display: "flex", flexDirection: "row", padding: "10px", backgroundColor: "#fff"}}>
+                            <div style = {{ display: "flex", flexDirection: "row", padding: "5px 10px 5px 10px", backgroundColor: "#fff"}}>
                                 <p style = {{marginRight: "40px"}}>Pick-up Date</p>
                                 <p>{">"}</p>
                             </div>

@@ -13,7 +13,7 @@ flex-direction: row;
 align-content: center;
 background-color: #f2f7f7;
 text-align: center;
-margin-top: 20px;
+margin-top: 60px;
 margin-bottom: 10px;
 max-width: 900px;
 margin-left: 40px;
@@ -94,14 +94,15 @@ max-width: 190px;
 
 .productPage .right h2{
     margin-left: 20px;
-    margin-right: 200px;
-    margin-bottom: 20px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .productPage .right h3{
     margin-left: 20px;
+    margin-top: 10px;
     font-size: 16px;
-    margin-bottom: 20px;
 }
 
 .productPage .right .durationPrice{
@@ -113,10 +114,14 @@ max-width: 190px;
 .productPage .right .durationPrice .durationButton{
     background-color: white;
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-    padding: 10px;
+    margin: 10px 10px 10px 20px;
+    padding: 8px;
     border: none;
-    min-width: 200px;
+    min-width: 150px;
+}
+
+.productPage .right .durationPrice .durationButton p{
+    font-size: 12px;
 }
 
 .Products{
@@ -152,6 +157,10 @@ max-width: 190px;
     border-radius: 10px;
     height: auto;
     max-width: 700px;
+}
+
+.DescriptionCard .subCard h2{
+    font-size: 18px;
 }
 
 .DescriptionCard .subCard p{
@@ -194,8 +203,12 @@ max-width: 190px;
     align-self: right;
 }
 
+.shareProgram h2{
+    font-size: 20px;
+}
+
 .shareProgram p{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     max-width: 600px;
 }
@@ -303,7 +316,7 @@ max-width: 190px;
     font-size: 10px;
     font-weight: bold;
     margin-right: 0px;
-    margin-left: 125px;
+    margin-left: 80px;
     border: 0.5px #83D6F3;
 }
 
@@ -315,17 +328,17 @@ max-width: 190px;
 }
 
 .productPage .right .Summary .product p{
-    width: 200px;
+    width: 150px;
     text-align: left;
 }
 
 .productPage .right .Summary .product button{
     padding: 5px;
-    min-width: 100px;
+    min-width: 80px;
     border: 0.5px solid #707070;
     border-radius: 5px;
     margin-left: auto;
-    margin-right: 90px;
+    margin-right: 40px;
     background-color: #ffffff;
 }
 
@@ -335,7 +348,7 @@ max-width: 190px;
 }
 
 .productPage .right .Summary .placeOrder .couponStatus{
-    width: 200px;
+    width: 150px;
     height: 70px;
     margin: 20px;
     background-color: #E8FFFC;
@@ -365,9 +378,18 @@ max-width: 190px;
     font-weight: bold;
 }
 
+h2{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 16px;
+}
+
 .productPage .productDesc .left h2{
     margin: 20px 0px 10px 40px;
     text-align: left;
+    font-size: 20px;
 }
 
 .productPage .productDesc .left h3{
@@ -391,17 +413,19 @@ max-width: 190px;
     background-color: white;
     border: none;
     box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 .productPage .productDesc .left .productImages .ImageList .productImage img{
-    width: 180px;
+    width: 100px;
+    padding: 10px 0px 10px 0px;
     height: auto;
 }
 
 
 
 .productPage .productDesc .left .productImages .previewImage{
-    height: 300px;
+    height: 260px;
     width: auto;
     align-self: center;
 }
@@ -410,6 +434,7 @@ max-width: 190px;
     border: none;
     box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
     margin: 20px 0px 0px 10px;
+    margin-left: 60px;
 }
 
 
